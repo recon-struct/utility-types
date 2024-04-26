@@ -4,13 +4,13 @@
 
 A repository of TypeScript utility types.
 
-## Why? 🤨
+## 🤨 Why?
 
 Use of these types assists in creating isomorphic functions that reveal their
 return value prior to compilation. This innovation assists with AI powered tools
 like [Copilot](https://docs.github.com/en/copilot). Giving the AI more context
 than it would have otherwise.
 
-## Links 🌐
+## 🌐 Links
 
 - [Documentation](https://recon-struct.github.io/utility-types)
