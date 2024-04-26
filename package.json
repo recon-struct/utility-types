@@ -1,0 +1,20 @@
+{
+  "name": "@recon-struct/utility-types",
+  "module": "./src/index.ts",
+  "main": "./dist/index.js",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "test": "echo No tests at this time",
+    "dev": "bun build --watch",
+    "build": "rimraf ./dist && tsc && bun ./build.ts"
+  },
+  "dependencies": {
+    "rimraf": "^5.0.5"
+  }
+}

@@ -1,0 +1,7 @@
+export * from './is-array-concat-identity'
+export * from './is-bigint-add-identity'
+export * from './is-bigint-mult-identity'
+export * from './is-num-add-identity'
+export * from './is-num-mult-identity'
+export * from './is-object-identity'
+export * from './is-string-identity'
