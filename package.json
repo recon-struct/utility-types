@@ -1,6 +1,7 @@
 {
   "name": "@recon-struct/utility-types",
-  "module": "./src/index.ts",
+  "version": "1.0.0",
+  "module": "./dist/index.js",
   "main": "./dist/index.js",
   "type": "module",
   "devDependencies": {
