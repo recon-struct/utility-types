@@ -5,10 +5,9 @@
 A repository of TypeScript utility types.
 
 Use of these types assists in creating isomorphic functions that reveal their
-return value prior to compilation.
-
-This innovation assists with AI powered tools like
-[Copilot](https://docs.github.com/en/copilot).
+return value prior to compilation. This innovation assists with AI powered tools
+like [Copilot](https://docs.github.com/en/copilot). Giving the AI more context
+than it would have otherwise.
 
 ## Links
 
