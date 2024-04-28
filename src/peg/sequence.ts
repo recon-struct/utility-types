@@ -1,4 +1,4 @@
-import type { Consume } from './utils'
+import type { Consume } from '../string/consume'
 
 /**
  * Type representing Parsing Expression Grammar (PEG) sequence operation.
