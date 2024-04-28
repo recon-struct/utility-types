@@ -1,6 +1,7 @@
 export * from './antecedent'
 export * from './capture'
 export * from './cases'
+export * from './consume'
 export * from './interpolation'
 export * from './join'
 export * from './split'
