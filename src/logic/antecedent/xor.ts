@@ -1,4 +1,4 @@
-import type { If } from '~/helpers/if'
+import type { If } from '~/logic/if'
 import type { IsTrue } from './is-true'
 import type { Not } from './not'
 

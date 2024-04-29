@@ -1,9 +1,8 @@
 import type { IsTrue } from '~/logic/antecedent/is-true'
 
 /**
- * # 🚫 DO NOT EXPORT FROM src/index.ts
  * If `A extends true` then `B` else `C`
- * @internal
+ * @group logic
  * @example
  * ```
  * type Ex1 = If<true>            // true
