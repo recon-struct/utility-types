@@ -1,6 +1,6 @@
 import type { AnyObject } from '../any'
-import type { IsLiteralKey } from '../primitive'
-import type { UnionUniqueLength } from '../type-set/union-unique-length'
+import type { UnionUniqueLength } from '../helpers/union-unique-length'
+import type { IsLiteralKey } from '../literal'
 import type { KeyOf } from './key-of'
 
 /**

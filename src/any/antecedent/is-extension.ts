@@ -1,3 +1,5 @@
+import type { IsNever } from './is-never'
+
 /**
  * If `A extends B` then `true` else `false`
  * @group Antecedent
@@ -8,8 +10,5 @@
  * type Ex2 = IsExtension<[string, 'a']> // false
  * ```
  */
-export type IsExtension<A, B> = [A] extends [never]
-  ? false
-  : A extends B
-    ? true
-    : false
+export type IsExtension<A, B> =
+  IsNever<A> extends true ? false : A extends B ? true : false

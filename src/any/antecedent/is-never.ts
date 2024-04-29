@@ -1,5 +1,3 @@
-import type { IsExtension } from './is-extension'
-
 /**
  * Checks if the given type `A` is `never`.
  * @typeParam A - The type to check.
@@ -11,4 +9,4 @@ import type { IsExtension } from './is-extension'
  * type Ex2 = IsNever<null>   // false
  * ```
  */
-export type IsNever<A> = IsExtension<[A], [never]>
+export type IsNever<A> = [A] extends [never] ? true : false

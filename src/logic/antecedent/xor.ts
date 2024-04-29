@@ -1,3 +1,5 @@
+import type { PureIf } from '~/helpers/pure-if'
+import type { IsTrue } from './is-true'
 import type { Not } from './not'
 
 /**
@@ -12,6 +14,8 @@ import type { Not } from './not'
  * type Ex4 = Xor<false, false> // false
  * ```
  */
-export type Xor<A extends boolean, B extends boolean> = A extends true
-  ? Not<B>
-  : B
+export type Xor<A extends boolean, B extends boolean> = PureIf<
+  IsTrue<A>,
+  Not<B>,
+  B
+>

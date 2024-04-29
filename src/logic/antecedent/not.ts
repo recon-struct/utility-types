@@ -1,3 +1,6 @@
+import type { PureIf } from '~/helpers/pure-if'
+import type { IsTrue } from './is-true'
+
 /**
  * Evaluate `¬A`
  * @group Antecedent
@@ -8,4 +11,4 @@
  * type Ex2 = Not<false> // true
  * ```
  */
-export type Not<A extends boolean> = A extends true ? false : true
+export type Not<A extends boolean> = PureIf<IsTrue<A>, false, true>

@@ -1,3 +1,6 @@
+import type { PureIf } from '~/helpers/pure-if'
+import type { IsTrue } from './is-true'
+
 /**
  * Evaluate `A ∧ B`
  * @group Antecedent
@@ -10,8 +13,7 @@
  * type Ex4 = And<false, false> // false
  * ```
  */
-export type And<A extends boolean, B extends boolean> = A extends true
-  ? B extends true
-    ? true
-    : false
-  : false
+export type And<A extends boolean, B extends boolean> = PureIf<
+  IsTrue<A>,
+  IsTrue<B>
+>

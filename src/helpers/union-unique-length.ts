@@ -1,7 +1,7 @@
+import type { IsNever } from '~/any/antecedent/is-never'
 import type { Increment } from '../math'
-import type { IsLiteralNever } from '../primitive/antecedent/is-literal-never'
-import type { Internal } from '../helpers/internal'
-import type { LastUniqueInUnion } from './helpers/last-unique-in-union'
+import type { Internal } from './internal'
+import type { LastUniqueInUnion } from './last-unique-in-union'
 
 /**
  * # 🚫 DO NOT EXPORT
@@ -22,7 +22,7 @@ interface Opts<A extends number = number> extends Internal {
  * ```
  */
 export type UnionUniqueLength<A, B extends Opts = Opts<0>> =
-  IsLiteralNever<LastUniqueInUnion<A>> extends true
+  IsNever<LastUniqueInUnion<A>> extends true
     ? B['value']
     : UnionUniqueLength<
         Exclude<A, LastUniqueInUnion<A>>,
