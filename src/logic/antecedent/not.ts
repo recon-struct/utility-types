@@ -1,4 +1,4 @@
-import type { PureIf } from '~/helpers/pure-if'
+import type { If } from '~/helpers/if'
 import type { IsTrue } from './is-true'
 
 /**
@@ -11,4 +11,4 @@ import type { IsTrue } from './is-true'
  * type Ex2 = Not<false> // true
  * ```
  */
-export type Not<A extends boolean> = PureIf<IsTrue<A>, false, true>
+export type Not<A extends boolean> = If<IsTrue<A>, false, true>

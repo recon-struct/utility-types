@@ -1,4 +1,4 @@
-import type { PureIf } from '~/helpers/pure-if'
+import type { If } from '~/helpers/if'
 import type { IsTrue } from './is-true'
 
 /**
@@ -13,7 +13,4 @@ import type { IsTrue } from './is-true'
  * type Ex4 = And<false, false> // false
  * ```
  */
-export type And<A extends boolean, B extends boolean> = PureIf<
-  IsTrue<A>,
-  IsTrue<B>
->
+export type And<A extends boolean, B extends boolean> = If<IsTrue<A>, IsTrue<B>>
