@@ -1,10 +1,10 @@
+import type { If } from '~/logic/if'
 import type { IsLessThan } from './antecedent/is-less-than'
 
 /**
- * Returns the minimum value between two numbers.
- *
- * @typeParam A - The first number.
- * @typeParam B - The second number.
+ * Returns the minimum value between two numbers, where `A ∈ ℕ` and `B ∈ ℕ`.
+ * @typeParam A - The first number (must be a natural number).
+ * @typeParam B - The second number (must be a natural number).
  * @group Math
  * @example
  * ```
@@ -12,5 +12,4 @@ import type { IsLessThan } from './antecedent/is-less-than'
  * type Ex2 = Min<3, 1> // 1
  * ```
  */
-export type Min<A extends number, B extends number> =
-  IsLessThan<A, B> extends true ? A : B
+export type Min<A extends number, B extends number> = If<IsLessThan<A, B>, A, B>

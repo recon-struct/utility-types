@@ -1,9 +1,10 @@
+import type { If } from '~/logic/if'
 import type { IsLessThan } from './antecedent'
 
 /**
- * Returns the maximum value between two numbers.
- * @typeParam A - The first number.
- * @typeParam B - The second number.
+ * Returns the maximum value between two numbers, where `A ∈ ℕ` and `B ∈ ℕ`.
+ * @typeParam A - The first number (must be a natural number).
+ * @typeParam B - The second number (must be a natural number).
  * @group Math
  * @example
  * ```
@@ -11,5 +12,4 @@ import type { IsLessThan } from './antecedent'
  * type Ex2 = Max<3, 1> // 3
  * ```
  */
-export type Max<A extends number, B extends number> =
-  IsLessThan<A, B> extends true ? B : A
+export type Max<A extends number, B extends number> = If<IsLessThan<A, B>, B, A>

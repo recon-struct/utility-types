@@ -1,16 +1,16 @@
+import type { If } from '~/logic/if'
 import type { One } from '../identity'
 import type { Add } from './add'
 import type { IsNatural } from './antecedent/is-natural'
 
 /**
- * Evaluate `A + 1`, where `A ∈ ℕ`
- * @typeParam A - The number to increment.
+ * Evaluate `A + 1`, where `A ∈ ℕ`.
+ * @typeParam A - The number to increment (must be a natural number).
  * @group Math
  * @example
  * ```
- * type Ex1 = Decrement<2> // 1
- * type Ex2 = Decrement<0> // number
+ * type Ex1 = Increment<1> // 3
+ * type Ex2 = Increment<0> // 2
  * ```
  */
-export type Increment<A extends number> =
-  IsNatural<A> extends true ? Add<A, One> : number
+export type Increment<A extends number> = If<IsNatural<A>, Add<A, One>, number>

@@ -20,6 +20,5 @@
     "dev": "bun build --watch",
     "build": "rimraf ./dist && tsc && bun ./build.ts",
     "generate-docs": "typedoc --out ./docs ./src"
-  },
-  "type": "module"
+  }
 }

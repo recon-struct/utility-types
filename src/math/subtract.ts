@@ -1,10 +1,13 @@
+import type { If } from '~/logic/if'
 import type { And } from '../logic/antecedent/and'
 import type { LengthProp } from '../object/length-prop'
 import type { Tuple } from '../tuple/tuple'
 import type { IsNatural } from './antecedent/is-natural'
 
 /**
- * Return the difference of `A - B`
+ * Return the difference of `A - B`, where `A ∈ ℕ` and `B ∈ ℕ`.
+ * @typeParam A - The first number (must be a natural number).
+ * @typeParam B - The second number (must be a natural number).
  * @group Math
  * @example
  * ```
@@ -12,9 +15,8 @@ import type { IsNatural } from './antecedent/is-natural'
  * type Ex2 = Subtract<20, 13> // 7
  * ```
  */
-export type Subtract<A extends number, B extends number> =
-  And<IsNatural<A>, IsNatural<B>> extends true
-    ? Tuple<A> extends [...infer C, ...Tuple<B>]
-      ? LengthProp<C>
-      : number
-    : number
+export type Subtract<A extends number, B extends number> = If<
+  And<IsNatural<A>, IsNatural<B>>,
+  Tuple<A> extends [...infer C, ...Tuple<B>] ? LengthProp<C> : number,
+  number
+>
