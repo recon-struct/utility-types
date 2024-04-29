@@ -2,7 +2,7 @@ import type { IsTrue } from '~/logic/antecedent/is-true'
 
 /**
  * If `A extends true` then `B` else `C`
- * @group logic
+ * @group Logic
  * @example
  * ```
  * type Ex1 = If<true>            // true
