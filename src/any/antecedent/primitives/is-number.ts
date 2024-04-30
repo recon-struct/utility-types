@@ -6,8 +6,8 @@ import type { IsExtension } from '../is-extension'
  * @group Any
  * @example
  * ```
- * type Ex = IsNumber<true | false> // true
- * type Ex = IsNumber<string | number> // false
+ * type Ex1 = IsNumber<number> // true
+ * type Ex2 = IsNumber<string> // false
  * ```
  */
 export type IsNumber<A> = IsExtension<A, number>
