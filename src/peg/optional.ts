@@ -2,6 +2,7 @@
  * Type representing Parsing Expression Grammar (PEG) optional operation.
  * @typeParam A - The string to match optionally.
  * @typeParam B - The sequence of strings to match.
+ * @group Parsing Expression Grammars
  * @experimental
  */
 export type Optional<

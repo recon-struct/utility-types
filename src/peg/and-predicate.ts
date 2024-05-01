@@ -5,6 +5,8 @@ import type { StartsWith } from '~/string/antecedent/starts-with'
  * Type represents Parsing Expression Grammar (PEG) and-predicate operation.
  * @typeParam A - The string to match.
  * @typeParam B - The sequence of strings to match.
+ * @group Parsing Expression Grammars
+ * @experimental
  */
 export type AndPredicate<A extends string, B extends string> = If<
   StartsWith<A, B>,

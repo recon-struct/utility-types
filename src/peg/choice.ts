@@ -7,6 +7,7 @@ import type { ConsumeRight } from '~/string/consume-right'
  * @typeParam A - The first string to match.
  * @typeParam B - The second string to match.
  * @typeParam C - The sequence of strings to match.
+ * @group Parsing Expression Grammars
  * @experimental
  * @privateRemarks - TODO see if it is possible to not use `Consume` twice.
  */
