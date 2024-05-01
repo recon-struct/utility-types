@@ -19,6 +19,6 @@
     "test": "echo No tests at this time",
     "dev": "bun build --watch",
     "build": "rimraf ./dist && tsc && bun ./build.ts",
-    "generate-docs": "typedoc --out ./docs ./src"
+    "generate-docs": "typedoc"
   }
 }

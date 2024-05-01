@@ -11,5 +11,5 @@ import type { IsTrue } from '~/logic/antecedent/is-true'
  * type Ex4 = If<false, 'a', 'b'> // 'b'
  * ```
  */
-export type If<A extends boolean, B = A, C = false> =
+export type If<A extends boolean, B = true, C = false> =
   IsTrue<A> extends true ? B : C

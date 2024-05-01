@@ -1,7 +1,7 @@
 import type { AnyKey } from '../any/any-key'
 import type { AnyPrimitive } from '../any/any-primitive'
 import type { Internal } from '../helpers/internal'
-import type { Join } from '../string/join'
+import type { Join } from '../tuple/join'
 import type { IsEmptyObject } from './antecedent'
 import type { KeyOf } from './key-of'
 
@@ -42,11 +42,11 @@ export type GetKeys<
       [D in KeyOf<A>]: A[D] extends object
         ? D extends string
           ? IsEmptyObject<A> extends true
-            ? Join<C['value'], D, B>
-            : GetKeys<A[D], B, Opts<Join<C['value'], D, B>>>
+            ? Join<[C['value'], D], B>
+            : GetKeys<A[D], B, Opts<Join<[C['value'], D], B>>>
           : never
         : D extends string
-          ? Join<C['value'], D, B>
+          ? Join<[C['value'], D], B>
           : never
     }[KeyOf<A>]
   : never
