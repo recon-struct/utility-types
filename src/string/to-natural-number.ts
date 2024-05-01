@@ -1,10 +1,7 @@
 import type { IsExtension } from '~/any/antecedent/is-extension'
 import type { Internal } from '~/helpers/internal'
-import type { If } from '~/logic/if'
 import type { Add } from '~/math/add'
-import type { IsNegative } from '~/math/antecedent/is-negative'
 import type { Multiply } from '~/math/multiply'
-import type { ConsumeRight } from '~/string/consume-right'
 import type { StringLength } from './string-length'
 
 interface DigitValue {
@@ -26,21 +23,17 @@ interface PlaceValue {
   3: 100
 }
 
-type MakePositive<A extends number> = If<
-  IsNegative<A>,
-  ConsumeRight<'-', `${A}`>,
-  A
->
+type StringShift<A extends string> = A extends `${infer B}${string}` ? B : never
 
-type Shift<A extends string> = A extends `${infer B}${string}` ? B : never
+type StringTail<A extends string> = A extends `${string}${infer B}` ? B : never
 
-type Tail<A extends string> = A extends `${string}${infer B}` ? B : never
-
-interface Opts<A extends string = string, B extends number = number>
-  extends Internal {
+interface ToNaturalNumberOpts<
+  A extends string = string,
+  B extends number = number,
+> extends Internal {
   remaining: A
   sum: B
-  leftMostDigit: Shift<A>
+  leftMostDigit: StringShift<A>
   length: StringLength<A>
 }
 
@@ -59,16 +52,16 @@ interface Opts<A extends string = string, B extends number = number>
  */
 export type ToNaturalNumber<
   A extends string,
-  B extends Opts<A> = Opts<A, 0>,
+  B extends ToNaturalNumberOpts<A> = ToNaturalNumberOpts<A, 0>,
 > = B['leftMostDigit'] extends ''
   ? B['sum']
   : IsExtension<A, `${number}`> extends true
     ? B['leftMostDigit'] extends keyof DigitValue
       ? B['length'] extends keyof PlaceValue
         ? ToNaturalNumber<
-            Tail<A>,
-            Opts<
-              Tail<A>,
+            StringTail<A>,
+            ToNaturalNumberOpts<
+              StringTail<A>,
               Add<
                 Multiply<
                   DigitValue[B['leftMostDigit']],

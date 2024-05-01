@@ -5,7 +5,7 @@ import type { LengthProp } from '../object/length-prop'
 /**
  * # 🚫 DO NOT EXPORT
  */
-interface Opts<A extends AnyArray = AnyArray> extends Internal {
+interface TupleOpts<A extends AnyArray = AnyArray> extends Internal {
   value: A
 }
 
@@ -21,8 +21,8 @@ interface Opts<A extends AnyArray = AnyArray> extends Internal {
 export type Tuple<
   A extends number = number,
   B = any,
-  Z extends Opts = Opts<[]>,
+  Z extends TupleOpts = TupleOpts<[]>,
 > =
   LengthProp<Z['value']> extends A
     ? Z['value']
-    : Tuple<A, B, Opts<[...Z['value'], B]>>
+    : Tuple<A, B, TupleOpts<[...Z['value'], B]>>

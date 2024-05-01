@@ -3,7 +3,7 @@ import type { If } from '~/logic/if'
 import type { Internal } from '../helpers/internal'
 import type { Increment } from '../math'
 
-interface Opts<A extends number = 0> extends Internal {
+interface OneOrMoreOpts<A extends number = 0> extends Internal {
   value: A
 }
 
@@ -17,7 +17,7 @@ interface Opts<A extends number = 0> extends Internal {
 export type OneOrMore<
   A extends string,
   B extends string,
-  C extends Opts<number> = Opts<0>,
+  C extends OneOrMoreOpts<number> = OneOrMoreOpts<0>,
 > = B extends `${A}${infer D}`
-  ? OneOrMore<A, D, Opts<Increment<C['value']>>>
+  ? OneOrMore<A, D, OneOrMoreOpts<Increment<C['value']>>>
   : If<IsZero<C['value']>, never, B>

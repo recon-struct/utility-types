@@ -1,7 +1,7 @@
 /**
  * # 🚫 DO NOT EXPORT
  */
-interface Opts<A extends string = string> {
+interface CamelCaseOpts<A extends string = string> {
   value: A
 }
 
@@ -22,11 +22,15 @@ interface Opts<A extends string = string> {
 export type CamelCase<
   A extends string,
   B extends string = ' ' | '-' | '_',
-  Z extends Opts = Opts<''>,
+  Z extends CamelCaseOpts = CamelCaseOpts<''>,
 > = A extends `${infer D}${B}${infer E}`
   ? Z['value'] extends ''
-    ? CamelCase<E, B, Opts<D>>
-    : CamelCase<E, B, Opts<`${Z['value']}${Capitalize<D>}${Capitalize<E>}`>>
+    ? CamelCase<E, B, CamelCaseOpts<D>>
+    : CamelCase<
+        E,
+        B,
+        CamelCaseOpts<`${Z['value']}${Capitalize<D>}${Capitalize<E>}`>
+      >
   : Z['value'] extends ''
     ? A
     : Z['value']

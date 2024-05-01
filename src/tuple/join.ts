@@ -5,7 +5,7 @@ import type { ToStringInterface } from '~/helpers/to-string-interface'
 import type { IsEmptyString } from '~/identity/antecedent'
 import type { If } from '~/logic/if'
 
-interface Opts<A extends string = string> extends Internal {
+interface JoinOpts<A extends string = string> extends Internal {
   value: A
 }
 
@@ -28,14 +28,14 @@ type StringLike = AnyStringish | ToStringInterface
 export type Join<
   A extends StringLike[],
   B extends StringLike = '',
-  C extends Opts = Opts<''>,
+  C extends JoinOpts = JoinOpts<''>,
 > = A extends [infer D, ...infer E]
   ? D extends StringLike
     ? E extends StringLike[]
       ? Join<
           E,
           B,
-          Opts<
+          JoinOpts<
             If<
               IsEmptyString<C['value']>,
               ToString<D>,

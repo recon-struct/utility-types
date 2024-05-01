@@ -8,7 +8,7 @@ import type { KeyOf } from './key-of'
 /**
  * # 🚫 DO NOT EXPORT
  */
-interface Opts<A extends string | undefined = string | undefined>
+interface GetKeysOpts<A extends string | undefined = string | undefined>
   extends Internal {
   value: A
 }
@@ -36,14 +36,14 @@ export interface DeepObject {
 export type GetKeys<
   A extends DeepObject,
   B extends string = '.',
-  C extends Opts = Opts<undefined>,
+  C extends GetKeysOpts = GetKeysOpts<undefined>,
 > = A extends object
   ? {
       [D in KeyOf<A>]: A[D] extends object
         ? D extends string
           ? IsEmptyObject<A> extends true
             ? Join<[C['value'], D], B>
-            : GetKeys<A[D], B, Opts<Join<[C['value'], D], B>>>
+            : GetKeys<A[D], B, GetKeysOpts<Join<[C['value'], D], B>>>
           : never
         : D extends string
           ? Join<[C['value'], D], B>

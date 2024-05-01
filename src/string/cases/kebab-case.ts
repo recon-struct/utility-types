@@ -5,7 +5,7 @@ import type { IsUppercase } from '../antecedent/is-uppercase'
 /**
  * # 🚫 DO NOT EXPORT
  */
-interface Opts<A extends string = string> {
+interface KebabCaseOpts<A extends string = string> {
   value: A
 }
 
@@ -26,15 +26,15 @@ interface Opts<A extends string = string> {
 export type KebabCase<
   A extends string,
   B extends string = ' ' | '_',
-  Z extends Opts = Opts<''>,
+  Z extends KebabCaseOpts = KebabCaseOpts<''>,
 > = A extends `${infer D}${infer E}`
   ? D extends B
     ? Z['value'] extends ''
       ? KebabCase<E, B, Z>
-      : KebabCase<E, B, Opts<`${Z['value']}-`>>
+      : KebabCase<E, B, KebabCaseOpts<`${Z['value']}-`>>
     : And<IsCaseSensitive<D>, IsUppercase<D>> extends true
       ? Z['value'] extends ''
-        ? KebabCase<E, B, Opts<Lowercase<D>>>
-        : KebabCase<E, B, Opts<`${Z['value']}-${Lowercase<D>}`>>
-      : KebabCase<E, B, Opts<`${Z['value']}${D}`>>
+        ? KebabCase<E, B, KebabCaseOpts<Lowercase<D>>>
+        : KebabCase<E, B, KebabCaseOpts<`${Z['value']}-${Lowercase<D>}`>>
+      : KebabCase<E, B, KebabCaseOpts<`${Z['value']}${D}`>>
   : Z['value']

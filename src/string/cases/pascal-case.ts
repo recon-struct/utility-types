@@ -1,7 +1,7 @@
 /**
  * # 🚫 DO NOT EXPORT
  */
-interface Opts<A extends string = string> {
+interface PascalCaseOpts<A extends string = string> {
   value: A
 }
 
@@ -22,9 +22,9 @@ interface Opts<A extends string = string> {
 export type PascalCase<
   A extends string,
   B extends string = ' ' | '-' | '_',
-  Z extends Opts = Opts<''>,
+  Z extends PascalCaseOpts = PascalCaseOpts<''>,
 > = A extends `${infer D}${B}${infer E}`
-  ? PascalCase<E, B, Opts<`${Z['value']}${Capitalize<D>}`>>
+  ? PascalCase<E, B, PascalCaseOpts<`${Z['value']}${Capitalize<D>}`>>
   : Z['value'] extends ''
     ? A
     : `${Z['value']}${Capitalize<A>}`

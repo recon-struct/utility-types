@@ -4,7 +4,7 @@ import type { Internal } from '../helpers/internal'
 /**
  * # 🚫 DO NOT EXPORT
  */
-interface Opts<A extends AnyArray = AnyArray> extends Internal {
+interface ReverseOpts<A extends AnyArray = AnyArray> extends Internal {
   value: A
 }
 
@@ -16,9 +16,9 @@ interface Opts<A extends AnyArray = AnyArray> extends Internal {
  * type Ex = Reverse<[1, 2, 3, 4]> // [4, 3, 2, 1]
  * ```
  */
-export type Reverse<A extends AnyArray, Z extends Opts = Opts<[]>> = A extends [
-  ...infer B,
-  infer C,
-]
-  ? Reverse<B, Opts<[...Z['value'], C]>>
+export type Reverse<
+  A extends AnyArray,
+  Z extends ReverseOpts = ReverseOpts<[]>,
+> = A extends [...infer B, infer C]
+  ? Reverse<B, ReverseOpts<[...Z['value'], C]>>
   : Z['value']

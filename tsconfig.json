@@ -11,7 +11,8 @@
     // Bundler mode
     "moduleResolution": "bundler",
     // "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
+    // NOTE not usable with `outFile`
+    // "verbatimModuleSyntax": true,
     // NOTE comment out the following line to enable emitting declaration files
     // "noEmit": true,
 
@@ -29,7 +30,7 @@
     // Declaration files
     "declaration": true,
     "emitDeclarationOnly": true,
-    "outDir": "dist",
+    // "outFile": "./dist/index.js",
     "rootDir": "src",
     "paths": {
       "~/*": ["./src/*"]

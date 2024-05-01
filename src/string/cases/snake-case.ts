@@ -5,7 +5,7 @@ import type { IsUppercase } from '../antecedent/is-uppercase'
 /**
  * # 🚫 DO NOT EXPORT
  */
-interface Opts<A extends string = string> {
+interface SnakeCaseOpts<A extends string = string> {
   value: A
 }
 
@@ -25,15 +25,15 @@ interface Opts<A extends string = string> {
 export type SnakeCase<
   A extends string,
   B extends string = ' ' | '-',
-  Z extends Opts = Opts<''>,
+  Z extends SnakeCaseOpts = SnakeCaseOpts<''>,
 > = A extends `${infer D}${infer E}`
   ? D extends B
     ? Z['value'] extends ''
       ? SnakeCase<E, B, Z>
-      : SnakeCase<E, B, Opts<`${Z['value']}_`>>
+      : SnakeCase<E, B, SnakeCaseOpts<`${Z['value']}_`>>
     : And<IsCaseSensitive<D>, IsUppercase<D>> extends true
       ? Z['value'] extends ''
-        ? SnakeCase<E, B, Opts<Lowercase<D>>>
-        : SnakeCase<E, B, Opts<`${Z['value']}_${Lowercase<D>}`>>
-      : SnakeCase<E, B, Opts<`${Z['value']}${D}`>>
+        ? SnakeCase<E, B, SnakeCaseOpts<Lowercase<D>>>
+        : SnakeCase<E, B, SnakeCaseOpts<`${Z['value']}_${Lowercase<D>}`>>
+      : SnakeCase<E, B, SnakeCaseOpts<`${Z['value']}${D}`>>
   : Z['value']

@@ -4,7 +4,7 @@ import type { CaptureGroup } from './utils'
 /**
  * # 🚫 DO NOT EXPORT
  */
-interface Opts<A extends string = string> extends Internal {
+interface CaptureOpts<A extends string = string> extends Internal {
   value: A
 }
 
@@ -21,7 +21,7 @@ interface Opts<A extends string = string> extends Internal {
 export type Capture<
   A extends string,
   B extends CaptureGroup = CaptureGroup<'{{', '}}'>,
-  Z extends Opts = Opts<never>,
+  Z extends CaptureOpts = CaptureOpts<never>,
 > = A extends `${string}${B['start']}${infer C}${B['end']}${infer D}`
-  ? Capture<D, B, Opts<Z['value'] | C>>
+  ? Capture<D, B, CaptureOpts<Z['value'] | C>>
   : Z['value']

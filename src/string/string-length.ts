@@ -5,7 +5,7 @@ import type { Increment } from '../math/increment'
 /**
  * # 🚫 DO NOT EXPORT
  */
-interface Opts<A extends number = number> extends Internal {
+interface StringLengthOpts<A extends number = number> extends Internal {
   value: A
 }
 
@@ -20,9 +20,12 @@ interface Opts<A extends number = number> extends Internal {
  * type Ex3 = StringLength<string>         // number
  * ```
  */
-export type StringLength<A extends string, B extends Opts = Opts<0>> =
+export type StringLength<
+  A extends string,
+  B extends StringLengthOpts = StringLengthOpts<0>,
+> =
   IsLiteralString<A> extends true
     ? A extends `${string}${infer C}`
-      ? StringLength<C, Opts<Increment<B['value']>>>
+      ? StringLength<C, StringLengthOpts<Increment<B['value']>>>
       : B['value']
     : number

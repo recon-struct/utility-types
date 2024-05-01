@@ -18,7 +18,7 @@
   "scripts": {
     "test": "echo No tests at this time",
     "dev": "bun build --watch",
-    "build": "rimraf ./dist && tsc && bun ./build.ts",
+    "build": "rimraf ./dist && tsc --outFile ./dist/index-flat.js && tsc --outDir ./dist && bun ./build.ts",
     "generate-docs": "typedoc"
   }
 }

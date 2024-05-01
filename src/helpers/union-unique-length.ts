@@ -6,7 +6,7 @@ import type { LastUniqueInUnion } from './last-unique-in-union'
 /**
  * # 🚫 DO NOT EXPORT
  */
-interface Opts<A extends number = number> extends Internal {
+interface UnionUniqueLengthOpts<A extends number = number> extends Internal {
   value: A
 }
 
@@ -21,10 +21,13 @@ interface Opts<A extends number = number> extends Internal {
  * type Ex2 = UnionUniqueLength<1 | 2 | 1 | 3>         // 3
  * ```
  */
-export type UnionUniqueLength<A, B extends Opts = Opts<0>> =
+export type UnionUniqueLength<
+  A,
+  B extends UnionUniqueLengthOpts = UnionUniqueLengthOpts<0>,
+> =
   IsNever<LastUniqueInUnion<A>> extends true
     ? B['value']
     : UnionUniqueLength<
         Exclude<A, LastUniqueInUnion<A>>,
-        Opts<Increment<B['value']>>
+        UnionUniqueLengthOpts<Increment<B['value']>>
       >

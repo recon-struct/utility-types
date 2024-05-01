@@ -16,7 +16,7 @@ import type { Override } from '~/object/override'
  * # 🚫 DO NOT EXPORT
  * @internal
  */
-interface Opts<
+interface SliceOpts<
   A extends AnyArray = AnyArray,
   B extends number = number,
   C extends number = number,
@@ -46,7 +46,7 @@ export type Slice<
   A extends AnyArray,
   B extends number = 0,
   C extends number = LengthProp<A>,
-  D extends Opts = Opts<
+  D extends SliceOpts = SliceOpts<
     [],
     If<IsNegative<B>, Subtract<LengthProp<A>, Absolute<B>>, B>,
     If<IsNegative<C>, Subtract<LengthProp<A>, Absolute<C>>, C>,

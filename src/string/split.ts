@@ -3,7 +3,7 @@ import type { Internal } from '../helpers/internal'
 /**
  * # 🚫 DO NOT EXPORT
  */
-interface Opts<A extends string[] = string[]> extends Internal {
+interface SplitOpts<A extends string[] = string[]> extends Internal {
   value: A
 }
 
@@ -21,13 +21,13 @@ interface Opts<A extends string[] = string[]> extends Internal {
 export type Split<
   A extends string,
   B extends string = '',
-  Z extends Opts = Opts<[]>,
+  Z extends SplitOpts = SplitOpts<[]>,
 > = B extends ''
   ? A extends `${infer D}${infer E}`
-    ? Split<E, B, Opts<[...Z['value'], D]>>
+    ? Split<E, B, SplitOpts<[...Z['value'], D]>>
     : Z['value']
   : A extends `${string}${B}${string}`
     ? A extends `${infer D}${B}${infer E}`
-      ? Split<E, B, Opts<[...Z['value'], D]>>
+      ? Split<E, B, SplitOpts<[...Z['value'], D]>>
       : never
     : [...Z['value'], A]
