@@ -14,7 +14,7 @@ interface UnionUniqueLengthOpts<A extends number = number> extends Internal {
  * Calculates the length of a union type with unique elements.
  *
  * @typeParam A - The union type to calculate the length of.
- * @group Type Set
+ * @internal
  * @example
  * ```
  * type Ex1 = UnionUniqueLength<'a' | 'b' | 'a' | 'c'> // 3

@@ -3,6 +3,7 @@
  * `A ∩ B` of `A` and `B`
  * @typeParam A - The first set.
  * @typeParam B - The second set.
- * @group Type Set
+ * @internal
+ * @experimental
  */
 export type Intersection<A, B> = A & B

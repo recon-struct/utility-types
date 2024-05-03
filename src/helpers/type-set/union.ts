@@ -4,6 +4,7 @@
  * `A ∪ B` of `A` and `B`
  * @typeParam A - The union to compare.
  * @typeParam B - The union to compare.
- * @group Type Set
+ * @internal
+ * @experimental
  */
 export type Union<A, B> = A | B

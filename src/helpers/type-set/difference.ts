@@ -7,6 +7,7 @@ import type { Union } from './union'
  * `A △ B` of `A` and `B`
  * @typeParam A - The union to compare.
  * @typeParam B - The union to compare.
- * @group Type Set
+ * @internal
+ * @experimental
  */
 export type Difference<A, B> = Exclude<Union<A, B>, Intersection<A, B>>

@@ -4,6 +4,7 @@
  * `B \ A` of `A` and `B`
  * @typeParam A - The union to remove from.
  * @typeParam B - The union to remove.
- * @group Type Set
+ * @internal
+ * @experimental
  */
 export type Complement<A, B> = Exclude<A, B>

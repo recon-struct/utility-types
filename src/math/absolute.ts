@@ -1,6 +1,7 @@
+import type { If } from '~/logic/if'
 import type { ConsumeRight } from '~/string/consume-right'
 import type { ToNaturalNumber } from '~/string/to-natural-number'
-import type { If, IsNatural } from '..'
+import type { IsNatural } from './antecedent/is-natural'
 
 /**
  * Calculates the absolute value of a number.

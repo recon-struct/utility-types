@@ -1,7 +1,6 @@
 export * from './any'
 export * from './function'
 export * from './generator'
-export * from './helpers/type-set'
 export * from './identity'
 export * from './literal'
 export * from './logic'

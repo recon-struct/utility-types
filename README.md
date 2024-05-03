@@ -13,4 +13,9 @@ than it would have otherwise.
 
 ## 🌐 Links
 
+- [Repository](https://github.com/recon-struct/utility-types)
 - [Documentation](https://recon-struct.github.io/utility-types)
+
+### Blog Series
+
+- [Logic](https://blog.hox.io/articles/2024-05-01)
