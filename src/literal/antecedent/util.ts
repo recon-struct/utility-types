@@ -6,7 +6,7 @@ import type { Xor } from '../../logic/antecedent/xor'
  * @typeParam A - The first type to compare.
  * @typeParam B - The second type to compare.
  * @group Antecedent
- * @group Primitives
+ * @group Literal
  * @example
  * ```
  * type Ex1 = IsExtensionAndNotEqual<1, number>      // true

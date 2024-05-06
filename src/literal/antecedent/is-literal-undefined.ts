@@ -3,7 +3,7 @@ import type { IsExtension } from '../../any/antecedent/is-extension'
 /**
  * If `A extends undefined` then `true` else `false`
  * @group Antecedent
- * @group Primitives
+ * @group Literal
  * @example
  * ```
  * type Ex1 = IsLiteralUndefined<undefined> // true

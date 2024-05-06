@@ -1,10 +1,10 @@
-import type { IsExtension } from '../../any/antecedent/is-extension'
+import type { IsEqual } from '~/any/antecedent'
 
 /**
  * Checks if the given type `A` is a literal null.
  * @typeParam A - The type to check.
  * @group Antecedent
- * @group Primitives
+ * @group Literal
  * @example
  * ```
  * type Ex1 = IsLiteralNull<null> // true
@@ -13,4 +13,4 @@ import type { IsExtension } from '../../any/antecedent/is-extension'
  * type Ex4 = IsLiteralNull<never> // false
  * ```
  */
-export type IsLiteralNull<A> = IsExtension<A, null>
+export type IsLiteralNull<A> = IsEqual<A, null>

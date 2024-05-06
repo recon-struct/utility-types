@@ -5,7 +5,8 @@ import type { IsLiteralSymbol } from './is-literal-symbol'
 /**
  * Checks if the type `A` is a literal key such as could index an object.
  * @typeParam A - The type to check.
- * @group Primitives
+ * @group Antecedent
+ * @group Literal
  * @example
  * ```
  * const MY_SYMBOL = Symbol()

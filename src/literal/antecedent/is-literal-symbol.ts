@@ -4,7 +4,7 @@ import type { IsExtensionAndNotEqual } from './util'
  * Checks if the given type `A` is a literal symbol.
  * @typeParam A - The type to check.
  * @group Antecedent
- * @group Primitives
+ * @group Literal
  * @example
  * ```
  * const MY_SYMBOL = Symbol()
