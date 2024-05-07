@@ -1,5 +1,4 @@
 import type { If } from '~/logic/if'
-import type { IsTrue } from './is-true'
 
 /**
  * Evaluate `¬A`
@@ -11,4 +10,4 @@ import type { IsTrue } from './is-true'
  * type Ex2 = Not<false> // true
  * ```
  */
-export type Not<A extends boolean> = If<IsTrue<A>, false, true>
+export type Not<A extends boolean> = If<A, false, true>

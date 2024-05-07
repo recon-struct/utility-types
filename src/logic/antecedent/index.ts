@@ -1,4 +1,6 @@
 export * from './and'
+export * from './is-false'
+export * from './is-true'
 export * from './not'
 export * from './or'
 export * from './xor'

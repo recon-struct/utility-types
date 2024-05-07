@@ -13,8 +13,4 @@ import type { IsTrue } from './is-true'
  * type Ex4 = Or<false, false> // false
  * ```
  */
-export type Or<A extends boolean, B extends boolean> = If<
-  IsTrue<A>,
-  true,
-  IsTrue<B>
->
+export type Or<A extends boolean, B extends boolean> = If<A, true, IsTrue<B>>
