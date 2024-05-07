@@ -19,3 +19,4 @@ than it would have otherwise.
 ### Blog Series
 
 - [Logic](https://blog.hox.io/articles/2024-05-01)
+- [Literal](https://blog.hox.io/articles/2024-05-06)
