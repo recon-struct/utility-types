@@ -36,7 +36,7 @@ export interface DeepObject {
 export type GetKeys<
   A extends DeepObject,
   B extends string = '.',
-  C extends GetKeysOpts = GetKeysOpts<undefined>,
+  C extends GetKeysOpts = GetKeysOpts<''>,
 > = A extends object
   ? {
       [D in KeyOf<A>]: A[D] extends object

@@ -1,39 +1,27 @@
 {
+  "include": ["src/**/*.ts"],
   "compilerOptions": {
-    // Enable latest features
-    "lib": ["ESNext"],
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleDetection": "force",
-    "jsx": "react-jsx",
-    "allowJs": true,
-
-    // Bundler mode
-    "moduleResolution": "bundler",
-    // "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
-    // NOTE comment out the following line to enable emitting declaration files
-    // "noEmit": true,
-
-    // Best practices
+    /* Strict Type-Checking Options */
     "strict": true,
-    "skipLibCheck": true,
-    "noFallthroughCasesInSwitch": true,
-
-    // Some stricter flags (disabled by default)
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noPropertyAccessFromIndexSignature": false,
-
-    // NOTE added this section to enable emitting declaration files
-    // Declaration files
-    "declaration": true,
-    "emitDeclarationOnly": true,
-    "outDir": "dist",
-    "rootDir": "src",
+    /* Others */
+    "lib": ["dom", "es2017"],
+    "types": [],
+    "outDir": "out/", // target for compiled files
+    "target": "es5",
+    "jsx": "react", // process JSX
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "declaration": true, // emit declarations
+    "importHelpers": false, // importing helper functions from tslib
+    "noEmitHelpers": false, // disable emitting inline helper functions
+    "noEmitOnError": true,
+    // "noUnusedLocals": true,
+    "pretty": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "stripInternal": true,
     "paths": {
       "~/*": ["./src/*"]
     }
-  },
-  "include": ["src"]
+  }
 }
