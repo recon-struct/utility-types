@@ -11,40 +11,37 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          node-version: 6.10.0
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: install, build, and test
-        run: |
-          npm install
-          npm run build
-          npm test
-      - name: upload artifacts
-        uses: actions/upload-artifact@v4
+          cache: 'pnpm'
+      - run: pnpm install
+      - run: pnpm build
+      - run: pnpm test
+      - uses: actions/upload-artifact@v4
         with:
           name: distribution
           path: dist
-          
 
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 6.10.0
+      - uses: actions/setup-node@v3
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
-      - name: Get Artifacts
-        uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v4
         with:
           name: distribution
-      - name: Publihs
-        run: npm publish --access public
+      - name: pnpm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
