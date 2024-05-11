@@ -1,8 +1,12 @@
+A repository of TypeScript utility types created by the 𝔯𝔢𝔠𝔬𝔫-𝔰𝔱𝔯𝔲𝔠𝔱 consortium.
+
+[![Node.js CI](https://github.com/recon-struct/utility-types/actions/workflows/node.js.yml/badge.svg)](https://github.com/recon-struct/utility-types/actions/workflows/node.js.yml)
+
 ![recon-struct logo](https://avatars.githubusercontent.com/u/168223311?s=300)
 
 # 𝔯𝔢𝔠𝔬𝔫-𝔰𝔱𝔯𝔲𝔠𝔱 / utility types
 
-A repository of TypeScript utility types.
+This is a library of utility types that supercharge your TypeScript development
 
 ## 🤨 Why?
 
