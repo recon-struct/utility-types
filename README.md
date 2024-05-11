@@ -1,6 +1,6 @@
 A repository of TypeScript utility types created by the 𝔯𝔢𝔠𝔬𝔫-𝔰𝔱𝔯𝔲𝔠𝔱 consortium.
 
-[![Tests](https://github.com/recon-struct/utility-types/actions/workflows/node.js.yml/badge.svg)](https://github.com/recon-struct/utility-types/actions/workflows/node.js.yml)
+[![Run tests](https://github.com/recon-struct/utility-types/actions/workflows/run-tests.js.yml/badge.svg)](https://github.com/recon-struct/utility-types/actions/workflows/run-tests.js.yml)
 
 ![recon-struct logo](https://avatars.githubusercontent.com/u/168223311?s=300)
 
