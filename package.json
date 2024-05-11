@@ -26,5 +26,5 @@
   "files": [
     "./dist/*"
   ],
-  "packageManager": "^pnpm@6.10.0"
+  "packageManager": "pnpm@9.1.0"
 }
