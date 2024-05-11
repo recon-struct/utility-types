@@ -6,7 +6,7 @@ A repository of TypeScript utility types created by the 𝔯𝔢𝔠𝔬𝔫-�
 
 # 𝔯𝔢𝔠𝔬𝔫-𝔰𝔱𝔯𝔲𝔠𝔱 / utility types
 
-This is a library of utility types that supercharge your TypeScript development
+This is a library of utility types that supercharge your TypeScript development.
 
 ## 🤨 Why?
 
