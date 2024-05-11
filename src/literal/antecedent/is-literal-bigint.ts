@@ -1,4 +1,4 @@
-import type { IsExtensionAndNotEqual } from './util'
+import type { IsExtensionAndNotEqual } from '../../helpers/is-extension-and-not-equal'
 
 /**
  * Checks if the given type `A` is a literal bigint.

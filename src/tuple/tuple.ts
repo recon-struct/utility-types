@@ -1,9 +1,6 @@
 import type { AnyArray } from '../any/any-array'
 import type { LengthProp } from '../object/length-prop'
 
-/**
- * @internal
- */
 export interface TupleOpts<A extends AnyArray = AnyArray> {
   value: A
 }

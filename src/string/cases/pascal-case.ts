@@ -1,6 +1,3 @@
-/**
- * @internal
- */
 export interface PascalCaseOpts<A extends string = string> {
   value: A
 }

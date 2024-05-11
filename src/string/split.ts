@@ -1,6 +1,3 @@
-/**
- * @internal
- */
 export interface SplitOpts<A extends string[] = string[]> {
   value: A
 }

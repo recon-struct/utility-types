@@ -4,14 +4,11 @@ import type { ToStringInterface } from '~/helpers/to-string-interface'
 import type { IsEmptyString } from '~/identity/antecedent'
 import type { If } from '~/logic/if'
 
-/**
- * @internal
- */
 export interface JoinOpts<A extends string = string> {
   value: A
 }
 
-type StringLike = AnyStringish | ToStringInterface
+export type StringLike = AnyStringish | ToStringInterface
 
 /**
  * Join a tuple of templatables `A` on a templatable `B`

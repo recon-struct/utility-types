@@ -11,9 +11,6 @@ import type { Subtract } from '~/math/subtract'
 import type { LengthProp } from '~/object/length-prop'
 import type { Override } from '~/object/override'
 
-/**
- * @internal
- */
 export interface SliceOpts<
   A extends AnyArray = AnyArray,
   B extends number = number,

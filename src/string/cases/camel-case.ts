@@ -1,6 +1,3 @@
-/**
- * @internal
- */
 export interface CamelCaseOpts<A extends string = string> {
   value: A
 }

@@ -1,8 +1,8 @@
 import { Or } from '~/logic/antecedent'
 import { If } from '~/logic/if'
 import { IsEmptyObject } from '~/object/antecedent'
-import type { IsExtension } from '../../any/antecedent/is-extension'
-import type { Xor } from '../../logic/antecedent/xor'
+import type { IsExtension } from '../any/antecedent/is-extension'
+import type { Xor } from '../logic/antecedent/xor'
 
 /**
  * Checks if type `A` extends type `B` and is not equal to type `B`.

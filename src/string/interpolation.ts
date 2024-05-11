@@ -1,9 +1,6 @@
 import type { Capture } from './capture'
 import type { CaptureGroup } from './utils'
 
-/**
- * @internal
- */
 export interface InterpolationOpts<
   A extends string = string,
   B extends string = string,

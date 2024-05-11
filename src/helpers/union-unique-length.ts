@@ -2,9 +2,6 @@ import type { IsNever } from '~/any/antecedent/is-never'
 import type { Increment } from '../math'
 import type { LastUniqueInUnion } from './last-unique-in-union'
 
-/**
- * @internal
- */
 export interface UnionUniqueLengthOpts<A extends number = number> {
   value: A
 }
@@ -13,7 +10,6 @@ export interface UnionUniqueLengthOpts<A extends number = number> {
  * Calculates the length of a union type with unique elements.
  *
  * @typeParam A - The union type to calculate the length of.
- * @internal
  * @example
  * ```
  * type Ex1 = UnionUniqueLength<'a' | 'b' | 'a' | 'c'> // 3

@@ -1,8 +1,5 @@
 import type { AnyArray } from '../any/any-array'
 
-/**
- * @internal
- */
 export interface ReverseOpts<A extends AnyArray = AnyArray> {
   value: A
 }

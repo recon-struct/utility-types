@@ -1,3 +1,4 @@
+export * from '../../helpers/is-extension-and-not-equal'
 export * from './is-literal-bigint'
 export * from './is-literal-boolean'
 export * from './is-literal-key'

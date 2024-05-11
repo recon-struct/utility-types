@@ -4,9 +4,6 @@ import type { Join } from '../tuple/join'
 import type { IsEmptyObject } from './antecedent'
 import type { KeyOf } from './key-of'
 
-/**
- * @internal
- */
 export interface GetKeysOpts<
   A extends string | undefined = string | undefined,
 > {

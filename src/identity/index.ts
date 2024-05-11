@@ -1,6 +1,7 @@
 export * from './antecedent'
 export * from './array-concat-identity'
 export * from './bigint-add-identity'
+export * from './bigint-mult-identity'
 export * from './num-add-identity'
 export * from './num-mult-identity'
 export * from './object-assign-identity'

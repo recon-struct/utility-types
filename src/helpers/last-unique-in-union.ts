@@ -4,7 +4,6 @@ import type { OuterWrapMap } from './outer-wrap-map'
 /**
  * Extracts the last unique type from a union type.
  * @typeParam A - The union type from which to extract the last unique type.
- * @internal
  */
 export type LastUniqueInUnion<A> =
   (

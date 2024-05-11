@@ -1,8 +1,5 @@
 import type { CaptureGroup } from './utils'
 
-/**
- * @internal
- */
 export interface CaptureOpts<A extends string = string> {
   value: A
 }

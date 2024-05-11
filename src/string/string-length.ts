@@ -1,9 +1,6 @@
 import type { IsLiteralString } from '../literal/antecedent/is-literal-string'
 import type { Increment } from '../math/increment'
 
-/**
- * @internal
- */
 export interface StringLengthOpts<A extends number = number> {
   value: A
 }
