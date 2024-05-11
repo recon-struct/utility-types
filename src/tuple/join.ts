@@ -1,11 +1,13 @@
 import type { AnyStringish } from '~/any/any-stringish'
 import type { ToString } from '~/any/to-string'
-import type { Internal } from '~/helpers/internal'
 import type { ToStringInterface } from '~/helpers/to-string-interface'
 import type { IsEmptyString } from '~/identity/antecedent'
 import type { If } from '~/logic/if'
 
-interface JoinOpts<A extends string = string> extends Internal {
+/**
+ * @internal
+ */
+export interface JoinOpts<A extends string = string> {
   value: A
 }
 

@@ -12,7 +12,12 @@ import type { ArrayConcatIdentity } from '../array-concat-identity'
  * type Ex2 = IsArrayIdentity<[true]> // false
  * ```
  */
-export type IsArrayIdentity<A> = IsEqual<A, ArrayConcatIdentity>
+export type IsArrayConcatIdentity<A> = IsEqual<A, ArrayConcatIdentity>
+
+/**
+ * @deprecated - Use `IsArrayConcatIdentity` instead.
+ */
+export type IsArrayIdentity<A> = IsArrayConcatIdentity<A>
 
 /**
  * Alias for `IsArrayIdentity`
@@ -20,4 +25,4 @@ export type IsArrayIdentity<A> = IsEqual<A, ArrayConcatIdentity>
  * @group Antecedent
  * @group Identity
  */
-export type IsEmptyArray<A> = IsArrayIdentity<A>
+export type IsEmptyArray<A> = IsArrayConcatIdentity<A>

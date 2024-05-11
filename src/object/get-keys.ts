@@ -1,15 +1,15 @@
 import type { AnyKey } from '../any/any-key'
 import type { AnyPrimitive } from '../any/any-primitive'
-import type { Internal } from '../helpers/internal'
 import type { Join } from '../tuple/join'
 import type { IsEmptyObject } from './antecedent'
 import type { KeyOf } from './key-of'
 
 /**
- * # 🚫 DO NOT EXPORT
+ * @internal
  */
-interface GetKeysOpts<A extends string | undefined = string | undefined>
-  extends Internal {
+export interface GetKeysOpts<
+  A extends string | undefined = string | undefined,
+> {
   value: A
 }
 

@@ -4,11 +4,24 @@ import type { Add } from '../math/add'
 import type { Decrement } from '../math/decrement'
 
 /**
- * # 🚫 DO NOT EXPORT FROM src/index.ts
- * Repeated addition utility function used in multiplication
  * @internal
  */
-export type MultiAdd<A extends number, B extends number, C extends number = 0> =
+export interface MultiAddOpts<A extends number = number> {
+  value: A
+}
+
+/**
+ * Repeated addition utility function used in multiplication
+ * @typeParam A - The first number.
+ * @typeParam B - The second number.
+ * @typeParam C - The accumulator.
+ * @internal
+ */
+export type MultiAdd<
+  A extends number,
+  B extends number,
+  C extends MultiAddOpts = MultiAddOpts<0>,
+> =
   Or<IsZero<A>, IsZero<B>> extends true
-    ? C
-    : MultiAdd<A, Decrement<B>, Add<A, C>>
+    ? C['value']
+    : MultiAdd<A, Decrement<B>, MultiAddOpts<Add<A, C['value']>>>

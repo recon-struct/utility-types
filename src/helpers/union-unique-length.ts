@@ -1,12 +1,11 @@
 import type { IsNever } from '~/any/antecedent/is-never'
 import type { Increment } from '../math'
-import type { Internal } from './internal'
 import type { LastUniqueInUnion } from './last-unique-in-union'
 
 /**
- * # 🚫 DO NOT EXPORT
+ * @internal
  */
-interface UnionUniqueLengthOpts<A extends number = number> extends Internal {
+export interface UnionUniqueLengthOpts<A extends number = number> {
   value: A
 }
 

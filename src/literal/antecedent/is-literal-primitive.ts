@@ -1,4 +1,6 @@
+import { IsNever } from '~/any/antecedent'
 import type { IsLiteralBigInt } from './is-literal-bigint'
+import { IsLiteralBoolean } from './is-literal-boolean'
 import type { IsLiteralNull } from './is-literal-null'
 import type { IsLiteralNumber } from './is-literal-number'
 import type { IsLiteralString } from './is-literal-string'
@@ -10,6 +12,7 @@ import type { IsLiteralUndefined } from './is-literal-undefined'
  * @typeParam A - The type to check.
  * @group Antecedent
  * @group Literal
+ * @privateRemarks TODO see why the boolean check is needed first
  * @example
  * ```
  * const MY_SYMBOL = Symbol()
@@ -26,18 +29,21 @@ import type { IsLiteralUndefined } from './is-literal-undefined'
  * type Ex10 = IsLiteralPrimitive<bigint>          // false
  * ```
  */
-export type IsLiteralPrimitive<A> = A extends any
-  ? A extends string
-    ? IsLiteralString<A>
-    : A extends number
-      ? IsLiteralNumber<A>
-      : A extends symbol
-        ? IsLiteralSymbol<A>
+export type IsLiteralPrimitive<A> =
+  IsLiteralBoolean<A> extends true
+    ? true
+    : IsNever<A> extends true
+      ? false
+      : A extends undefined
+        ? IsLiteralUndefined<A>
         : A extends null
           ? IsLiteralNull<A>
-          : A extends undefined
-            ? IsLiteralUndefined<A>
-            : A extends bigint
-              ? IsLiteralBigInt<A>
-              : false
-  : false
+          : A extends string
+            ? IsLiteralString<A>
+            : A extends number
+              ? IsLiteralNumber<A>
+              : A extends bigint
+                ? IsLiteralBigInt<A>
+                : A extends symbol
+                  ? IsLiteralSymbol<A>
+                  : false

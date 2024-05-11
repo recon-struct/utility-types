@@ -1,3 +1,6 @@
+import { Or } from '~/logic/antecedent'
+import { If } from '~/logic/if'
+import { IsEmptyObject } from '~/object/antecedent'
 import type { IsExtension } from '../../any/antecedent/is-extension'
 import type { Xor } from '../../logic/antecedent/xor'
 
@@ -15,7 +18,8 @@ import type { Xor } from '../../logic/antecedent/xor'
  * type Ex4 = IsExtensionAndNotEqual<number, number> // false
  * ```
  */
-export type IsExtensionAndNotEqual<A, B> = Xor<
-  IsExtension<A, B>,
-  IsExtension<B, A>
+export type IsExtensionAndNotEqual<A, B> = If<
+  Or<IsEmptyObject<A>, IsEmptyObject<B>>,
+  false,
+  Xor<IsExtension<A, B>, IsExtension<B, A>>
 >

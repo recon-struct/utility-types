@@ -1,10 +1,9 @@
-import type { Internal } from '../helpers/internal'
 import type { CaptureGroup } from './utils'
 
 /**
- * # 🚫 DO NOT EXPORT
+ * @internal
  */
-interface CaptureOpts<A extends string = string> extends Internal {
+export interface CaptureOpts<A extends string = string> {
   value: A
 }
 

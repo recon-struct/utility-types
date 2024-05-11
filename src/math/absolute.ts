@@ -4,7 +4,7 @@ import type { ToNaturalNumber } from '~/string/to-natural-number'
 import type { IsNatural } from './antecedent/is-natural'
 
 /**
- * Calculates the absolute value of a number.
+ * Calculates the absolute value of `A`, where `A ∈ ℕ`.
  * @typeParam A - The input number.
  * @group Math
  * @experimental

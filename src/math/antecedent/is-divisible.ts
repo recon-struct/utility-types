@@ -1,3 +1,5 @@
+import { IsLiteralNumber } from '~/literal/antecedent'
+import { And } from '~/logic/antecedent/and'
 import type { IsZero } from '../../identity/antecedent/is-num-add-identity'
 import type { Modulo } from '../modulo'
 
@@ -13,6 +15,7 @@ import type { Modulo } from '../modulo'
  * type Ex2 = IsDivisible<11, 3> // false
  * ```
  */
-export type IsDivisible<A extends number, B extends number> = IsZero<
-  Modulo<A, B>
->
+export type IsDivisible<A extends number, B extends number> =
+  And<IsLiteralNumber<A>, IsLiteralNumber<B>> extends true
+    ? IsZero<Modulo<A, B>>
+    : false

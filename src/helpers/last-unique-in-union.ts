@@ -2,7 +2,6 @@ import type { InnerWrapMap } from './inner-wrap-map'
 import type { OuterWrapMap } from './outer-wrap-map'
 
 /**
- * # 🚫 DO NOT EXPORT FROM src/index.ts
  * Extracts the last unique type from a union type.
  * @typeParam A - The union type from which to extract the last unique type.
  * @internal

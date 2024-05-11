@@ -12,7 +12,12 @@ import type { StringConcatIdentity } from '../string-concat-identity'
  * type Ex2 = IsStringIdentity<'abc'> // false
  * ```
  */
-export type IsStringIdentity<A> = IsEqual<A, StringConcatIdentity>
+export type IsStringConcatIdentity<A> = IsEqual<A, StringConcatIdentity>
+
+/**
+ * @deprecated - Use `IsStringConcatIdentity` instead.
+ */
+export type IsStringIdentity<A> = IsStringConcatIdentity<A>
 
 /**
  * Alias for `IsStringIdentity`
@@ -20,4 +25,4 @@ export type IsStringIdentity<A> = IsEqual<A, StringConcatIdentity>
  * @group Antecedent
  * @group Identity
  */
-export type IsEmptyString<A> = IsStringIdentity<A>
+export type IsEmptyString<A> = IsStringConcatIdentity<A>

@@ -1,9 +1,7 @@
-import type { Internal } from '../helpers/internal'
-
 /**
- * # 🚫 DO NOT EXPORT
+ * @internal
  */
-interface SplitOpts<A extends string[] = string[]> extends Internal {
+export interface SplitOpts<A extends string[] = string[]> {
   value: A
 }
 

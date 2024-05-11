@@ -13,5 +13,8 @@ import type { IsExtension } from '../../any/antecedent/is-extension'
  */
 export type IsFloat<A extends number> = IsExtension<
   `${A}`,
-  `${number}.${number}`
+  | `${number}.${number}`
+  | `${number}.${number}e${number}`
+  | `${number}.${number}e+${number}`
+  | `${number}.${number}e-${number}`
 >

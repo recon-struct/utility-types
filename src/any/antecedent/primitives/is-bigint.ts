@@ -6,8 +6,13 @@ import type { IsExtension } from '../is-extension'
  * @group Any
  * @example
  * ```
- * type Ex1 = IsBigint<1n> // true
- * type Ex2 = IsBigint<1>  // false
+ * type Ex1 = IsBigInt<1n> // true
+ * type Ex2 = IsBigInt<1>  // false
  * ```
  */
-export type IsBigint<A> = IsExtension<A, bigint>
+export type IsBigInt<A> = IsExtension<A, bigint>
+
+/**
+ * @deprecated - Use `IsBigInt` instead
+ */
+export type IsBigint<A> = IsBigInt<A>

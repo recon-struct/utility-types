@@ -1,4 +1,4 @@
-import type { BigintAdditiveIdentity } from '../identity/bigint-additive-identity'
+import type { BigIntAddIdentity } from '../identity/bigint-add-identity'
 import type { NumAddIdentity } from '../identity/num-add-identity'
 import type { StringConcatIdentity } from '../identity/string-concat-identity'
 
@@ -14,6 +14,6 @@ export type AnyFalsy =
   | false
   | StringConcatIdentity
   | NumAddIdentity
-  | BigintAdditiveIdentity
+  | BigIntAddIdentity
   | null
   | undefined

@@ -1,14 +1,13 @@
-import type { Internal } from '../helpers/internal'
 import type { Capture } from './capture'
 import type { CaptureGroup } from './utils'
 
 /**
- * # 🚫 DO NOT EXPORT
+ * @internal
  */
-interface InterpolationOpts<
+export interface InterpolationOpts<
   A extends string = string,
   B extends string = string,
-> extends Internal {
+> {
   value: A
   variables: B
 }

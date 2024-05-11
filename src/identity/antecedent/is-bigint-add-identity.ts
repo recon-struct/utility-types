@@ -1,5 +1,5 @@
 import type { IsExtension } from '../../any'
-import type { NumAddIdentity } from '../num-add-identity'
+import { BigIntAddIdentity } from '../bigint-add-identity'
 
 /**
  * If `A ≡ 0n` then `true` else `false`
@@ -8,8 +8,13 @@ import type { NumAddIdentity } from '../num-add-identity'
  * @group Identity
  * @example
  * ```
- * type Ex1 = IsBigintAddIdentity<0n> // true
- * type Ex2 = IsBigintAddIdentity<2n> // false
+ * type Ex1 = IsBigIntAddIdentity<0n> // true
+ * type Ex2 = IsBigIntAddIdentity<2n> // false
  * ```
  */
-export type IsBigintAddIdentity<A> = IsExtension<A, NumAddIdentity>
+export type IsBigIntAddIdentity<A> = IsExtension<A, BigIntAddIdentity>
+
+/**
+ * @deprecated - Use `IsBigIntAddIdentity` instead.
+ */
+export type IsBigintAddIdentity<A> = IsBigIntAddIdentity<A>

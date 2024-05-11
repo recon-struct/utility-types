@@ -1,10 +1,9 @@
 import type { AnyArray } from '../any/any-array'
-import type { Internal } from '../helpers/internal'
 
 /**
- * # 🚫 DO NOT EXPORT
+ * @internal
  */
-interface ReverseOpts<A extends AnyArray = AnyArray> extends Internal {
+export interface ReverseOpts<A extends AnyArray = AnyArray> {
   value: A
 }
 

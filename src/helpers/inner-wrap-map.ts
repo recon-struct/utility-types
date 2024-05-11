@@ -1,5 +1,4 @@
 /**
- * # 🚫 DO NOT EXPORT FROM src/index.ts
  * Represents a type that wraps another type in a function.
  * @typeParam A - The type to be wrapped.
  * @internal

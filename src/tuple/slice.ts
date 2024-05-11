@@ -1,5 +1,4 @@
 import type { AnyArray } from '~/any/any-array'
-import type { Internal } from '~/helpers/internal'
 import type { And } from '~/logic/antecedent/and'
 import type { Or } from '~/logic/antecedent/or'
 import type { If } from '~/logic/if'
@@ -13,15 +12,14 @@ import type { LengthProp } from '~/object/length-prop'
 import type { Override } from '~/object/override'
 
 /**
- * # 🚫 DO NOT EXPORT
  * @internal
  */
-interface SliceOpts<
+export interface SliceOpts<
   A extends AnyArray = AnyArray,
   B extends number = number,
   C extends number = number,
   D extends number = number,
-> extends Internal {
+> {
   value: A
   startIndex: B
   endIndex: C

@@ -1,5 +1,5 @@
 import type { IsEqual } from '../../any/antecedent/is-equal'
-import type { ObjectIntersectionIdenity } from '../object-intersection-identity'
+import type { ObjectAssignIdentity } from '../object-assign-identity'
 
 /**
  * If `A ≡ {}` then `true` else `false`
@@ -12,4 +12,9 @@ import type { ObjectIntersectionIdenity } from '../object-intersection-identity'
  * type Ex2 = IsObjectIdentity<{ a: true }> // false
  * ```
  */
-export type IsObjectIdentity<A> = IsEqual<A, ObjectIntersectionIdenity>
+export type IsObjectAssignIdentity<A> = IsEqual<A, ObjectAssignIdentity>
+
+/**
+ * @deprecated - Use `IsObjectAssignIdentity` instead.
+ */
+export type IsObjectIdentity<A> = IsObjectAssignIdentity<A>

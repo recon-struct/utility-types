@@ -1,7 +1,7 @@
 /**
- * # 🚫 DO NOT EXPORT
+ * @internal
  */
-interface PascalCaseOpts<A extends string = string> {
+export interface PascalCaseOpts<A extends string = string> {
   value: A
 }
 

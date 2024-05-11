@@ -1,3 +1,4 @@
+import { IsNever } from '~/any/antecedent/is-never'
 import type { IsLiteralNumber } from './is-literal-number'
 import type { IsLiteralString } from './is-literal-string'
 import type { IsLiteralSymbol } from './is-literal-symbol'
@@ -19,12 +20,13 @@ import type { IsLiteralSymbol } from './is-literal-symbol'
  * type Ex6 = IsLiteralKey<symbol>           // false
  * ```
  */
-export type IsLiteralKey<A> = A extends any
-  ? A extends string
-    ? IsLiteralString<A>
-    : A extends number
-      ? IsLiteralNumber<A>
-      : A extends symbol
-        ? IsLiteralSymbol<A>
-        : false
-  : false
+export type IsLiteralKey<A> =
+  IsNever<A> extends true
+    ? false
+    : A extends string
+      ? IsLiteralString<A>
+      : A extends number
+        ? IsLiteralNumber<A>
+        : A extends symbol
+          ? IsLiteralSymbol<A>
+          : false

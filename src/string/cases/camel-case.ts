@@ -1,7 +1,7 @@
 /**
- * # 🚫 DO NOT EXPORT
+ * @internal
  */
-interface CamelCaseOpts<A extends string = string> {
+export interface CamelCaseOpts<A extends string = string> {
   value: A
 }
 

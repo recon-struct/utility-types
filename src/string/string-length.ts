@@ -1,11 +1,10 @@
-import type { Internal } from '../helpers/internal'
 import type { IsLiteralString } from '../literal/antecedent/is-literal-string'
 import type { Increment } from '../math/increment'
 
 /**
- * # 🚫 DO NOT EXPORT
+ * @internal
  */
-interface StringLengthOpts<A extends number = number> extends Internal {
+export interface StringLengthOpts<A extends number = number> {
   value: A
 }
 

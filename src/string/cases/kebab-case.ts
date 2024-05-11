@@ -3,9 +3,9 @@ import type { IsCaseSensitive } from '../antecedent/is-case-sensitive'
 import type { IsUppercase } from '../antecedent/is-uppercase'
 
 /**
- * # 🚫 DO NOT EXPORT
+ * @internal
  */
-interface KebabCaseOpts<A extends string = string> {
+export interface KebabCaseOpts<A extends string = string> {
   value: A
 }
 

@@ -9,8 +9,8 @@
     "outDir": "out/", // target for compiled files
     "target": "es5",
     "jsx": "react", // process JSX
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "module": "Preserve",
+    "moduleResolution": "bundler",
     "declaration": true, // emit declarations
     "importHelpers": false, // importing helper functions from tslib
     "noEmitHelpers": false, // disable emitting inline helper functions

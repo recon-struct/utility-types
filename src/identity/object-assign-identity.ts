@@ -11,4 +11,9 @@
  * type Ex = ObjectIdenity // {}
  * ```
  */
-export type ObjectIntersectionIdenity = {}
+export type ObjectAssignIdentity = {}
+
+/**
+ * @deprecated - Use `ObjectAssignIdenity` instead.
+ */
+export type ObjectIntersectionIdentity = ObjectAssignIdentity
