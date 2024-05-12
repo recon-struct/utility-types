@@ -19,13 +19,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
-      - name: Install dependencies
-        run: pnpm install
-      - name: Build
-        run: pnpm build
-      - name: Run tests
-        run: pnpm test
-      - name: Publish
-        run: pnpm publish
+      - run: pnpm install
+      - run: pnpm build
+      - run: pnpm test
+      - run: pnpm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
