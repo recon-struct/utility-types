@@ -1,5 +1,5 @@
+import type { Not } from '~/logic/antecedent/not'
 import type { If } from '~/logic/if'
-import type { Not } from './not'
 
 /**
  * Evaluate `A ⊻ B`

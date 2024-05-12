@@ -1,7 +1,7 @@
+import type { HelperMultiAdd } from '~/helper/multi-add'
+import type { And } from '~/logic/antecedent/and'
 import type { If } from '~/logic/if'
-import type { MultiAdd } from '../helpers/multi-add'
-import type { And } from '../logic/antecedent/and'
-import type { IsNatural } from './antecedent/is-natural'
+import type { IsNatural } from '~/math/antecedent/is-natural'
 
 /**
  * Return the product of `A * B`, where `A ∈ ℕ` and `B ∈ ℕ`.
@@ -17,6 +17,6 @@ import type { IsNatural } from './antecedent/is-natural'
  * */
 export type Multiply<A extends number, B extends number> = If<
   And<IsNatural<A>, IsNatural<B>>,
-  MultiAdd<A, B>,
+  HelperMultiAdd<A, B>,
   number
 >

@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { IsStringConcatIdentity } from './is-string-concat-identity'
+import type { IsStringConcatIdentity } from '~/identity/antecedent/is-string-concat-identity'
 
 describe('IsStringConcatIdentity', () => {
   it('should evaluate if the item is an empty string', () => {

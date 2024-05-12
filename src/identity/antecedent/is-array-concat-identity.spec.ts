@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { IsArrayConcatIdentity } from './is-array-concat-identity'
+import type { IsArrayConcatIdentity } from '~/identity/antecedent/is-array-concat-identity'
 
 describe('IsArrayConcatIdentity', () => {
   it('should evaluate if the item is an empty array', () => {

@@ -1,5 +1,5 @@
-import type { IsEqual } from '../../any/antecedent/is-equal'
-import type { ArrayConcatIdentity } from '../array-concat-identity'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { ArrayConcatIdentity } from '~/identity/array-concat-identity'
 
 /**
  * If `A ≡ []` then `true` else `false`

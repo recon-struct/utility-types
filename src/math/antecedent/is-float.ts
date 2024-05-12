@@ -1,4 +1,4 @@
-import type { IsExtension } from '../../any/antecedent/is-extension'
+import type { IsExtension } from '~/extension/antecedent/is-extension'
 
 /**
  * If the string representation of `A` has a decimal then `true` else `false`

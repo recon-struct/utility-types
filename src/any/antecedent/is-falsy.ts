@@ -1,5 +1,5 @@
-import type { AnyFalsy } from '../any-falsy'
-import type { IsExtension } from './is-extension'
+import type { AnyFalsy } from '~/any/any-falsy'
+import type { IsExtension } from '~/extension/antecedent/is-extension'
 
 /**
  * If `A extends AnyFalsy` then `true` else `false`

@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { ArrayConcatIdentity } from './array-concat-identity'
+import type { ArrayConcatIdentity } from '~/identity/array-concat-identity'
 
 describe('ArrayConcatIdentity', () => {
   it('should equal an empty array', () => {

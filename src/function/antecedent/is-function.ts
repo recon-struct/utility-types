@@ -1,5 +1,5 @@
-import type { IsExtension } from '../../any/antecedent/is-extension'
-import type { AnyFunction } from '../../any/any-function'
+import type { AnyFunction } from '~/any/any-function'
+import type { IsExtension } from '~/extension/antecedent/is-extension'
 
 /**
  * If `A extends AnyFunction` then `true` else `false`

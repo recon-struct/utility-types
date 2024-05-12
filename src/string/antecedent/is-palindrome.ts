@@ -1,9 +1,9 @@
-import type { IsEqual } from '~/any/antecedent/is-equal'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
 import type { IsLiteralString } from '~/literal/antecedent/is-literal-string'
 import type { And } from '~/logic/antecedent/and'
+import type { Split } from '~/string/split'
 import type { Join } from '~/tuple/join'
 import type { Reverse } from '~/tuple/reverse'
-import type { Split } from '../split'
 
 /**
  * Checks if the given string `A` is a IsPalindrome

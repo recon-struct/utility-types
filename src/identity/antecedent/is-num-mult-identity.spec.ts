@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { IsNumMultIdentity } from './is-num-mult-identity'
+import type { IsNumMultIdentity } from '~/identity/antecedent/is-num-mult-identity'
 
 describe('IsNumMultIdentity', () => {
   it('should evaluate if the item is 1', () => {

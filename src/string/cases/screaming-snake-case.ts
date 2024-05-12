@@ -1,4 +1,4 @@
-import type { SnakeCase } from './snake-case'
+import type { SnakeCase } from '~/string/cases/snake-case'
 
 /**
  * Transform string `A` to SCREAMING_SNAKE_CASE split on `B` and uppercase

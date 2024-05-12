@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { BigIntMultIdentity } from './bigint-mult-identity'
+import type { BigIntMultIdentity } from '~/identity/bigint-mult-identity'
 
 describe('BigIntMultIdentity', () => {
   it('should equal 1n', () => {

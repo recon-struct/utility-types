@@ -1,5 +1,5 @@
-import type { AnyKey } from '../any-key'
-import type { IsExtension } from './is-extension'
+import type { AnyKey } from '~/any/any-key'
+import type { IsExtension } from '~/extension/antecedent/is-extension'
 
 /**
  * If `A extends AnyKey` then `true` else `false`

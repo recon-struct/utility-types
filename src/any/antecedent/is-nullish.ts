@@ -1,5 +1,5 @@
-import type { AnyNullish } from '../any-nullish'
-import type { IsExtension } from './is-extension'
+import type { AnyNullish } from '~/any/any-nullish'
+import type { IsExtension } from '~/extension/antecedent/is-extension'
 
 /**
  * If `A extends AnyNullish` then `true` else `false`

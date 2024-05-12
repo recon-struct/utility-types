@@ -1,5 +1,5 @@
-import type { IsExtension } from '../../any/antecedent/is-extension'
-import type { CaptureGroup } from '../utils'
+import type { IsExtension } from '~/extension/antecedent/is-extension'
+import type { CaptureGroup } from '~/string/utils'
 
 /**
  * Evaluate if `A` has a matches CaptureGroup `B`

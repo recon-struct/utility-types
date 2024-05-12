@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { Or } from './or'
+import type { Or } from '~/logic/antecedent/or'
 
 describe('Or', () => {
   it('should evaluate `A ∨ B`', () => {

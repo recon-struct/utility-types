@@ -1,5 +1,5 @@
 import type { If } from '~/logic/if'
-import type { IsLessThan } from './antecedent'
+import type { IsLessThan } from '~/math/antecedent/is-less-than'
 
 /**
  * Returns the maximum value between two numbers, where `A ∈ ℕ` and `B ∈ ℕ`.

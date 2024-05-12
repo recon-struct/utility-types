@@ -1,4 +1,4 @@
-import type { AnyObject } from './any-object'
+import type { AnyObject } from '~/any/any-object'
 
 /**
  * Generic WeakSet interface

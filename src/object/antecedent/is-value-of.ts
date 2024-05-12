@@ -1,5 +1,6 @@
-import type { AnyObject, IsExtension } from '../../any'
-import type { ValueOf } from '../value-of'
+import type { AnyObject } from '~/any/any-object'
+import type { IsExtension } from '~/extension/antecedent/is-extension'
+import type { ValueOf } from '~/object/value-of'
 
 /**
  * If `B extends ValueOf<A>` then `true` else `false`

@@ -1,5 +1,5 @@
-import type { Capture } from './capture'
-import type { CaptureGroup } from './utils'
+import type { Capture } from '~/string/capture'
+import type { CaptureGroup } from '~/string/utils'
 
 export interface InterpolationOpts<
   A extends string = string,

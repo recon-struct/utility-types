@@ -1,4 +1,4 @@
-import type { IsExtension } from '../../any/antecedent/is-extension'
+import type { IsExtension } from '~/extension/antecedent/is-extension'
 
 /**
  * Check if the string `B` is in `A`

@@ -1,5 +1,5 @@
-import type { Not } from '../../logic/antecedent/not'
-import type { IsCaseInsensitive } from './is-case-insensitive'
+import type { Not } from '~/logic/antecedent/not'
+import type { IsCaseInsensitive } from '~/string/antecedent/is-case-insensitive'
 
 /**
  * If `Lowercase<A> extends Uppercase<A>` then `true` else `false`

@@ -1,4 +1,4 @@
-import type { AnyFunction } from '../any'
+import type { AnyFunction } from '~/any/any-function'
 
 /**
  * A generic binary operator interface

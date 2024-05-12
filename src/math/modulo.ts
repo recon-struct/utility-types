@@ -1,8 +1,8 @@
+import type { And } from '~/logic/antecedent/and'
 import type { If } from '~/logic/if'
-import type { And } from '../logic/antecedent/and'
-import type { IsLessThan } from './antecedent/is-less-than'
-import type { IsNatural } from './antecedent/is-natural'
-import type { Subtract } from './subtract'
+import type { IsLessThan } from '~/math/antecedent/is-less-than'
+import type { IsNatural } from '~/math/antecedent/is-natural'
+import type { Subtract } from '~/math/subtract'
 
 /**
  * Evaluate `A % B`, where `A ∈ ℕ` and `B ∈ ℕ`.

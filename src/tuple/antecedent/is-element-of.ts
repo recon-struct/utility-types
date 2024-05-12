@@ -1,6 +1,6 @@
-import type { IsExtension } from '../../any/antecedent/is-extension'
-import type { AnyArray } from '../../any/any-array'
-import type { ElementOf } from '../element-of'
+import type { AnyArray } from '~/any/any-array'
+import type { IsExtension } from '~/extension/antecedent/is-extension'
+import type { ElementOf } from '~/tuple/element-of'
 
 /**
  * If `B extends ElementOf<A>` then `true` else `false`

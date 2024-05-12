@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { IsNonPositive } from './is-non-positive'
+import type { IsNonPositive } from '~/math/antecedent/is-non-positive'
 
 describe('IsNonPositive', () => {
   it('should return true for negative numbers', () => {

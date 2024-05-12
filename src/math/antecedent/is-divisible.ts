@@ -1,7 +1,7 @@
-import { IsLiteralNumber } from '~/literal/antecedent'
-import { And } from '~/logic/antecedent/and'
-import type { IsZero } from '../../identity/antecedent/is-num-add-identity'
-import type { Modulo } from '../modulo'
+import type { IsZero } from '~/identity/antecedent/is-num-add-identity'
+import type { IsLiteralNumber } from '~/literal/antecedent'
+import type { And } from '~/logic/antecedent/and'
+import type { Modulo } from '~/math/modulo'
 
 /**
  * Evaluate `A % B === 0`, where `A ∈ ℕ` and `B ∈ ℕ`

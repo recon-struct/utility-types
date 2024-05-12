@@ -1,5 +1,5 @@
-import type { IsExtension } from '../../any'
-import type { NumMultIdentity } from '../num-mult-identity'
+import type { IsExtension } from '~/any'
+import type { NumMultIdentity } from '~/identity/num-mult-identity'
 
 /**
  * If `A ≡ 1` then `true` else `false`

@@ -1,7 +1,7 @@
-import type { IsZero } from '../../identity/antecedent/is-num-add-identity'
-import type { And } from '../../logic/antecedent/and'
-import type { Not } from '../../logic/antecedent/not'
-import type { IsNonNegative } from './is-non-negative'
+import type { IsZero } from '~/identity/antecedent/is-num-add-identity'
+import type { And } from '~/logic/antecedent/and'
+import type { Not } from '~/logic/antecedent/not'
+import type { IsNonNegative } from '~/math/antecedent/is-non-negative'
 
 /**
  * If `A > 0` then `true` else `false`

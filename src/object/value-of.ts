@@ -1,6 +1,7 @@
-import type { AnyWeakMap, AnyWeakSet } from '../any'
-import type { AnyMap } from '../any/any-map'
-import type { AnySet } from '../any/any-set'
+import type { AnyMap } from '~/any/any-map'
+import type { AnySet } from '~/any/any-set'
+import type { AnyWeakMap } from '~/any/any-weak-map'
+import type { AnyWeakSet } from '~/any/any-weak-set'
 
 /**
  * Return the union of all values in `A`

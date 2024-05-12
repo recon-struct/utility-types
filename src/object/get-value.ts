@@ -1,4 +1,4 @@
-import type { DeepObject, GetKeys } from './get-keys'
+import type { DeepObject, GetKeys } from '~/object/get-keys'
 
 /**
  * Get the type of prop corresponding to `B` from `A`

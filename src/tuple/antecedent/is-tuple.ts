@@ -1,7 +1,8 @@
-import type { AnyArray, IsExtension } from '../../any'
-import type { And } from '../../logic/antecedent/and'
-import type { Not } from '../../logic/antecedent/not'
-import type { LengthProp } from '../../object/length-prop'
+import type { AnyArray } from '~/any/any-array'
+import type { IsExtension } from '~/extension/antecedent/is-extension'
+import type { And } from '~/logic/antecedent/and'
+import type { Not } from '~/logic/antecedent/not'
+import type { LengthProp } from '~/object/length-prop'
 
 /**
  * If `A` is a tuple return `true` else `false`

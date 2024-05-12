@@ -1,5 +1,5 @@
-import type { AnyArray } from '../any'
-import type { Indices } from './indices'
+import type { AnyArray } from '~/any/any-array'
+import type { Indices } from '~/tuple/indices'
 
 /**
  * A union of all elements of `A`.

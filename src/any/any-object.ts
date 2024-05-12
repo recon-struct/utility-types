@@ -1,4 +1,4 @@
-import type { AnyKey } from './any-key'
+import type { AnyKey } from '~/any/any-key'
 
 /**
  * Generic object interface

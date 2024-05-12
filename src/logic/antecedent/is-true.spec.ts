@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { IsTrue } from './is-true'
+import type { IsTrue } from '~/logic/antecedent/is-true'
 
 describe('IsTrue', () => {
   it('should evaluate `A`', () => {

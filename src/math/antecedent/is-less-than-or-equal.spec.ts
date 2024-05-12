@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { IsLessThanOrEqual } from './is-less-than-or-equal'
+import type { IsLessThanOrEqual } from '~/math/antecedent/is-less-than-or-equal'
 
 describe('IsLessThanOrEqual', () => {
   it('should equal false', () => {

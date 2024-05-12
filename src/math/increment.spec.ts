@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { Increment } from './increment'
+import type { Increment } from '~/math/increment'
 
 describe('Increment', () => {
   it('should increment a number', () => {

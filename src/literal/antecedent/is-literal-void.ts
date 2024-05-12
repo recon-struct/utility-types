@@ -1,4 +1,4 @@
-import type { IsEqual } from '../../any/antecedent/is-equal'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
 
 /**
  * Checks if the given type `A` is a literal void.

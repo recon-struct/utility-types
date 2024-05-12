@@ -1,4 +1,6 @@
-import type { AnyArray, AnyFunction, AnyObject } from '../any'
+import type { AnyArray } from '~/any/any-array'
+import type { AnyFunction } from '~/any/any-function'
+import type { AnyObject } from '~/any/any-object'
 
 /**
  * Represents a factory function that takes an array of arguments of type A and returns an object of type B.

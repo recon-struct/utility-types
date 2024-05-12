@@ -1,4 +1,4 @@
-import type { IsExtension } from '../../any'
+import type { IsExtension } from '~/any'
 
 /**
  * If `Lowercase<A> extends Uppercase<A>` then `true` else `false`

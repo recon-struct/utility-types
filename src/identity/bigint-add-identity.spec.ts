@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { BigIntAddIdentity } from './bigint-add-identity'
+import type { BigIntAddIdentity } from '~/identity/bigint-add-identity'
 
 describe('BigIntAddIdentity', () => {
   it('should equal 0n', () => {

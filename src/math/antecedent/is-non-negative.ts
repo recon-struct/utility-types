@@ -1,5 +1,5 @@
-import type { Not } from '../../logic/antecedent/not'
-import type { IsNegative } from './is-negative'
+import type { Not } from '~/logic/antecedent/not'
+import type { IsNegative } from '~/math/antecedent/is-negative'
 
 /**
  * If `A ≥ 0` then `true` else `false`

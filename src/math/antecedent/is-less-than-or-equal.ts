@@ -1,5 +1,5 @@
-import type { Not } from '../../logic/antecedent/not'
-import type { IsGreaterThan } from './is-greater-than'
+import type { Not } from '~/logic/antecedent/not'
+import type { IsGreaterThan } from '~/math/antecedent/is-greater-than'
 
 /**
  * Evaluate `A ≤ B`, where `A ∈ ℕ` and `B ∈ ℕ`

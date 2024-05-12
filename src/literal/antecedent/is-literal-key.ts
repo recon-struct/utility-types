@@ -1,7 +1,7 @@
-import { IsNever } from '~/any/antecedent/is-never'
-import type { IsLiteralNumber } from './is-literal-number'
-import type { IsLiteralString } from './is-literal-string'
-import type { IsLiteralSymbol } from './is-literal-symbol'
+import type { IsNever } from '~/any/antecedent/is-never'
+import type { IsLiteralNumber } from '~/literal/antecedent/is-literal-number'
+import type { IsLiteralString } from '~/literal/antecedent/is-literal-string'
+import type { IsLiteralSymbol } from '~/literal/antecedent/is-literal-symbol'
 
 /**
  * Checks if the type `A` is a literal key such as could index an object.

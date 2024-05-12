@@ -1,4 +1,4 @@
-import type { IsExtensionAndNotEqual } from '../../helpers/is-extension-and-not-equal'
+import type { HelperIsExtensionAndNotEqual } from '~/helper/is-extension-and-not-equal'
 
 /**
  * Checks if the given type `A` is a literal bigint.
@@ -13,4 +13,4 @@ import type { IsExtensionAndNotEqual } from '../../helpers/is-extension-and-not-
  * type Ex4 = IsLiteralBigInt<number> // false
  * ```
  */
-export type IsLiteralBigInt<A> = IsExtensionAndNotEqual<A, bigint>
+export type IsLiteralBigInt<A> = HelperIsExtensionAndNotEqual<A, bigint>

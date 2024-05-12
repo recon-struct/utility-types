@@ -1,6 +1,6 @@
-import type { IsZero } from '../../identity/antecedent/is-num-add-identity'
-import type { Or } from '../../logic/antecedent/or'
-import type { IsNegative } from './is-negative'
+import type { IsZero } from '~/identity/antecedent/is-num-add-identity'
+import type { Or } from '~/logic/antecedent/or'
+import type { IsNegative } from '~/math/antecedent/is-negative'
 
 /**
  * If `A ≤ 0` then `true` else `false`

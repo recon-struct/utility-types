@@ -1,5 +1,5 @@
-import type { IsExtension } from '../../any/antecedent/is-extension'
-import type { Constructor } from '../constructor'
+import type { IsExtension } from '~/extension/antecedent/is-extension'
+import type { Constructor } from '~/function/constructor'
 
 /**
  * If `A extends AnyConstructor` then `true` else `false`

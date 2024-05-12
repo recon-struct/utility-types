@@ -1,9 +1,9 @@
+import type { Zero } from '~/identity/num-add-identity'
+import type { And } from '~/logic/antecedent/and'
 import type { If } from '~/logic/if'
-import type { Zero } from '../identity'
-import type { And } from '../logic/antecedent/and'
-import type { IsGreaterThan } from './antecedent/is-greater-than'
-import type { IsNatural } from './antecedent/is-natural'
-import type { Subtract } from './subtract'
+import type { IsGreaterThan } from '~/math/antecedent/is-greater-than'
+import type { IsNatural } from '~/math/antecedent/is-natural'
+import type { Subtract } from '~/math/subtract'
 
 /**
  * Evaluate `A - 1`, where `A > 0` and `A ∈ ℕ`

@@ -1,4 +1,4 @@
-import type { ConsumeRight } from '../string/consume-right'
+import type { ConsumeRight } from '~/string/consume-right'
 
 /**
  * Type representing Parsing Expression Grammar (PEG) sequence operation.

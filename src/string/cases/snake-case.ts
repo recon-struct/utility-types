@@ -1,6 +1,6 @@
-import type { And } from '../../logic/antecedent/and'
-import type { IsCaseSensitive } from '../antecedent/is-case-sensitive'
-import type { IsUppercase } from '../antecedent/is-uppercase'
+import type { And } from '~/logic/antecedent/and'
+import type { IsCaseSensitive } from '~/string/antecedent/is-case-sensitive'
+import type { IsUppercase } from '~/string/antecedent/is-uppercase'
 
 export interface SnakeCaseOpts<A extends string = string> {
   value: A

@@ -1,5 +1,5 @@
-import type { AnyArray } from '../any-array'
-import type { IsExtension } from './is-extension'
+import type { AnyArray } from '~/any/any-array'
+import type { IsExtension } from '~/extension/antecedent/is-extension'
 
 /**
  * If `A extends AnyArray` then `true` else `false`

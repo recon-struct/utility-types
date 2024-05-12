@@ -1,5 +1,5 @@
-import type { Not } from '../../logic/antecedent/not'
-import type { IsFloat } from './is-float'
+import type { Not } from '~/logic/antecedent/not'
+import type { IsFloat } from '~/math/antecedent/is-float'
 
 /**
  * If `A ∈ ℤ` then `true` else `false`.

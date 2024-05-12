@@ -1,4 +1,4 @@
-import type { IsExtension } from '../../any'
+import type { IsExtension } from '~/any'
 
 /**
  * Checks if a value is a generator function.

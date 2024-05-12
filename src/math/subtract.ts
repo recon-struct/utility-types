@@ -1,8 +1,8 @@
+import type { And } from '~/logic/antecedent/and'
 import type { If } from '~/logic/if'
-import type { And } from '../logic/antecedent/and'
-import type { LengthProp } from '../object/length-prop'
-import type { Tuple } from '../tuple/tuple'
-import type { IsNatural } from './antecedent/is-natural'
+import type { IsNatural } from '~/math/antecedent/is-natural'
+import type { LengthProp } from '~/object/length-prop'
+import type { Tuple } from '~/tuple/tuple'
 
 /**
  * Return the difference of `A - B`, where `A ∈ ℕ` and `B ∈ ℕ`.

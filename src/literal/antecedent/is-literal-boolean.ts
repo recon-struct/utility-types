@@ -1,4 +1,4 @@
-import type { IsExtensionAndNotEqual } from '../../helpers/is-extension-and-not-equal'
+import type { HelperIsExtensionAndNotEqual } from '~/helper/is-extension-and-not-equal'
 
 /**
  * Checks if the given type `A` is a literal boolean.
@@ -12,4 +12,4 @@ import type { IsExtensionAndNotEqual } from '../../helpers/is-extension-and-not-
  * type Ex3 = IsLiteralBoolean<never>   // false
  * ```
  */
-export type IsLiteralBoolean<A> = IsExtensionAndNotEqual<A, boolean>
+export type IsLiteralBoolean<A> = HelperIsExtensionAndNotEqual<A, boolean>

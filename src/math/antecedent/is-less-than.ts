@@ -1,6 +1,6 @@
-import type { IsZero } from '../../identity/antecedent/is-num-add-identity'
-import type { Not } from '../../logic/antecedent/not'
-import type { Decrement } from '../../math/decrement'
+import type { IsZero } from '~/identity/antecedent/is-num-add-identity'
+import type { Not } from '~/logic/antecedent/not'
+import type { Decrement } from '~/math/decrement'
 
 /**
  * Evaluate `A < B`, where `A ∈ ℕ` and `B ∈ ℕ`

@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { IsLiteralBigInt } from './is-literal-bigint'
+import type { IsLiteralBigInt } from '~/literal/antecedent/is-literal-bigint'
 
 describe('IsLiteralBigInt', () => {
   it('should evaluate if `A` is a literal bigint', () => {

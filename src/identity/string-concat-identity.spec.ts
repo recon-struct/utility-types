@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { StringConcatIdentity } from './string-concat-identity'
+import type { StringConcatIdentity } from '~/identity/string-concat-identity'
 
 describe('StringConcatIdentity', () => {
   it('should equal ""', () => {

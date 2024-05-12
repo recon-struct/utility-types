@@ -1,5 +1,5 @@
-import type { IsExtension } from '../../any'
-import type { NumAddIdentity } from '../num-add-identity'
+import type { IsExtension } from '~/any'
+import type { NumAddIdentity } from '~/identity/num-add-identity'
 
 /**
  * If `A ≡ 0` then `true` else `false`

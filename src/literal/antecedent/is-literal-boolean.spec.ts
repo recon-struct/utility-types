@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { IsLiteralBoolean } from './is-literal-boolean'
+import type { IsLiteralBoolean } from '~/literal/antecedent/is-literal-boolean'
 
 describe('IsLiteralBoolean', () => {
   it('should evaluate if `A` is a literal boolean', () => {

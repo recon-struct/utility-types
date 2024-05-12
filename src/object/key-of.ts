@@ -1,5 +1,5 @@
-import type { AnyMap } from '../any/any-map'
-import type { AnyWeakMap } from '../any/any-weak-map'
+import type { AnyMap } from '~/any/any-map'
+import type { AnyWeakMap } from '~/any/any-weak-map'
 
 /**
  * Alias of `keyof A` to maintain parity with `ValueOf`

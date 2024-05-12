@@ -1,5 +1,5 @@
+import type { IsTrue } from '~/logic/antecedent/is-true'
 import type { If } from '~/logic/if'
-import type { IsTrue } from './is-true'
 
 /**
  * Evaluate `A ∨ B`

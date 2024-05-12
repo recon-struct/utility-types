@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { IsNatural } from './is-natural'
+import type { IsNatural } from '~/math/antecedent/is-natural'
 
 describe('IsNatural', () => {
   it('should return true for natural numbers', () => {

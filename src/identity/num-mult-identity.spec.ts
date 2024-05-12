@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { NumMultIdentity } from './num-mult-identity'
+import type { NumMultIdentity } from '~/identity/num-mult-identity'
 
 describe('NumMultIdentity', () => {
   it('should equal 1', () => {

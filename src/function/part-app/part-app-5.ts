@@ -1,12 +1,12 @@
-import type { Arity1 } from '../arity/arity-1'
-import type { Arity2 } from '../arity/arity-2'
-import type { Arity3 } from '../arity/arity-3'
-import type { Arity4 } from '../arity/arity-4'
-import type { Arity5 } from '../arity/arity-5'
-import type { PartApp1 } from './part-app-1'
-import type { PartApp2 } from './part-app-2'
-import type { PartApp3 } from './part-app-3'
-import type { PartApp4 } from './part-app-4'
+import type { Arity1 } from '~/function/arity/arity-1'
+import type { Arity2 } from '~/function/arity/arity-2'
+import type { Arity3 } from '~/function/arity/arity-3'
+import type { Arity4 } from '~/function/arity/arity-4'
+import type { Arity5 } from '~/function/arity/arity-5'
+import type { PartApp1 } from '~/function/part-app/part-app-1'
+import type { PartApp2 } from '~/function/part-app/part-app-2'
+import type { PartApp3 } from '~/function/part-app/part-app-3'
+import type { PartApp4 } from '~/function/part-app/part-app-4'
 
 /**
  * Represents a utility type that combines multiple arity functions with partial application.

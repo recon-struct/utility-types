@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { Add } from './add'
+import type { Add } from '~/math/add'
 
 describe('Add', () => {
   it('should add two numbers', () => {

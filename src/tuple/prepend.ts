@@ -1,4 +1,4 @@
-import type { AnyArray } from '../any/any-array'
+import type { AnyArray } from '~/any/any-array'
 
 /**
  * Prepend `B` onto tuple `A`

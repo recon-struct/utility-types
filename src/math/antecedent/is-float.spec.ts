@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { IsFloat } from './is-float'
+import type { IsFloat } from '~/math/antecedent/is-float'
 
 describe('IsFloat', () => {
   it('should return true for floating point numbers', () => {

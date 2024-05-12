@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { ObjectAssignIdentity } from './object-assign-identity'
+import type { ObjectAssignIdentity } from '~/identity/object-assign-identity'
 
 describe('ObjectAssignIdentity', () => {
   it('should equal {}', () => {

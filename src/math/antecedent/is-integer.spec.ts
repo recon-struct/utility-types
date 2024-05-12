@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { IsInteger } from './is-integer'
+import type { IsInteger } from '~/math/antecedent/is-integer'
 
 describe('IsInteger', () => {
   it('should return true for integers', () => {

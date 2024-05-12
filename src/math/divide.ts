@@ -1,7 +1,7 @@
+import type { HelperMultiSub } from '~/helper/multi-sub'
+import type { And } from '~/logic/antecedent/and'
 import type { If } from '~/logic/if'
-import type { MultiSub } from '../helpers/multi-sub'
-import type { And } from '../logic/antecedent/and'
-import type { IsNatural } from './antecedent/is-natural'
+import type { IsNatural } from '~/math/antecedent/is-natural'
 
 /**
  * Evaluate `A / B`, where `A ∈ ℕ` and `B ∈ ℕ`.
@@ -17,6 +17,6 @@ import type { IsNatural } from './antecedent/is-natural'
  */
 export type Divide<A extends number, B extends number> = If<
   And<IsNatural<A>, IsNatural<B>>,
-  MultiSub<A, B>,
+  HelperMultiSub<A, B>,
   number
 >

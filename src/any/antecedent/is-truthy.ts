@@ -1,5 +1,5 @@
-import type { Not } from '../../logic/antecedent/not'
-import type { IsFalsy } from './is-falsy'
+import type { IsNever } from '~/any/antecedent/is-never'
+import type { AnyFalsy } from '~/any/any-falsy'
 
 /**
  * If `A extends AnyFalsy` then `false` else `true`
@@ -20,4 +20,5 @@ import type { IsFalsy } from './is-falsy'
  * ```
  */
 // export type IsTruthy<A> = IsFalsy<A> extends true ? false : true
-export type IsTruthy<A> = Not<IsFalsy<A>>
+export type IsTruthy<A> =
+  IsNever<A> extends true ? false : A extends AnyFalsy ? false : true

@@ -1,7 +1,7 @@
-import type { IsExtension } from '~/any/antecedent/is-extension'
+import type { IsExtension } from '~/extension/antecedent/is-extension'
 import type { Add } from '~/math/add'
 import type { Multiply } from '~/math/multiply'
-import type { StringLength } from './string-length'
+import type { StringLength } from '~/string/string-length'
 
 export interface DigitValue {
   '0': 0

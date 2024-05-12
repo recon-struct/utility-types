@@ -1,6 +1,6 @@
-import type { Arity1 } from '../arity/arity-1'
-import type { Arity2 } from '../arity/arity-2'
-import type { PartApp1 } from './part-app-1'
+import type { Arity1 } from '~/function/arity/arity-1'
+import type { Arity2 } from '~/function/arity/arity-2'
+import type { PartApp1 } from '~/function/part-app/part-app-1'
 
 /**
  * Represents a function that takes two arguments and returns a function that takes one argument.

@@ -1,8 +1,8 @@
-import type { AnyKey } from '../any/any-key'
-import type { AnyPrimitive } from '../any/any-primitive'
-import type { Join } from '../tuple/join'
-import type { IsEmptyObject } from './antecedent'
-import type { KeyOf } from './key-of'
+import type { AnyKey } from '~/any/any-key'
+import type { AnyPrimitive } from '~/any/any-primitive'
+import type { IsEmptyObject } from '~/object/antecedent/is-empty-object'
+import type { KeyOf } from '~/object/key-of'
+import type { Join } from '~/tuple/join'
 
 export interface GetKeysOpts<
   A extends string | undefined = string | undefined,

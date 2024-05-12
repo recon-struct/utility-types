@@ -1,5 +1,5 @@
-import type { IsExtension } from '../../any/antecedent/is-extension'
-import type { AnyObject } from '../../any/any-object'
+import type { AnyObject } from '~/any/any-object'
+import type { IsExtension } from '~/extension/antecedent/is-extension'
 
 /**
  * If `A extends AnyObject` then `true` else `false`

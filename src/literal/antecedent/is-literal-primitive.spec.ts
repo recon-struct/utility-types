@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { IsLiteralPrimitive } from './is-literal-primitive'
+import type { IsLiteralPrimitive } from '~/literal/antecedent/is-literal-primitive'
 
 describe('IsLiteralPrimitive', () => {
   it('should evaluate if `A` is a literal primitive', () => {

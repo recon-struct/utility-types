@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { GeneratorNextType } from './generator-next-type'
+import type { GeneratorNextType } from '~/generator/generator-next-type'
 
 describe('GeneratorNextType', () => {
   it('should return the next type of a generator', () => {

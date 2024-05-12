@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { IsBigIntAddIdentity } from './is-bigint-add-identity'
+import type { IsBigIntAddIdentity } from '~/identity/antecedent/is-bigint-add-identity'
 
 describe('IsBigIntAddIdentity', () => {
   it('should evaluate if the item is 0n', () => {

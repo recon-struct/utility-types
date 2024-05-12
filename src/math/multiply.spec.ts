@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { Multiply } from './multiply'
+import type { Multiply } from '~/math/multiply'
 
 describe('Multiply', () => {
   it('should multiply two numbers', () => {

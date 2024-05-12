@@ -1,7 +1,7 @@
-import type { AnyObject } from '../any'
-import type { UnionUniqueLength } from '../helpers/union-unique-length'
-import type { IsLiteralKey } from '../literal'
-import type { KeyOf } from './key-of'
+import type { AnyObject } from '~/any/any-object'
+import type { HelperUnionUniqueLength } from '~/helper/union-unique-length'
+import type { IsLiteralKey } from '~/literal/antecedent/is-literal-key'
+import type { KeyOf } from '~/object/key-of'
 
 /**
  * Gets the number of keys in an object type.
@@ -15,4 +15,6 @@ import type { KeyOf } from './key-of'
  * ```
  */
 export type ObjectLength<A extends AnyObject> =
-  IsLiteralKey<KeyOf<A>> extends true ? UnionUniqueLength<KeyOf<A>> : number
+  IsLiteralKey<KeyOf<A>> extends true
+    ? HelperUnionUniqueLength<KeyOf<A>>
+    : number

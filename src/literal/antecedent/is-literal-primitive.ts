@@ -1,11 +1,11 @@
-import { IsNever } from '~/any/antecedent'
-import type { IsLiteralBigInt } from './is-literal-bigint'
-import { IsLiteralBoolean } from './is-literal-boolean'
-import type { IsLiteralNull } from './is-literal-null'
-import type { IsLiteralNumber } from './is-literal-number'
-import type { IsLiteralString } from './is-literal-string'
-import type { IsLiteralSymbol } from './is-literal-symbol'
-import type { IsLiteralUndefined } from './is-literal-undefined'
+import type { IsNever } from '~/any/antecedent'
+import type { IsLiteralBigInt } from '~/literal/antecedent/is-literal-bigint'
+import type { IsLiteralBoolean } from '~/literal/antecedent/is-literal-boolean'
+import type { IsLiteralNull } from '~/literal/antecedent/is-literal-null'
+import type { IsLiteralNumber } from '~/literal/antecedent/is-literal-number'
+import type { IsLiteralString } from '~/literal/antecedent/is-literal-string'
+import type { IsLiteralSymbol } from '~/literal/antecedent/is-literal-symbol'
+import type { IsLiteralUndefined } from '~/literal/antecedent/is-literal-undefined'
 
 /**
  * Checks if the given type `A` is a literal primitive.

@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { Absolute } from './absolute'
+import type { Absolute } from '~/math/absolute'
 
 describe('Absolute', () => {
   it('should return the absolute value of a number', () => {

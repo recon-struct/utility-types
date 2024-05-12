@@ -1,7 +1,7 @@
-import type { IsExtension } from '../../any/antecedent/is-extension'
-import type { AnyKey } from '../../any/any-key'
-import type { AnyObject } from '../../any/any-object'
-import type { KeyOf } from '../key-of'
+import type { AnyKey } from '~/any/any-key'
+import type { AnyObject } from '~/any/any-object'
+import type { IsExtension } from '~/extension/antecedent/is-extension'
+import type { KeyOf } from '~/object/key-of'
 
 /**
  * If `B extends KeyOf<A>` then `true` else `false`

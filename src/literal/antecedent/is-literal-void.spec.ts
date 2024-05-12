@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { IsLiteralVoid } from './is-literal-void'
+import type { IsLiteralVoid } from '~/literal/antecedent/is-literal-void'
 
 describe('IsLiteralVoid', () => {
   it('should evaluate if `A` is a literal void', () => {

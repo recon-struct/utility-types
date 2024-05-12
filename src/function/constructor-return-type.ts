@@ -1,4 +1,4 @@
-import type { Constructor } from './constructor'
+import type { Constructor } from '~/function/constructor'
 
 /**
  * Returns the type of the return value of a constructor function.
@@ -14,7 +14,7 @@ export type ConstructorReturnType<A extends Constructor> =
   A extends Constructor<any[], infer B> ? B : never
 
 /**
- * Represents the type of an instance created by a constructor function.
+ * Alias for `ConstructorReturnType`.
  * @typeParam A - The constructor function.
  * @group Function
  */

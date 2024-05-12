@@ -1,7 +1,7 @@
+import type { One } from '~/identity/num-mult-identity'
 import type { If } from '~/logic/if'
-import type { One } from '../identity'
-import type { Add } from './add'
-import type { IsNatural } from './antecedent/is-natural'
+import type { Add } from '~/math/add'
+import type { IsNatural } from '~/math/antecedent/is-natural'
 
 /**
  * Evaluate `A + 1`, where `A ∈ ℕ`.

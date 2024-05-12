@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { Divide } from './divide'
+import type { Divide } from '~/math/divide'
 
 describe('Divide', () => {
   it('should divide two numbers', () => {

@@ -1,5 +1,5 @@
-import type { IsExtension } from '../../any'
-import { BigIntAddIdentity } from '../bigint-add-identity'
+import type { IsExtension } from '~/any'
+import type { BigIntAddIdentity } from '~/identity/bigint-add-identity'
 
 /**
  * If `A ≡ 0n` then `true` else `false`

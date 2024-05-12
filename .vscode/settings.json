@@ -6,8 +6,5 @@
   "editor.formatOnSave": true,
   "typescript.tsdk": "node_modules/typescript/lib",
   "editor.tabSize": 2,
-  "typescript.preferences.autoImportFileExcludePatterns": [
-    "./src/index.ts",
-    "./src/*/index.ts"
-  ]
+  "typescript.preferences.autoImportFileExcludePatterns": ["src/**/index.ts"]
 }

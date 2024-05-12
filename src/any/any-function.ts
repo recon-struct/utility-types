@@ -1,4 +1,4 @@
-import type { AnyArray } from './any-array'
+import type { AnyArray } from '~/any/any-array'
 
 /**
  * Generic function interface

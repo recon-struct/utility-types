@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { Not } from './not'
+import type { Not } from '~/logic/antecedent/not'
 
 describe('Not', () => {
   it('should evaluate `¬A`', () => {

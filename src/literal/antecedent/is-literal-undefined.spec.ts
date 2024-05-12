@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { IsLiteralUndefined } from './is-literal-undefined'
+import type { IsLiteralUndefined } from '~/literal/antecedent/is-literal-undefined'
 
 describe('IsLiteralUndefined', () => {
   it('should evaluate if `A` is a literal undefined', () => {

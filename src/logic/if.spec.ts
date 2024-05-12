@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { If } from './if'
+import type { If } from '~/logic/if'
 
 describe('If', () => {
   it('should evaluate `A → B`', () => {

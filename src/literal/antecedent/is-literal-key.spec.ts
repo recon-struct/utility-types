@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { IsLiteralKey } from './is-literal-key'
+import type { IsLiteralKey } from '~/literal/antecedent/is-literal-key'
 
 describe('IsLiteralKey', () => {
   it('should evaluate if `A` is a literal key', () => {

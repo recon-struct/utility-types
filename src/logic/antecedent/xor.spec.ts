@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { Xor } from './xor'
+import type { Xor } from '~/logic/antecedent/xor'
 
 describe('Xor', () => {
   it('should evaluate `A ⊕ B`', () => {

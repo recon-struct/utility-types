@@ -1,4 +1,4 @@
-import type { IsLessThan } from './is-less-than'
+import type { IsLessThan } from '~/math/antecedent/is-less-than'
 
 /**
  * Evaluate `A > B`, where `A ∈ ℕ` and `B ∈ ℕ`

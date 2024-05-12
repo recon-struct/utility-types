@@ -1,6 +1,6 @@
-import type { IsExtension } from '../../any/antecedent/is-extension'
-import type { AnyArray } from '../../any/any-array'
-import type { Indices } from '../indices'
+import type { AnyArray } from '~/any/any-array'
+import type { IsExtension } from '~/extension/antecedent/is-extension'
+import type { Indices } from '~/tuple/indices'
 
 /**
  * If `B extends IndexOf<A>` then `true` else `false`

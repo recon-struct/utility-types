@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { Min } from './min'
+import type { Min } from '~/math/min'
 
 describe('Min', () => {
   it('should return the minimum of two numbers', () => {

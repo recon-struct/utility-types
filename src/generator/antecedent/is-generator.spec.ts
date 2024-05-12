@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { IsGenerator } from './is-generator'
+import type { IsGenerator } from '~/generator/antecedent/is-generator'
 
 describe('IsGenerator', () => {
   it('should return true if `A` is a generator', () => {

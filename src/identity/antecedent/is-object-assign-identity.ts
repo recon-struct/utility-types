@@ -1,5 +1,5 @@
-import type { IsEqual } from '../../any/antecedent/is-equal'
-import type { ObjectAssignIdentity } from '../object-assign-identity'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { ObjectAssignIdentity } from '~/identity/object-assign-identity'
 
 /**
  * If `A ≡ {}` then `true` else `false`

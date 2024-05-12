@@ -1,4 +1,4 @@
-import type { IsExtensionAndNotEqual } from '../../helpers/is-extension-and-not-equal'
+import type { HelperIsExtensionAndNotEqual } from '~/helper/is-extension-and-not-equal'
 
 /**
  * Checks if the given type `A` is a literal number.
@@ -11,4 +11,4 @@ import type { IsExtensionAndNotEqual } from '../../helpers/is-extension-and-not-
  * type Ex2 = IsLiteralNumber<number> // false
  * ```
  */
-export type IsLiteralNumber<A> = IsExtensionAndNotEqual<A, number>
+export type IsLiteralNumber<A> = HelperIsExtensionAndNotEqual<A, number>

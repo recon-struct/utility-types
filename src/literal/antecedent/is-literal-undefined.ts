@@ -1,4 +1,4 @@
-import type { IsExtension } from '../../any/antecedent/is-extension'
+import type { IsExtension } from '~/extension/antecedent/is-extension'
 
 /**
  * If `A extends undefined` then `true` else `false`

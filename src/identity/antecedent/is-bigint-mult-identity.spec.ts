@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { IsBigIntMultIdentity } from './is-bigint-mult-identity'
+import type { IsBigIntMultIdentity } from '~/identity/antecedent/is-bigint-mult-identity'
 
 describe('IsBigIntMultIdentity', () => {
   it('should evaluate if the item is 1n', () => {

@@ -1,4 +1,4 @@
-import type { CaptureGroup } from './utils'
+import type { CaptureGroup } from '~/string/utils'
 
 export interface CaptureOpts<A extends string = string> {
   value: A

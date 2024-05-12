@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { Max } from './max'
+import type { Max } from '~/math/max'
 
 describe('Max', () => {
   it('should return the larger of two numbers', () => {

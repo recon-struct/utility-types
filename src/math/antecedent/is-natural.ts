@@ -1,6 +1,6 @@
-import type { And } from '../../logic/antecedent/and'
-import type { IsInteger } from './is-integer'
-import type { IsNonNegative } from './is-non-negative'
+import type { And } from '~/logic/antecedent/and'
+import type { IsInteger } from '~/math/antecedent/is-integer'
+import type { IsNonNegative } from '~/math/antecedent/is-non-negative'
 
 /**
  * If `A ∈ ℕ` then `true` else `false`

@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { And } from './and'
+import type { And } from '~/logic/antecedent/and'
 
 describe('And', () => {
   it('should evaluate `A ∧ B`', () => {

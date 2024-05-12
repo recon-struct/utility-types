@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { IsDivisible } from './is-divisible'
+import type { IsDivisible } from '~/math/antecedent/is-divisible'
 
 describe('IsDivisible', () => {
   it('should be true', () => {

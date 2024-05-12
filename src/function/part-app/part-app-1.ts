@@ -1,4 +1,4 @@
-import type { Arity1 } from '../arity/arity-1'
+import type { Arity1 } from '~/function/arity'
 
 /**
  * Represents a type that combines a unary function with a curried unary

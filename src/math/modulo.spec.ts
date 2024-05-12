@@ -1,5 +1,5 @@
 import { describe, expectTypeOf, it } from 'vitest'
-import { Modulo } from './modulo'
+import type { Modulo } from '~/math/modulo'
 
 describe('Modulo', () => {
   it('should return the remainder of a division', () => {

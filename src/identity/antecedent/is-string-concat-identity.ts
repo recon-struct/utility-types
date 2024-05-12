@@ -1,5 +1,5 @@
-import type { IsEqual } from '../../any/antecedent/is-equal'
-import type { StringConcatIdentity } from '../string-concat-identity'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { StringConcatIdentity } from '~/identity/string-concat-identity'
 
 /**
  * If `A ≡ ''` then `true` else `false`

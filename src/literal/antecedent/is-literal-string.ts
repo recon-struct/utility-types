@@ -1,4 +1,4 @@
-import type { IsExtensionAndNotEqual } from '../../helpers/is-extension-and-not-equal'
+import type { HelperIsExtensionAndNotEqual } from '~/helper/is-extension-and-not-equal'
 
 /**
  * Checks if the given type `A` is a literal string.
@@ -11,4 +11,4 @@ import type { IsExtensionAndNotEqual } from '../../helpers/is-extension-and-not-
  * type Ex2 = IsLiteralString<string>  // false
  * ```
  */
-export type IsLiteralString<A> = IsExtensionAndNotEqual<A, string>
+export type IsLiteralString<A> = HelperIsExtensionAndNotEqual<A, string>

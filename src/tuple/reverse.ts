@@ -1,4 +1,4 @@
-import type { AnyArray } from '../any/any-array'
+import type { AnyArray } from '~/any/any-array'
 
 export interface ReverseOpts<A extends AnyArray = AnyArray> {
   value: A
