@@ -1,5 +1,6 @@
 {
   "include": ["src/**/*.ts"],
+  "exclude": ["**/*.spec.ts"],
   "compilerOptions": {
     /* Strict Type-Checking Options */
     "strict": true,
@@ -21,8 +22,9 @@
     "removeComments": false,
     "sourceMap": true,
     "stripInternal": true,
+    "baseUrl": "./src",
     "paths": {
-      "~/*": ["./src/*"]
+      "~/*": ["./*"]
     }
   }
 }
