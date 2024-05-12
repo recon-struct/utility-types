@@ -22,6 +22,8 @@ jobs:
       - run: pnpm install
       - run: pnpm build
       - run: pnpm test
-      - run: pnpm publish
+      # See this issue for more information:
+      # https://github.com/pnpm/pnpm/issues/5894
+      - run: pnpm publish --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
