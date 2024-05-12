@@ -26,6 +26,6 @@ jobs:
       - name: Run tests
         run: pnpm test
       - name: Publish
-        run: pnpm publish --access public
+        run: pnpm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
