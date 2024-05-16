@@ -1,3 +1,4 @@
+export * from './capture-group'
 export * from './inner-wrap-map'
 export * from './last-unique-in-union'
 export * from './multi-add'
