@@ -3,8 +3,8 @@
  *
  * @typeParam A - The first string.
  * @typeParam B - The second string.
- * @group String
  * @group Antecedent
+ * @group String
  * @example
  * ```
  * type Ex1 = EndsWith<'abc', 'c'> // true

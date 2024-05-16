@@ -1,5 +1,5 @@
 import type { IsExtension } from '~/extension/antecedent/is-extension'
-import type { CaptureGroup } from '~/string/utils'
+import type { HelperCaptureGroup } from '~/helper/capture-group'
 
 /**
  * Evaluate if `A` has a matches CaptureGroup `B`
@@ -16,5 +16,5 @@ import type { CaptureGroup } from '~/string/utils'
  */
 export type HasCaptureGroup<
   A extends string,
-  B extends CaptureGroup = CaptureGroup<'{{', '}}'>,
+  B extends HelperCaptureGroup = HelperCaptureGroup<'{{', '}}'>,
 > = IsExtension<A, `${string}${B['start']}${string}${B['end']}${string}`>

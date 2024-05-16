@@ -2,10 +2,13 @@ import path from 'node:path'
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 
+console.log(path.resolve(__dirname, 'tsconfig.build.json'))
+
 export default defineConfig({
   plugins: [
     dts({
       insertTypesEntry: true,
+      tsconfigPath: path.resolve(__dirname, 'tsconfig-build.json'),
     }),
   ],
   build: {

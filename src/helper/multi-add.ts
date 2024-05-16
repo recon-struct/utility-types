@@ -12,6 +12,7 @@ export interface MultiAddOpts<A extends number = number> {
  * @typeParam A - The first number.
  * @typeParam B - The second number.
  * @typeParam C - The accumulator.
+ * @group Helper
  */
 export type HelperMultiAdd<
   A extends number,

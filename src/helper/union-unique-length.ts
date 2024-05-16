@@ -10,6 +10,7 @@ export interface UnionUniqueLengthOpts<A extends number = number> {
  * Calculates the length of a union type with unique elements.
  *
  * @typeParam A - The union type to calculate the length of.
+ * @group Helper
  * @example
  * ```
  * type Ex1 = UnionUniqueLength<'a' | 'b' | 'a' | 'c'> // 3

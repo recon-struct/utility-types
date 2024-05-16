@@ -15,6 +15,12 @@ return value prior to compilation. This innovation assists with AI powered tools
 like [Copilot](https://docs.github.com/en/copilot). Giving the AI more context
 than it would have otherwise.
 
+## Installation
+
+```shell
+npm install @recon-struct/utility-types
+```
+
 ## 🌐 Links
 
 - [Repository](https://github.com/recon-struct/utility-types)

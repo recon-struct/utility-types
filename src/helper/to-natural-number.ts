@@ -44,8 +44,7 @@ export interface ToNaturalNumberOpts<
  * Converts a string representation of a natural number to its numeric value.
  * @typeParam A - The input string.
  * @typeParam B - Optional configuration options.
- * @group String
- * @experimental
+ * @group Helper
  * @example
  * ```
  * type Ex1 = ToNaturalNumber<'123'> // 123

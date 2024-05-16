@@ -1,5 +1,5 @@
+import type { HelperCaptureGroup } from '~/helper/capture-group'
 import type { Capture } from '~/string/capture'
-import type { CaptureGroup } from '~/string/utils'
 
 export interface InterpolationOpts<
   A extends string = string,
@@ -23,7 +23,7 @@ export interface InterpolationOpts<
 export type Interpolation<
   A extends string,
   B extends Record<Capture<A, C>, string>,
-  C extends CaptureGroup = CaptureGroup<'{{', '}}'>,
+  C extends HelperCaptureGroup = HelperCaptureGroup<'{{', '}}'>,
   Z extends InterpolationOpts<string, Capture<A, C>> = InterpolationOpts<
     A,
     Capture<A, C>

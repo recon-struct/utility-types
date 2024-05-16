@@ -5,7 +5,7 @@ import type { IsExtension } from '~/extension/antecedent/is-extension'
  * If `A extends AnyObject` then `true` else `false`
  * @typeParam A - The type to check.
  * @group Antecedent
- * @group Any
+ * @group Object
  * @example
  * ```
  * type Ex1 = IsObject<{ a: true }>            // true

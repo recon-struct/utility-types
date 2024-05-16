@@ -18,3 +18,8 @@ export type IsObjectAssignIdentity<A> = IsEqual<A, ObjectAssignIdentity>
  * @deprecated - Use `IsObjectAssignIdentity` instead.
  */
 export type IsObjectIdentity<A> = IsObjectAssignIdentity<A>
+
+/**
+ * @deprecated - Use `IsObjectAssignIdentity` instead.
+ */
+export type IsEmptyObject<A> = IsObjectAssignIdentity<A>

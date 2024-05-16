@@ -2,13 +2,13 @@
  * An interface representing the start and end of a capture group
  * @typeParam A - The start of the capture group.
  * @typeParam B - The end of the capture group.
- * @group String
+ * @group Helper
  * @example
  * ```
  * type Ex = CaptureGroup<'{{', '}}'> // { start: '{{', end: '}}' }
  * ```
  */
-export interface CaptureGroup<
+export interface HelperCaptureGroup<
   A extends string = string,
   B extends string = string,
 > {
