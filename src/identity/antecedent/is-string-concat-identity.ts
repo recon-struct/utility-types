@@ -1,5 +1,4 @@
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { StringConcatIdentity } from '~/identity/string-concat-identity'
 
 /**
  * If `A ≡ ''` then `true` else `false`
@@ -12,7 +11,7 @@ import type { StringConcatIdentity } from '~/identity/string-concat-identity'
  * type Ex2 = IsStringIdentity<'abc'> // false
  * ```
  */
-export type IsStringConcatIdentity<A> = IsEqual<A, StringConcatIdentity>
+export type IsStringConcatIdentity<A> = IsEqual<A, []>
 
 /**
  * @deprecated - Use `IsStringConcatIdentity` instead.

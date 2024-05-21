@@ -3,18 +3,19 @@
  *
  * Identity element under the following operation
  * ```
- * IsEqual<[1, 2, 3, ...ArrayIdentity], [1, 2, 3]> // true
+ * IsEqual<[1, 2, 3, ...ArrayConcatIdentity], [1, 2, 3]> // true
  * ```
  * @group Identity
  * @example
  * ```
- * type Ex = ArrayIdentity // []
+ * type Ex = ArrayConcatIdentity // []
  * ```
  */
 export type ArrayConcatIdentity = []
 
 /**
- * Alias of `ArrayIdentity`
+ * Alias of `ArrayConactIdentity`
  * @group Identity
+ * @deprecated - use `ArrayConcatIdentity` instead
  */
 export type EmptyArray = ArrayConcatIdentity

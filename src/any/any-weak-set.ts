@@ -1,5 +1,3 @@
-import type { AnyObject } from '~/any/any-object'
-
 /**
  * Generic WeakSet interface
  * @typeParam A - The type of the value.
@@ -10,5 +8,4 @@ import type { AnyObject } from '~/any/any-object'
  * type Ex2 = AnyWeakSet<number> // WeakSet<number>
  * ```
  */
-export interface AnyWeakSet<A extends AnyObject = AnyObject>
-  extends WeakSet<A> {}
+export interface AnyWeakSet<A extends object = object> extends WeakSet<A> {}

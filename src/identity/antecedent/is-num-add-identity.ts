@@ -1,5 +1,4 @@
 import type { IsExtension } from '~/any'
-import type { NumAddIdentity } from '~/identity/num-add-identity'
 
 /**
  * If `A ≡ 0` then `true` else `false`
@@ -12,7 +11,7 @@ import type { NumAddIdentity } from '~/identity/num-add-identity'
  * type Ex2 = IsNumAddIdentity<2> // false
  * ```
  */
-export type IsNumAddIdentity<A> = IsExtension<A, NumAddIdentity>
+export type IsNumAddIdentity<A> = IsExtension<A, 0>
 
 /**
  * Alias for `IsNumAddIdentity`

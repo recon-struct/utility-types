@@ -1,7 +1,4 @@
-import type { AnyKey } from '~/any/any-key'
-import type { AnyObject } from '~/any/any-object'
 import type { IsExtension } from '~/extension/antecedent/is-extension'
-import type { KeyOf } from '~/object/key-of'
 
 /**
  * If `B extends KeyOf<A>` then `true` else `false`
@@ -15,7 +12,7 @@ import type { KeyOf } from '~/object/key-of'
  * type Ex2 = IsKeyOf<{ hello: 'World' }, 42>      // false
  * ```
  */
-export type IsKeyOf<A extends AnyObject, B extends AnyKey> = IsExtension<
+export type IsKeyOf<A extends object, B extends PropertyKey> = IsExtension<
   B,
-  KeyOf<A>
+  keyof A
 >

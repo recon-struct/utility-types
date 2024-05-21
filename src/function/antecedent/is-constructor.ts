@@ -1,5 +1,4 @@
 import type { IsExtension } from '~/extension/antecedent/is-extension'
-import type { Constructor } from '~/function/constructor'
 
 /**
  * If `A extends AnyConstructor` then `true` else `false`
@@ -15,4 +14,4 @@ import type { Constructor } from '~/function/constructor'
  * type Ex6 = IsConstructor<{ (..._: AnyArray): any }>     // false
  * ```
  */
-export type IsConstructor<A> = IsExtension<A, Constructor>
+export type IsConstructor<A> = IsExtension<A, { new (..._: any[]): any }>

@@ -1,5 +1,3 @@
-import type { AnyKey } from '~/any/any-key'
-
 /**
  * Generic object interface
  * @typeParam A - The type of the key.
@@ -12,6 +10,6 @@ import type { AnyKey } from '~/any/any-key'
  * type Ex2 = AnyObject<'a' | 'b', boolean> // { a: boolean, b: boolean }
  * ```
  */
-export type AnyObject<A extends AnyKey = AnyKey, B = any> = {
+export type AnyObject<A extends PropertyKey = PropertyKey, B = any> = {
   [C in A]: B
 }

@@ -1,4 +1,3 @@
-import type { AnyObject } from '~/any/any-object'
 import type { IsExtension } from '~/extension/antecedent/is-extension'
 
 /**
@@ -15,4 +14,4 @@ import type { IsExtension } from '~/extension/antecedent/is-extension'
  * type Ex5 = IsObject<boolean>                // false
  * ```
  */
-export type IsObject<A> = IsExtension<A, AnyObject>
+export type IsObject<A> = IsExtension<A, object>

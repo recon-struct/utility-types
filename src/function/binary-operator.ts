@@ -1,5 +1,3 @@
-import type { AnyFunction } from '~/any/any-function'
-
 /**
  * A generic binary operator interface
  * @group Function
@@ -10,7 +8,6 @@ import type { AnyFunction } from '~/any/any-function'
  * type Ex3 = BinaryOperator<string, number> // (a: string, b: number) => any
  * ```
  */
-export type BinaryOperator<
-  A extends any = any,
-  B extends any = A,
-> = AnyFunction<[A, A], B>
+export type BinaryOperator<A extends any = any, B extends any = A> = (
+  _: [A, A],
+) => B

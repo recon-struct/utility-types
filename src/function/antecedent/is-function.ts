@@ -1,4 +1,3 @@
-import type { AnyFunction } from '~/any/any-function'
 import type { IsExtension } from '~/extension/antecedent/is-extension'
 
 /**
@@ -15,4 +14,4 @@ import type { IsExtension } from '~/extension/antecedent/is-extension'
  * type Ex6 = IsFunction<{ new (..._: AnyArray): any }> // false
  * ```
  */
-export type IsFunction<A> = IsExtension<A, AnyFunction>
+export type IsFunction<A> = IsExtension<A, (..._: any[]) => any>

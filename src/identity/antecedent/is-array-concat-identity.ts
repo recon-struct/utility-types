@@ -1,5 +1,4 @@
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { ArrayConcatIdentity } from '~/identity/array-concat-identity'
 
 /**
  * If `A ≡ []` then `true` else `false`
@@ -12,7 +11,7 @@ import type { ArrayConcatIdentity } from '~/identity/array-concat-identity'
  * type Ex2 = IsArrayIdentity<[true]> // false
  * ```
  */
-export type IsArrayConcatIdentity<A> = IsEqual<A, ArrayConcatIdentity>
+export type IsArrayConcatIdentity<A> = IsEqual<A, []>
 
 /**
  * @deprecated - Use `IsArrayConcatIdentity` instead.
@@ -20,9 +19,6 @@ export type IsArrayConcatIdentity<A> = IsEqual<A, ArrayConcatIdentity>
 export type IsArrayIdentity<A> = IsArrayConcatIdentity<A>
 
 /**
- * Alias for `IsArrayIdentity`
- * @typeParam A - The type to check.
- * @group Antecedent
- * @group Identity
+ * @deprecated - Use `IsArrayConcatIdentity` instead.
  */
 export type IsEmptyArray<A> = IsArrayConcatIdentity<A>

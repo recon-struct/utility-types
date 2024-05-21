@@ -1,5 +1,4 @@
 import type { IsExtension } from '~/any'
-import type { NumMultIdentity } from '~/identity/num-mult-identity'
 
 /**
  * If `A ≡ 1` then `true` else `false`
@@ -12,7 +11,7 @@ import type { NumMultIdentity } from '~/identity/num-mult-identity'
  * type Ex2 = IsNumMultIdentity<2> // false
  * ```
  */
-export type IsNumMultIdentity<A> = IsExtension<A, NumMultIdentity>
+export type IsNumMultIdentity<A> = IsExtension<A, 1>
 
 /**
  * Alias for `IsNumMultIdentity`

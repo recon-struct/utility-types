@@ -1,5 +1,4 @@
 import type { IsExtension } from '~/any'
-import type { BigIntAddIdentity } from '~/identity/bigint-add-identity'
 
 /**
  * If `A ≡ 0n` then `true` else `false`
@@ -12,7 +11,7 @@ import type { BigIntAddIdentity } from '~/identity/bigint-add-identity'
  * type Ex2 = IsBigIntAddIdentity<2n> // false
  * ```
  */
-export type IsBigIntAddIdentity<A> = IsExtension<A, BigIntAddIdentity>
+export type IsBigIntAddIdentity<A> = IsExtension<A, 0n>
 
 /**
  * @deprecated - Use `IsBigIntAddIdentity` instead.

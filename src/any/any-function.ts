@@ -1,5 +1,3 @@
-import type { AnyArray } from '~/any/any-array'
-
 /**
  * Generic function interface
  * @typeParam A - The type of the arguments.
@@ -12,6 +10,6 @@ import type { AnyArray } from '~/any/any-array'
  * type Ex3 = AnyFunction<[number, number], number> // (a: number, b: number) => number
  * ```
  */
-export interface AnyFunction<A extends AnyArray = AnyArray, B = any> {
+export interface AnyFunction<A extends any[] = any[], B = any> {
   (..._: A): B
 }

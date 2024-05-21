@@ -1,5 +1,4 @@
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { ObjectAssignIdentity } from '~/identity/object-assign-identity'
 
 /**
  * If `A ≡ {}` then `true` else `false`
@@ -12,7 +11,7 @@ import type { ObjectAssignIdentity } from '~/identity/object-assign-identity'
  * type Ex2 = IsObjectIdentity<{ a: true }> // false
  * ```
  */
-export type IsObjectAssignIdentity<A> = IsEqual<A, ObjectAssignIdentity>
+export type IsObjectAssignIdentity<A> = IsEqual<A, {}>
 
 /**
  * @deprecated - Use `IsObjectAssignIdentity` instead.

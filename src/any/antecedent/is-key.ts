@@ -1,8 +1,7 @@
-import type { AnyKey } from '~/any/any-key'
 import type { IsExtension } from '~/extension/antecedent/is-extension'
 
 /**
- * If `A extends AnyKey` then `true` else `false`
+ * If `A extends PropertyKey` then `true` else `false`
  * @group Antecedent
  * @group Any
  * @example
@@ -13,4 +12,4 @@ import type { IsExtension } from '~/extension/antecedent/is-extension'
  * type Ex4 = IsKey<boolean> // false
  * ```
  */
-export type IsKey<A> = IsExtension<A, AnyKey>
+export type IsKey<A> = IsExtension<A, PropertyKey>
