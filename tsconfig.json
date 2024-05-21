@@ -10,8 +10,9 @@
 
     // Bundler mode
     "moduleResolution": "bundler",
-    // "allowImportingTsExtensions": true,
+    "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
+    // Overwritten by local configuration
     // "noEmit": true,
 
     // Best practices
@@ -34,5 +35,6 @@
     "declaration": true,
     "emitDeclarationOnly": true
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src"],
+  "exclude": ["**/*.spec.ts"]
 }

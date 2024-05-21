@@ -2,29 +2,27 @@
   "name": "@recon-struct/utility-types",
   "version": "1.4.0",
   "devDependencies": {
+    "@types/bun": "latest",
     "eslint": "^9.3.0",
     "prettier": "^3.2.5",
     "prettier-plugin-organize-imports": "^3.2.4",
-    "typedoc": "^0.25.13",
-    "vite": "^5.2.11",
-    "vite-plugin-dts": "^3.9.1",
-    "vitest": "^1.6.0"
+    "tsd": "^0.31.0",
+    "typedoc": "^0.25.13"
   },
   "license": "MIT",
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "test": "vitest --typecheck",
-    "dev": "vite build --watch",
-    "build": "vite build",
-    "generate-docs": "typedoc --options ./typedoc.json"
+    "generate-docs": "typedoc --out docs src",
+    "test": "bun test",
+    "build": "bun build ./src/index.ts --outdir ./dist && tsc"
   },
-  "main": "./dist/index.umd.js",
-  "module": "./dist/index.es.js",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "./dist/*"
-  ],
-  "packageManager": "pnpm@9.1.0"
+    "dist"
+  ]
 }
