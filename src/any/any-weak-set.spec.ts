@@ -1,10 +1,14 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
 import type { AnyObject } from '~/any/any-object'
 import type { AnyWeakSet } from '~/any/any-weak-set'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 
 describe('AnyWeakSet', () => {
   it('should be a WeakSet of any type', () => {
-    expectTypeOf<AnyWeakSet>().toEqualTypeOf<WeakSet<AnyObject>>()
+    type Ex = AnyWeakSet
+
+    type TestEx = Expect<IsEqual<Ex, WeakSet<AnyObject>>>
   })
 
   it('should be a WeakSet of type A', () => {
@@ -12,8 +16,8 @@ describe('AnyWeakSet', () => {
     type Ex2 = AnyWeakSet<{ b: number }>
     type Ex3 = AnyWeakSet<{ c: boolean }>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<WeakSet<{ a: string }>>()
-    expectTypeOf<Ex2>().toEqualTypeOf<WeakSet<{ b: number }>>()
-    expectTypeOf<Ex3>().toEqualTypeOf<WeakSet<{ c: boolean }>>()
+    type TestEx1 = Expect<IsEqual<Ex1, WeakSet<{ a: string }>>>
+    type TestEx2 = Expect<IsEqual<Ex2, WeakSet<{ b: number }>>>
+    type TestEx3 = Expect<IsEqual<Ex3, WeakSet<{ c: boolean }>>>
   })
 })

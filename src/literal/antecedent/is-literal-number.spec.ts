@@ -1,4 +1,6 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { IsLiteralNumber } from '~/literal/antecedent/is-literal-number'
 
 describe('IsLiteralNumber', () => {
@@ -10,12 +12,12 @@ describe('IsLiteralNumber', () => {
     type Ex5 = IsLiteralNumber<0n>
     type Ex6 = IsLiteralNumber<-1n>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<true>()
-    expectTypeOf<Ex2>().toEqualTypeOf<true>()
-    expectTypeOf<Ex3>().toEqualTypeOf<true>()
-    expectTypeOf<Ex4>().toEqualTypeOf<false>()
-    expectTypeOf<Ex5>().toEqualTypeOf<false>()
-    expectTypeOf<Ex6>().toEqualTypeOf<false>()
+    type TestEx1 = Expect<IsEqual<Ex1, true>>
+    type TestEx2 = Expect<IsEqual<Ex2, true>>
+    type TestEx3 = Expect<IsEqual<Ex3, true>>
+    type TestEx4 = Expect<IsEqual<Ex4, false>>
+    type TestEx5 = Expect<IsEqual<Ex5, false>>
+    type TestEx6 = Expect<IsEqual<Ex6, false>>
   })
 
   it('should evaluate if `A` is not a literal number', () => {
@@ -27,12 +29,12 @@ describe('IsLiteralNumber', () => {
     type Ex6 = IsLiteralNumber<false>
     type Ex7 = IsLiteralNumber<boolean>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<false>()
-    expectTypeOf<Ex2>().toEqualTypeOf<false>()
-    expectTypeOf<Ex3>().toEqualTypeOf<false>()
-    expectTypeOf<Ex4>().toEqualTypeOf<false>()
-    expectTypeOf<Ex5>().toEqualTypeOf<false>()
-    expectTypeOf<Ex6>().toEqualTypeOf<false>()
-    expectTypeOf<Ex7>().toEqualTypeOf<false>()
+    type TestEx1 = Expect<IsEqual<Ex1, false>>
+    type TestEx2 = Expect<IsEqual<Ex2, false>>
+    type TestEx3 = Expect<IsEqual<Ex3, false>>
+    type TestEx4 = Expect<IsEqual<Ex4, false>>
+    type TestEx5 = Expect<IsEqual<Ex5, false>>
+    type TestEx6 = Expect<IsEqual<Ex6, false>>
+    type TestEx7 = Expect<IsEqual<Ex7, false>>
   })
 })

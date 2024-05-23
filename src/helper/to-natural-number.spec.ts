@@ -1,5 +1,7 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
 import type { ToNaturalNumber } from '~/helper/to-natural-number'
+import type { Expect } from './test'
 
 describe('ToNaturalNumber', () => {
   it('should convert a string to a natural number', () => {
@@ -7,8 +9,8 @@ describe('ToNaturalNumber', () => {
     type Ex2 = ToNaturalNumber<'1'>
     type Ex3 = ToNaturalNumber<'99'>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<0>()
-    expectTypeOf<Ex2>().toEqualTypeOf<1>()
-    expectTypeOf<Ex3>().toEqualTypeOf<99>()
+    type TestEx1 = Expect<IsEqual<Ex1, 0>>
+    type TestEx2 = Expect<IsEqual<Ex2, 1>>
+    type TestEx3 = Expect<IsEqual<Ex3, 99>>
   })
 })

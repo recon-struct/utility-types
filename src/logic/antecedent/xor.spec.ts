@@ -1,4 +1,6 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { Xor } from '~/logic/antecedent/xor'
 
 describe('Xor', () => {
@@ -8,9 +10,9 @@ describe('Xor', () => {
     type FT = Xor<false, true>
     type FF = Xor<false, false>
 
-    expectTypeOf<TT>().toEqualTypeOf<false>()
-    expectTypeOf<TF>().toEqualTypeOf<true>()
-    expectTypeOf<FT>().toEqualTypeOf<true>()
-    expectTypeOf<FF>().toEqualTypeOf<false>()
+    type TestTT = Expect<IsEqual<TT, false>>
+    type TestTF = Expect<IsEqual<TF, true>>
+    type TestFT = Expect<IsEqual<FT, true>>
+    type TestFF = Expect<IsEqual<FF, false>>
   })
 })

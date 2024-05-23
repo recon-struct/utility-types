@@ -1,9 +1,11 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
 import type { AnySet } from '~/any/any-set'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 
 describe('AnySet', () => {
   it('should be a Set of any type', () => {
-    expectTypeOf<AnySet>().toEqualTypeOf<Set<any>>()
+    type TestAnySet = Expect<IsEqual<AnySet, Set<any>>>
   })
 
   it('should be a set of type A', () => {
@@ -11,8 +13,8 @@ describe('AnySet', () => {
     type Ex2 = AnySet<string>
     type Ex3 = AnySet<boolean>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<Set<number>>()
-    expectTypeOf<Ex2>().toEqualTypeOf<Set<string>>()
-    expectTypeOf<Ex3>().toEqualTypeOf<Set<boolean>>()
+    type TestEx1 = Expect<IsEqual<Ex1, Set<number>>>
+    type TestEx2 = Expect<IsEqual<Ex2, Set<string>>>
+    type TestEx3 = Expect<IsEqual<Ex3, Set<boolean>>>
   })
 })

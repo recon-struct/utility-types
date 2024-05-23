@@ -1,4 +1,6 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { Interpolation } from '~/string/interpolation'
 
 describe('Interpolation', () => {
@@ -6,7 +8,7 @@ describe('Interpolation', () => {
     type Ex1 = Interpolation<'hello {{world}}', { world: 'world' }>
     type Ex2 = Interpolation<'{{a}} {{b}} {{c}}', { a: 'a'; b: 'b'; c: 'c' }>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<'hello world'>()
-    expectTypeOf<Ex2>().toEqualTypeOf<'a b c'>()
+    type TestEx1 = Expect<IsEqual<Ex1, 'hello world'>>
+    type TestEx2 = Expect<IsEqual<Ex2, 'a b c'>>
   })
 })

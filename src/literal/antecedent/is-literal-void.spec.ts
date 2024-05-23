@@ -1,11 +1,13 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { IsLiteralVoid } from '~/literal/antecedent/is-literal-void'
 
 describe('IsLiteralVoid', () => {
   it('should evaluate if `A` is a literal void', () => {
     type Ex1 = IsLiteralVoid<void>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<true>()
+    type TestEx1 = Expect<IsEqual<Ex1, true>>
   })
 
   it('should evaluate if `A` is not a literal void', () => {
@@ -17,12 +19,12 @@ describe('IsLiteralVoid', () => {
     type Ex6 = IsLiteralVoid<unknown>
     type Ex7 = IsLiteralVoid<any>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<false>()
-    expectTypeOf<Ex2>().toEqualTypeOf<false>()
-    expectTypeOf<Ex3>().toEqualTypeOf<false>()
-    expectTypeOf<Ex4>().toEqualTypeOf<false>()
-    expectTypeOf<Ex5>().toEqualTypeOf<false>()
-    expectTypeOf<Ex6>().toEqualTypeOf<false>()
-    expectTypeOf<Ex7>().toEqualTypeOf<false>()
+    type TestEx1 = Expect<IsEqual<Ex1, false>>
+    type TestEx2 = Expect<IsEqual<Ex2, false>>
+    type TestEx3 = Expect<IsEqual<Ex3, false>>
+    type TestEx4 = Expect<IsEqual<Ex4, false>>
+    type TestEx5 = Expect<IsEqual<Ex5, false>>
+    type TestEx6 = Expect<IsEqual<Ex6, false>>
+    type TestEx7 = Expect<IsEqual<Ex7, false>>
   })
 })

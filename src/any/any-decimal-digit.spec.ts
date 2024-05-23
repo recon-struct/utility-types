@@ -1,10 +1,12 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
 import type { AnyDecimalDigit } from '~/any/any-decimal-digit'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 
 describe('AnyDecimalDigit', () => {
   it('should be a decimal digit', () => {
     type Ex = AnyDecimalDigit
 
-    expectTypeOf<Ex>().toEqualTypeOf<0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9>()
+    type TestEx = Expect<IsEqual<Ex, 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9>>
   })
 })

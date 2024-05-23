@@ -1,11 +1,15 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
 import type { Arity5 } from '~/function/arity/arity-5'
+import type { Expect } from '~/helper/test'
 
 describe('Arity5', () => {
   it('should be a function with 5 parameters', () => {
-    expectTypeOf<Arity5>().toEqualTypeOf<
-      (a: any, b: any, c: any, d: any, e: any) => any
-    >()
+    type Ex = Arity5<any, any, any, any, any, 1>
+
+    type TestEx = Expect<
+      IsEqual<Ex, (a: any, b: any, c: any, d: any, e: any) => 1>
+    >
   })
 
   it('should return a value of type F', () => {
@@ -17,6 +21,6 @@ describe('Arity5', () => {
     type F = 'F'
     type Ex = Arity5<A, B, C, D, E, F>
 
-    expectTypeOf<Ex>().toEqualTypeOf<(a: A, b: B, c: C, d: D, e: E) => F>()
+    type TestEx = Expect<IsEqual<Ex, (a: A, b: B, c: C, d: D, e: E) => F>>
   })
 })

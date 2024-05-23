@@ -1,4 +1,6 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { GetPathValue } from '~/object/get-path-value'
 
 describe('GetPathValue', () => {
@@ -8,15 +10,15 @@ describe('GetPathValue', () => {
     type Ex2 = GetPathValue<Obj, ['d']> // 'e'
     type Ex3 = GetPathValue<Obj, ['a']> // 'c'
 
-    expectTypeOf<Ex1>().toEqualTypeOf<'c'>()
-    expectTypeOf<Ex2>().toEqualTypeOf<'e'>()
-    expectTypeOf<Ex3>().toEqualTypeOf<{ b: 'c' }>()
+    type TestEx1 = Expect<IsEqual<Ex1, 'c'>>
+    type TestEx2 = Expect<IsEqual<Ex2, 'e'>>
+    type TestEx3 = Expect<IsEqual<Ex3, { b: 'c' }>>
   })
 
   it('should return undefined if the path does not exist', () => {
     type Obj = { a: { b: 'c' } }
     type Ex1 = GetPathValue<Obj, ['z']> // undefined
 
-    expectTypeOf<Ex1>().toEqualTypeOf<undefined>()
+    type TestEx1 = Expect<IsEqual<Ex1, undefined>>
   })
 })

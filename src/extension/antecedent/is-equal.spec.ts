@@ -1,5 +1,6 @@
-import { describe, expectTypeOf, it } from 'vitest'
-import type { IsEqual } from '~/extension/antecedent/is-equal'
+import { describe, it } from 'bun:test'
+import type { Expect } from '~/helper/test'
+import type { IsEqual } from './is-equal'
 
 describe('IsEqual', () => {
   it('should return true if two types are symmetrically equal', () => {
@@ -7,7 +8,7 @@ describe('IsEqual', () => {
     type B = number
     type Ex = IsEqual<A, B>
 
-    expectTypeOf<Ex>().toEqualTypeOf<true>()
+    type TestEx = Expect<IsEqual<Ex, true>>
   })
 
   it('should return false if two types are not symmetrically equal', () => {
@@ -16,9 +17,9 @@ describe('IsEqual', () => {
     type Ex3 = IsEqual<1, number>
     type Ex4 = IsEqual<number, 1n>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<false>()
-    expectTypeOf<Ex2>().toEqualTypeOf<false>()
-    expectTypeOf<Ex3>().toEqualTypeOf<false>()
-    expectTypeOf<Ex4>().toEqualTypeOf<false>()
+    type TestEx1 = Expect<IsEqual<Ex1, false>>
+    type TestEx2 = Expect<IsEqual<Ex2, false>>
+    type TestEx3 = Expect<IsEqual<Ex3, false>>
+    type TestEx4 = Expect<IsEqual<Ex4, false>>
   })
 })

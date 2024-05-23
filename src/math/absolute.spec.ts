@@ -1,4 +1,6 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { Absolute } from '~/math/absolute'
 
 describe('Absolute', () => {
@@ -7,8 +9,8 @@ describe('Absolute', () => {
     type Ex2 = Absolute<-1>
     type Ex3 = Absolute<1>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<0>()
-    expectTypeOf<Ex2>().toEqualTypeOf<1>()
-    expectTypeOf<Ex3>().toEqualTypeOf<1>()
+    type TestEx1 = Expect<IsEqual<Ex1, 0>>
+    type TestEx2 = Expect<IsEqual<Ex2, 1>>
+    type TestEx3 = Expect<IsEqual<Ex3, 1>>
   })
 })

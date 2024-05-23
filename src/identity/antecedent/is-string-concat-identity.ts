@@ -11,7 +11,7 @@ import type { IsEqual } from '~/extension/antecedent/is-equal'
  * type Ex2 = IsStringIdentity<'abc'> // false
  * ```
  */
-export type IsStringConcatIdentity<A> = IsEqual<A, []>
+export type IsStringConcatIdentity<A> = IsEqual<A, ''>
 
 /**
  * @deprecated - Use `IsStringConcatIdentity` instead.

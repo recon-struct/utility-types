@@ -1,14 +1,20 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
 import type { PartApp3 } from '~/function/part-app/part-app-3'
+import type { Expect } from '~/helper/test'
 
 describe('PartApp3', () => {
   it('should have 3 parameters', () => {
-    type Ex = PartApp3
+    type Ex = PartApp3<any, any, any, 1>
 
-    expectTypeOf<Ex>().toMatchTypeOf<(a: any, b: any, c: any) => any>()
-    expectTypeOf<Ex>().toMatchTypeOf<(a: any) => (b: any, c: any) => any>()
-    expectTypeOf<Ex>().toMatchTypeOf<(a: any) => (b: any) => (c: any) => any>()
-    expectTypeOf<Ex>().toMatchTypeOf<(a: any, b: any) => (c: any) => any>()
+    type TestEx = Expect<
+      IsEqual<
+        Ex,
+        | ((a: any, b: any, c: any) => 1)
+        | ((a: any, b: any) => (c: any) => 1)
+        | ((a: any) => ((b: any, c: any) => 1) | ((b: any) => (c: any) => 1))
+      >
+    >
   })
 
   it('should return a value of type D', () => {
@@ -18,9 +24,13 @@ describe('PartApp3', () => {
     type D = 'D'
     type Ex = PartApp3<A, B, C, D>
 
-    expectTypeOf<Ex>().toMatchTypeOf<(a: A, b: B, c: C) => D>()
-    expectTypeOf<Ex>().toMatchTypeOf<(a: A) => (b: B, c: C) => D>()
-    expectTypeOf<Ex>().toMatchTypeOf<(a: A) => (b: B) => (c: C) => D>()
-    expectTypeOf<Ex>().toMatchTypeOf<(a: A, b: B) => (c: C) => D>()
+    type TestEx = Expect<
+      IsEqual<
+        Ex,
+        | ((a: A, b: B, c: C) => D)
+        | ((a: A, b: B) => (c: C) => D)
+        | ((a: A) => ((b: B, c: C) => D) | ((b: B) => (c: C) => D))
+      >
+    >
   })
 })

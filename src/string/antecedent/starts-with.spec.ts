@@ -1,4 +1,6 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { StartsWith } from '~/string/antecedent/starts-with'
 
 describe('StartsWith', () => {
@@ -7,9 +9,9 @@ describe('StartsWith', () => {
     type Ex2 = StartsWith<'abc', 'ab'>
     type Ex3 = StartsWith<'abc', 'abc'>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<true>()
-    expectTypeOf<Ex2>().toEqualTypeOf<true>()
-    expectTypeOf<Ex3>().toEqualTypeOf<true>()
+    type TestEx1 = Expect<IsEqual<Ex1, true>>
+    type TestEx2 = Expect<IsEqual<Ex2, true>>
+    type TestEx3 = Expect<IsEqual<Ex3, true>>
   })
 
   it('should return false if `A` does not start with `B`', () => {
@@ -17,8 +19,8 @@ describe('StartsWith', () => {
     type Ex2 = StartsWith<'abc', 'bc'>
     type Ex3 = StartsWith<'abc', 'c'>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<false>()
-    expectTypeOf<Ex2>().toEqualTypeOf<false>()
-    expectTypeOf<Ex3>().toEqualTypeOf<false>()
+    type TestEx1 = Expect<IsEqual<Ex1, false>>
+    type TestEx2 = Expect<IsEqual<Ex2, false>>
+    type TestEx3 = Expect<IsEqual<Ex3, false>>
   })
 })

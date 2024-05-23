@@ -1,4 +1,6 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { IsCapitalized } from '~/string/antecedent/is-capitalized'
 
 describe('IsCapitalized', () => {
@@ -6,15 +8,15 @@ describe('IsCapitalized', () => {
     type Ex1 = IsCapitalized<'A'>
     type Ex2 = IsCapitalized<'Abc'>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<true>()
-    expectTypeOf<Ex2>().toEqualTypeOf<true>()
+    type TestEx1 = Expect<IsEqual<Ex1, true>>
+    type TestEx2 = Expect<IsEqual<Ex2, true>>
   })
 
   it('should return false if `A` is not capitalized', () => {
     type Ex1 = IsCapitalized<'a'>
     type Ex2 = IsCapitalized<'abc'>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<false>()
-    expectTypeOf<Ex2>().toEqualTypeOf<false>()
+    type TestEx1 = Expect<IsEqual<Ex1, false>>
+    type TestEx2 = Expect<IsEqual<Ex2, false>>
   })
 })

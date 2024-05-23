@@ -1,4 +1,6 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { IsObject } from '~/object/antecedent/is-object'
 
 describe('IsObject', () => {
@@ -9,16 +11,16 @@ describe('IsObject', () => {
     type Ex4 = IsObject<Array<string | number>>
     type Ex5 = IsObject<() => void>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<true>()
-    expectTypeOf<Ex2>().toEqualTypeOf<true>()
-    expectTypeOf<Ex3>().toEqualTypeOf<true>()
-    expectTypeOf<Ex4>().toEqualTypeOf<true>()
-    expectTypeOf<Ex5>().toEqualTypeOf<true>()
+    type TestEx1 = Expect<IsEqual<Ex1, true>>
+    type TestEx2 = Expect<IsEqual<Ex2, true>>
+    type TestEx3 = Expect<IsEqual<Ex3, true>>
+    type TestEx4 = Expect<IsEqual<Ex4, true>>
+    type TestEx5 = Expect<IsEqual<Ex5, true>>
   })
 
   it('should return false if A does not extend AnyObject', () => {
     type Ex = IsObject<boolean>
 
-    expectTypeOf<Ex>().toEqualTypeOf<false>()
+    type TestEx = Expect<IsEqual<Ex, false>>
   })
 })

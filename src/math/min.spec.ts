@@ -1,4 +1,6 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { Min } from '~/math/min'
 
 describe('Min', () => {
@@ -6,7 +8,7 @@ describe('Min', () => {
     type Ex1 = Min<1, 2>
     type Ex2 = Min<2, 1>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<1>()
-    expectTypeOf<Ex2>().toEqualTypeOf<1>()
+    type TestEx1 = Expect<IsEqual<Ex1, 1>>
+    type TestEx2 = Expect<IsEqual<Ex2, 1>>
   })
 })

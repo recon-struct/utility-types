@@ -1,5 +1,7 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
 import type { IsTruthy } from '~/any/antecedent/is-truthy'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 
 describe('IsTruthy', () => {
   it('should return true if A extends true', () => {
@@ -9,11 +11,11 @@ describe('IsTruthy', () => {
     type Ex4 = IsTruthy<{}>
     type Ex5 = IsTruthy<[]>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<true>()
-    expectTypeOf<Ex2>().toEqualTypeOf<true>()
-    expectTypeOf<Ex3>().toEqualTypeOf<true>()
-    expectTypeOf<Ex4>().toEqualTypeOf<true>()
-    expectTypeOf<Ex5>().toEqualTypeOf<true>()
+    type TestEx1 = Expect<IsEqual<Ex1, true>>
+    type TestEx2 = Expect<IsEqual<Ex2, true>>
+    type TestEx3 = Expect<IsEqual<Ex3, true>>
+    type TestEx4 = Expect<IsEqual<Ex4, true>>
+    type TestEx5 = Expect<IsEqual<Ex5, true>>
   })
 
   it('should return false if A does not extend true', () => {
@@ -24,12 +26,12 @@ describe('IsTruthy', () => {
     type Ex5 = IsTruthy<undefined>
     type Ex6 = IsTruthy<never>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<false>()
-    expectTypeOf<Ex2>().toEqualTypeOf<false>()
-    expectTypeOf<Ex3>().toEqualTypeOf<false>()
-    expectTypeOf<Ex4>().toEqualTypeOf<false>()
-    expectTypeOf<Ex5>().toEqualTypeOf<false>()
-    expectTypeOf<Ex6>().toEqualTypeOf<false>()
+    type TestEx1 = Expect<IsEqual<Ex1, false>>
+    type TestEx2 = Expect<IsEqual<Ex2, false>>
+    type TestEx3 = Expect<IsEqual<Ex3, false>>
+    type TestEx4 = Expect<IsEqual<Ex4, false>>
+    type TestEx5 = Expect<IsEqual<Ex5, false>>
+    type TestEx6 = Expect<IsEqual<Ex6, false>>
   })
 
   it('should return boolean if A is a union that extends true', () => {
@@ -39,10 +41,10 @@ describe('IsTruthy', () => {
     type Ex4 = IsTruthy<{} | null>
     type Ex5 = IsTruthy<[] | undefined>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<boolean>()
-    expectTypeOf<Ex2>().toEqualTypeOf<boolean>()
-    expectTypeOf<Ex3>().toEqualTypeOf<boolean>()
-    expectTypeOf<Ex4>().toEqualTypeOf<boolean>()
-    expectTypeOf<Ex5>().toEqualTypeOf<boolean>()
+    type TestEx1 = Expect<IsEqual<Ex1, boolean>>
+    type TestEx2 = Expect<IsEqual<Ex2, boolean>>
+    type TestEx3 = Expect<IsEqual<Ex3, boolean>>
+    type TestEx4 = Expect<IsEqual<Ex4, boolean>>
+    type TestEx5 = Expect<IsEqual<Ex5, boolean>>
   })
 })

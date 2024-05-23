@@ -1,24 +1,26 @@
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { Tuple } from '~/tuple/tuple'
-import { describe, expectTypeOf, it } from 'vitest'
 
 describe('Tuple', () => {
   it('should be a tuple', () => {
     type Ex1 = Tuple // []
-    expectTypeOf<Ex1>().toEqualTypeOf<[]>()
+    type TestEx1 = Expect<IsEqual<Ex1, []>>
   })
 
   it('should be a tuple with one element', () => {
     type Ex2 = Tuple<1> // [1]
-    expectTypeOf<Ex2>().toEqualTypeOf<[any]>()
+    type TestEx2 = Expect<IsEqual<Ex2, [any]>>
   })
 
   it('should be a tuple with two elements', () => {
     type Ex3 = Tuple<2> // [1, 2]
-    expectTypeOf<Ex3>().toEqualTypeOf<[any, any]>()
+    type TestEx3 = Expect<IsEqual<Ex3, [any, any]>>
   })
 
   it('should be a tuple with three elements', () => {
     type Ex4 = Tuple<3> // [1, 2, 3]
-    expectTypeOf<Ex4>().toEqualTypeOf<[any, any, any]>()
+    type TestEx4 = Expect<IsEqual<Ex4, [any, any, any]>>
   })
 })

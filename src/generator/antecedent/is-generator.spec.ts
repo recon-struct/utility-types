@@ -1,15 +1,15 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
 import type { IsGenerator } from '~/generator/antecedent/is-generator'
+import type { Expect } from '~/helper/test'
 
 describe('IsGenerator', () => {
   it('should return true if `A` is a generator', () => {
-    expectTypeOf<
-      IsGenerator<Generator<unknown, unknown>>
-    >().toEqualTypeOf<true>()
+    type Test = Expect<IsEqual<IsGenerator<Generator<unknown, unknown>>, true>>
   })
 
   it('should return false if `A` is not a generator', () => {
-    expectTypeOf<IsGenerator<unknown>>().toEqualTypeOf<false>()
-    expectTypeOf<IsGenerator<() => void>>().toEqualTypeOf<false>()
+    type Test1 = Expect<IsEqual<IsGenerator<unknown>, false>>
+    type Test2 = Expect<IsEqual<IsGenerator<() => void>, false>>
   })
 })

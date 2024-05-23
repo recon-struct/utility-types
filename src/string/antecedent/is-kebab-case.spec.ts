@@ -1,4 +1,6 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { IsKebabCase } from '~/string/antecedent/is-kebab-case'
 
 describe('IsKebabCase', () => {
@@ -8,10 +10,10 @@ describe('IsKebabCase', () => {
     type Ex3 = IsKebabCase<'hello123'>
     type Ex4 = IsKebabCase<'hello-world-123'>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<true>()
-    expectTypeOf<Ex2>().toEqualTypeOf<true>()
-    expectTypeOf<Ex3>().toEqualTypeOf<true>()
-    expectTypeOf<Ex4>().toEqualTypeOf<true>()
+    type TestEx1 = Expect<IsEqual<Ex1, true>>
+    type TestEx2 = Expect<IsEqual<Ex2, true>>
+    type TestEx3 = Expect<IsEqual<Ex3, true>>
+    type TestEx4 = Expect<IsEqual<Ex4, true>>
   })
 
   it('should be false if `A` is not kebab-case', () => {
@@ -20,9 +22,9 @@ describe('IsKebabCase', () => {
     type Ex3 = IsKebabCase<'helloWorld123_456'>
     type Ex4 = IsKebabCase<'helloWorld123_456'>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<false>()
-    expectTypeOf<Ex2>().toEqualTypeOf<false>()
-    expectTypeOf<Ex3>().toEqualTypeOf<false>()
-    expectTypeOf<Ex4>().toEqualTypeOf<false>()
+    type TestEx1 = Expect<IsEqual<Ex1, false>>
+    type TestEx2 = Expect<IsEqual<Ex2, false>>
+    type TestEx3 = Expect<IsEqual<Ex3, false>>
+    type TestEx4 = Expect<IsEqual<Ex4, false>>
   })
 })

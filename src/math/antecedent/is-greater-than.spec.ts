@@ -1,14 +1,16 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { IsGreaterThan } from '~/math/antecedent/is-greater-than'
 
 describe('IsGreaterThan', () => {
   it('should equal false', () => {
-    expectTypeOf<IsGreaterThan<1, 2>>().toEqualTypeOf<false>()
+    type TestIsGreaterThan = Expect<IsEqual<IsGreaterThan<1, 2>, false>>
   })
   it('should equal true', () => {
-    expectTypeOf<IsGreaterThan<2, 1>>().toEqualTypeOf<true>()
+    type TestIsGreaterThan = Expect<IsEqual<IsGreaterThan<2, 1>, true>>
   })
   it('should equal false', () => {
-    expectTypeOf<IsGreaterThan<1, 1>>().toEqualTypeOf<false>()
+    type TestIsGreaterThan = Expect<IsEqual<IsGreaterThan<1, 1>, false>>
   })
 })

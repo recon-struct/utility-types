@@ -1,10 +1,14 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
 import type { AnyStringish } from '~/any/any-stringish'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 
 describe('AnyStringish', () => {
   it('should be a union of all TypeScript type that can be coercedto a string easily.', () => {
-    expectTypeOf<AnyStringish>().toEqualTypeOf<
-      string | number | bigint | boolean | null | undefined
-    >()
+    type Ex = AnyStringish
+
+    type TestEx = Expect<
+      IsEqual<Ex, string | number | bigint | boolean | null | undefined>
+    >
   })
 })

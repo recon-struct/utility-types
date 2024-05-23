@@ -1,4 +1,6 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { IsLiteralBoolean } from '~/literal/antecedent/is-literal-boolean'
 
 describe('IsLiteralBoolean', () => {
@@ -6,8 +8,8 @@ describe('IsLiteralBoolean', () => {
     type Ex1 = IsLiteralBoolean<true>
     type Ex2 = IsLiteralBoolean<false>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<true>()
-    expectTypeOf<Ex2>().toEqualTypeOf<true>()
+    type TestEx1 = Expect<IsEqual<Ex1, true>>
+    type TestEx2 = Expect<IsEqual<Ex2, true>>
   })
 
   it('should evaluate if `A` is not a literal boolean', () => {
@@ -15,8 +17,8 @@ describe('IsLiteralBoolean', () => {
     type Ex2 = IsLiteralBoolean<null>
     type Ex3 = IsLiteralBoolean<{}>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<false>()
-    expectTypeOf<Ex2>().toEqualTypeOf<false>()
-    expectTypeOf<Ex3>().toEqualTypeOf<false>()
+    type TestEx1 = Expect<IsEqual<Ex1, false>>
+    type TestEx2 = Expect<IsEqual<Ex2, false>>
+    type TestEx3 = Expect<IsEqual<Ex3, false>>
   })
 })

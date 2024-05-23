@@ -1,4 +1,6 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { UpperCase } from '~/string/upper-case'
 
 describe('UpperCase', () => {
@@ -8,9 +10,9 @@ describe('UpperCase', () => {
     type Ex3 = UpperCase<'hello 123'>
     type Ex4 = UpperCase<'hello world 123'>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<'HELLO'>()
-    expectTypeOf<Ex2>().toEqualTypeOf<'HELLO WORLD'>()
-    expectTypeOf<Ex3>().toEqualTypeOf<'HELLO 123'>()
-    expectTypeOf<Ex4>().toEqualTypeOf<'HELLO WORLD 123'>()
+    type TestEx1 = Expect<IsEqual<Ex1, 'HELLO'>>
+    type TestEx2 = Expect<IsEqual<Ex2, 'HELLO WORLD'>>
+    type TestEx3 = Expect<IsEqual<Ex3, 'HELLO 123'>>
+    type TestEx4 = Expect<IsEqual<Ex4, 'HELLO WORLD 123'>>
   })
 })

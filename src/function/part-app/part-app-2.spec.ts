@@ -1,12 +1,15 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
 import type { PartApp2 } from '~/function/part-app/part-app-2'
+import type { Expect } from '~/helper/test'
 
 describe('PartApp2', () => {
   it('should be a function with 2 arguments', () => {
-    type Ex = PartApp2
+    type Ex = PartApp2<any, any, 1>
 
-    expectTypeOf<Ex>().toMatchTypeOf<(a: any, b: any) => any>()
-    expectTypeOf<Ex>().toMatchTypeOf<(a: any) => (b: any) => any>()
+    type TestEx = Expect<
+      IsEqual<Ex, ((a: any, b: any) => 1) | ((a: any) => (b: any) => 1)>
+    >
   })
 
   it('should return a value of type C', () => {
@@ -15,7 +18,8 @@ describe('PartApp2', () => {
     type C = 'C'
     type Ex = PartApp2<A, B, C>
 
-    expectTypeOf<Ex>().toMatchTypeOf<(a: A, b: B) => C>()
-    expectTypeOf<Ex>().toMatchTypeOf<(a: A) => (b: B) => C>()
+    type TestEx = Expect<
+      IsEqual<Ex, ((a: A, b: B) => C) | ((a: A) => (b: B) => C)>
+    >
   })
 })

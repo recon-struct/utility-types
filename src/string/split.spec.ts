@@ -1,4 +1,6 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { Split } from '~/string/split'
 
 describe('Split', () => {
@@ -9,10 +11,10 @@ describe('Split', () => {
     type Ex4 = Split<'hello world', 'd'>
     type Ex5 = Split<'hello world', 'h'>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<['hello', 'world']>()
-    expectTypeOf<Ex2>().toEqualTypeOf<['hell', ' w', 'rld']>()
-    expectTypeOf<Ex3>().toEqualTypeOf<['he', '', 'o wor', 'd']>()
-    expectTypeOf<Ex4>().toEqualTypeOf<['hello worl', '']>()
-    expectTypeOf<Ex5>().toEqualTypeOf<['', 'ello world']>()
+    type TestEx1 = Expect<IsEqual<Ex1, ['hello', 'world']>>
+    type TestEx2 = Expect<IsEqual<Ex2, ['hell', ' w', 'rld']>>
+    type TestEx3 = Expect<IsEqual<Ex3, ['he', '', 'o wor', 'd']>>
+    type TestEx4 = Expect<IsEqual<Ex4, ['hello worl', '']>>
+    type TestEx5 = Expect<IsEqual<Ex5, ['', 'ello world']>>
   })
 })

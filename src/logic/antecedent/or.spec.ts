@@ -1,4 +1,6 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { Or } from '~/logic/antecedent/or'
 
 describe('Or', () => {
@@ -8,9 +10,9 @@ describe('Or', () => {
     type FT = Or<false, true>
     type FF = Or<false, false>
 
-    expectTypeOf<TT>().toEqualTypeOf<true>()
-    expectTypeOf<TF>().toEqualTypeOf<true>()
-    expectTypeOf<FT>().toEqualTypeOf<true>()
-    expectTypeOf<FF>().toEqualTypeOf<false>()
+    type TestTT = Expect<IsEqual<TT, true>>
+    type TestTF = Expect<IsEqual<TF, true>>
+    type TestFT = Expect<IsEqual<FT, true>>
+    type TestFF = Expect<IsEqual<FF, false>>
   })
 })

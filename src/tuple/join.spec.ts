@@ -1,14 +1,16 @@
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { Join } from '~/tuple/join'
-import { describe, expectTypeOf, it } from 'vitest'
 
 describe('Join', () => {
   it('should join `A` and `B`', () => {
     type Ex1 = Join<['a', 'b', 'c']>
-    expectTypeOf<Ex1>().toEqualTypeOf<'abc'>()
+    type TestEx1 = Expect<IsEqual<Ex1, 'abc'>>
   })
 
   it('should join `A` and `B` with a separator', () => {
     type Ex1 = Join<['a', 'b', 'c'], '-'>
-    expectTypeOf<Ex1>().toEqualTypeOf<'a-b-c'>()
+    type TestEx1 = Expect<IsEqual<Ex1, 'a-b-c'>>
   })
 })

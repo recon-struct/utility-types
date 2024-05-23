@@ -1,4 +1,6 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { IsTrue } from '~/logic/antecedent/is-true'
 
 describe('IsTrue', () => {
@@ -6,7 +8,7 @@ describe('IsTrue', () => {
     type Ex1 = IsTrue<true>
     type Ex2 = IsTrue<false>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<true>()
-    expectTypeOf<Ex2>().toEqualTypeOf<false>()
+    type TestEx1 = Expect<IsEqual<Ex1, true>>
+    type TestEx2 = Expect<IsEqual<Ex2, false>>
   })
 })

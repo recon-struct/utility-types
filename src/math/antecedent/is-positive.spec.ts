@@ -1,16 +1,18 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { IsPositive } from '~/math/antecedent/is-positive'
 
 describe('IsPositive', () => {
   it('should return true for positive numbers', () => {
-    expectTypeOf<IsPositive<1>>().toEqualTypeOf<true>()
+    type TestIsPositive = Expect<IsEqual<IsPositive<1>, true>>
   })
 
   it('should return false for negative numbers', () => {
-    expectTypeOf<IsPositive<-1>>().toEqualTypeOf<false>()
+    type TestIsPositive = Expect<IsEqual<IsPositive<-1>, false>>
   })
 
   it('should return false for 0', () => {
-    expectTypeOf<IsPositive<0>>().toEqualTypeOf<false>()
+    type TestIsPositive = Expect<IsEqual<IsPositive<0>, false>>
   })
 })

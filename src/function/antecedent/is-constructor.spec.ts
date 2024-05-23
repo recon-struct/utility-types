@@ -1,18 +1,20 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
 import type { IsConstructor } from '~/function/antecedent/is-constructor'
+import type { Expect } from '~/helper/test'
 
 describe('IsConstructor', () => {
   it('hould return true if the function is a constructor', () => {
-    type Ex2 = IsConstructor<new () => void>
+    type Ex = IsConstructor<new () => void>
 
-    expectTypeOf<Ex2>().toEqualTypeOf<true>()
+    type TestEx = Expect<IsEqual<Ex, true>>
   })
 
   it('should return false if the function is not a constructor', () => {
     type Ex1 = IsConstructor<() => void>
     type Ex2 = IsConstructor<Function>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<false>()
-    expectTypeOf<Ex2>().toEqualTypeOf<false>()
+    type TestEx1 = Expect<IsEqual<Ex1, false>>
+    type TestEx2 = Expect<IsEqual<Ex2, false>>
   })
 })

@@ -1,9 +1,13 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
 import type { AnyArray } from '~/any/any-array'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 
 describe('AnyArray', () => {
   it('should equal any[]', () => {
-    expectTypeOf<AnyArray>().toEqualTypeOf<any[] | readonly any[]>()
+    type Ex = AnyArray
+
+    type TestEx = Expect<IsEqual<Ex, any[] | readonly any[]>>
   })
 
   it('should create an array of type A', () => {
@@ -11,8 +15,8 @@ describe('AnyArray', () => {
     type Ex2 = AnyArray<string>
     type Ex3 = AnyArray<boolean>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<number[] | readonly number[]>()
-    expectTypeOf<Ex2>().toEqualTypeOf<string[] | readonly string[]>()
-    expectTypeOf<Ex3>().toEqualTypeOf<boolean[] | readonly boolean[]>()
+    type TestEx1 = Expect<IsEqual<Ex1, number[] | readonly number[]>>
+    type TestEx2 = Expect<IsEqual<Ex2, string[] | readonly string[]>>
+    type TestEx3 = Expect<IsEqual<Ex3, boolean[] | readonly boolean[]>>
   })
 })

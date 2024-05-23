@@ -1,4 +1,6 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { IsLiteralPrimitive } from '~/literal/antecedent/is-literal-primitive'
 
 describe('IsLiteralPrimitive', () => {
@@ -15,15 +17,15 @@ describe('IsLiteralPrimitive', () => {
     type Ex8 = IsLiteralPrimitive<1n>
     type Ex9 = IsLiteralPrimitive<typeof MY_SYMBOL>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<true>()
-    expectTypeOf<Ex2>().toEqualTypeOf<true>()
-    expectTypeOf<Ex3>().toEqualTypeOf<true>()
-    expectTypeOf<Ex4>().toEqualTypeOf<true>()
-    expectTypeOf<Ex5>().toEqualTypeOf<true>()
-    expectTypeOf<Ex6>().toEqualTypeOf<true>()
-    expectTypeOf<Ex7>().toEqualTypeOf<true>()
-    expectTypeOf<Ex8>().toEqualTypeOf<true>()
-    expectTypeOf<Ex9>().toEqualTypeOf<true>()
+    type TestEx1 = Expect<IsEqual<Ex1, true>>
+    type TestEx2 = Expect<IsEqual<Ex2, true>>
+    type TestEx3 = Expect<IsEqual<Ex3, true>>
+    type TestEx4 = Expect<IsEqual<Ex4, true>>
+    type TestEx5 = Expect<IsEqual<Ex5, true>>
+    type TestEx6 = Expect<IsEqual<Ex6, true>>
+    type TestEx7 = Expect<IsEqual<Ex7, true>>
+    type TestEx8 = Expect<IsEqual<Ex8, true>>
+    type TestEx9 = Expect<IsEqual<Ex9, true>>
   })
 
   it('should evaluate if `A` is not a literal primitive', () => {
@@ -34,11 +36,11 @@ describe('IsLiteralPrimitive', () => {
     type Ex5 = IsLiteralPrimitive<symbol>
     type Ex6 = IsLiteralPrimitive<{}>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<false>()
-    expectTypeOf<Ex2>().toEqualTypeOf<false>()
-    expectTypeOf<Ex3>().toEqualTypeOf<false>()
-    expectTypeOf<Ex4>().toEqualTypeOf<false>()
-    expectTypeOf<Ex5>().toEqualTypeOf<false>()
-    expectTypeOf<Ex6>().toEqualTypeOf<false>()
+    type TestEx1 = Expect<IsEqual<Ex1, false>>
+    type TestEx2 = Expect<IsEqual<Ex2, false>>
+    type TestEx3 = Expect<IsEqual<Ex3, false>>
+    type TestEx4 = Expect<IsEqual<Ex4, false>>
+    type TestEx5 = Expect<IsEqual<Ex5, false>>
+    type TestEx6 = Expect<IsEqual<Ex6, false>>
   })
 })

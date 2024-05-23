@@ -1,4 +1,6 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { ObjectLength } from '~/object/object-length'
 
 describe('ObjectLength', () => {
@@ -7,8 +9,8 @@ describe('ObjectLength', () => {
     type Ex2 = ObjectLength<{ [k: string]: number }>
     type Ex3 = ObjectLength<{ a: 1; b: 2; [k: string]: number }>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<2>()
-    expectTypeOf<Ex2>().toEqualTypeOf<number>()
-    expectTypeOf<Ex3>().toEqualTypeOf<number>()
+    type TestEx1 = Expect<IsEqual<Ex1, 2>>
+    type TestEx2 = Expect<IsEqual<Ex2, number>>
+    type TestEx3 = Expect<IsEqual<Ex3, number>>
   })
 })

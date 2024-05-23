@@ -1,9 +1,13 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
 import type { AnyFunction } from '~/any/any-function'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 
 describe('AnyFunction', () => {
   it('should equal (...args: any[]) => any', () => {
-    expectTypeOf<AnyFunction>().toEqualTypeOf<(...args: any[]) => any>()
+    type Ex = AnyFunction
+
+    type TestEx = Expect<IsEqual<Ex, (...args: any[]) => any>>
   })
 
   it('should create a function type with A as parameters', () => {
@@ -12,12 +16,12 @@ describe('AnyFunction', () => {
     type Ex3 = AnyFunction<boolean[]>
     type Ex4 = AnyFunction<[number, string, boolean]>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<(...args: number[]) => any>()
-    expectTypeOf<Ex2>().toEqualTypeOf<(...args: string[]) => any>()
-    expectTypeOf<Ex3>().toEqualTypeOf<(...args: boolean[]) => any>()
-    expectTypeOf<Ex4>().toEqualTypeOf<
-      (...args: [number, string, boolean]) => any
-    >()
+    type TestEx1 = Expect<IsEqual<Ex1, (...args: number[]) => any>>
+    type TestEx2 = Expect<IsEqual<Ex2, (...args: string[]) => any>>
+    type TestEx3 = Expect<IsEqual<Ex3, (...args: boolean[]) => any>>
+    type TestEx4 = Expect<
+      IsEqual<Ex4, (...args: [number, string, boolean]) => any>
+    >
   })
 
   it('should create a function type with A as parameters and B as return type', () => {
@@ -26,11 +30,11 @@ describe('AnyFunction', () => {
     type Ex3 = AnyFunction<boolean[], boolean>
     type Ex4 = AnyFunction<[number, string, boolean], string>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<(...args: number[]) => string>()
-    expectTypeOf<Ex2>().toEqualTypeOf<(...args: string[]) => number>()
-    expectTypeOf<Ex3>().toEqualTypeOf<(...args: boolean[]) => boolean>()
-    expectTypeOf<Ex4>().toEqualTypeOf<
-      (...args: [number, string, boolean]) => string
-    >()
+    type TestEx1 = Expect<IsEqual<Ex1, (...args: number[]) => string>>
+    type TestEx2 = Expect<IsEqual<Ex2, (...args: string[]) => number>>
+    type TestEx3 = Expect<IsEqual<Ex3, (...args: boolean[]) => boolean>>
+    type TestEx4 = Expect<
+      IsEqual<Ex4, (...args: [number, string, boolean]) => string>
+    >
   })
 })

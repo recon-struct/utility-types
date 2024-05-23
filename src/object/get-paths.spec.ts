@@ -1,4 +1,6 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { GetPaths } from '~/object/get-paths'
 
 describe('GetPaths', () => {
@@ -6,7 +8,7 @@ describe('GetPaths', () => {
     type Ex1 = GetPaths<{ a: { b: 'c' } }> // ['a', 'b']
     type Ex2 = GetPaths<{ a: { b: 'c' }; d: 'e' }> // ['a', 'b'] | ['d']
 
-    expectTypeOf<Ex1>().toEqualTypeOf<['a', 'b']>()
-    expectTypeOf<Ex2>().toEqualTypeOf<['a', 'b'] | ['d']>()
+    type TestEx1 = Expect<IsEqual<Ex1, ['a', 'b']>>
+    type TestEx2 = Expect<IsEqual<Ex2, ['a', 'b'] | ['d']>>
   })
 })

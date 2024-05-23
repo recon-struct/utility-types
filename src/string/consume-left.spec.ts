@@ -1,4 +1,6 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { ConsumeLeft } from '~/string/consume-left'
 
 describe('ConsumeLeft', () => {
@@ -7,8 +9,8 @@ describe('ConsumeLeft', () => {
     type Ex2 = ConsumeLeft<'World', 'helloWorld'>
     type Ex3 = ConsumeLeft<'23', 'hello123'>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<'he'>()
-    expectTypeOf<Ex2>().toEqualTypeOf<'hello'>()
-    expectTypeOf<Ex3>().toEqualTypeOf<'hello1'>()
+    type TestEx1 = Expect<IsEqual<Ex1, 'he'>>
+    type TestEx2 = Expect<IsEqual<Ex2, 'hello'>>
+    type TestEx3 = Expect<IsEqual<Ex3, 'hello1'>>
   })
 })

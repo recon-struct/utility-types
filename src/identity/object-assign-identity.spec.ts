@@ -1,8 +1,10 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { ObjectAssignIdentity } from '~/identity/object-assign-identity'
 
 describe('ObjectAssignIdentity', () => {
   it('should equal {}', () => {
-    expectTypeOf<ObjectAssignIdentity>().toEqualTypeOf<{}>
+    type TestEx = Expect<IsEqual<ObjectAssignIdentity, {}>>
   })
 })

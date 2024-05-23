@@ -1,4 +1,6 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { If } from '~/logic/if'
 
 describe('If', () => {
@@ -6,37 +8,37 @@ describe('If', () => {
     type Ex1 = If<true, 'a', 'b'>
     type Ex2 = If<false, 'a', 'b'>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<'a'>()
-    expectTypeOf<Ex2>().toEqualTypeOf<'b'>()
+    type TestEx1 = Expect<IsEqual<Ex1, 'a'>>
+    type TestEx2 = Expect<IsEqual<Ex2, 'b'>>
   })
 
   it('should default to returning true if no false case is provided', () => {
     type Ex = If<true>
 
-    expectTypeOf<Ex>().toEqualTypeOf<true>()
+    type TestEx = Expect<IsEqual<Ex, true>>
   })
 
   it('should default to returning false if no true case is provided', () => {
     type Ex = If<false>
 
-    expectTypeOf<Ex>().toEqualTypeOf<false>()
+    type TestEx = Expect<IsEqual<Ex, false>>
   })
 
   it('should default to returning false if no cases are provided', () => {
     type Ex = If<never>
 
-    expectTypeOf<Ex>().toEqualTypeOf<false>()
+    type TestEx = Expect<IsEqual<Ex, false>>
   })
 
   it('should allow overriding the consequent case if true', () => {
     type Ex = If<true, 'a'>
 
-    expectTypeOf<Ex>().toEqualTypeOf<'a'>()
+    type TestEx = Expect<IsEqual<Ex, 'a'>>
   })
 
   it('should default to false for the alternate case if no cases are provided', () => {
     type Ex = If<never, 'a'>
 
-    expectTypeOf<Ex>().toEqualTypeOf<false>()
+    type TestEx = Expect<IsEqual<Ex, false>>
   })
 })

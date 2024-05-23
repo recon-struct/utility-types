@@ -33,10 +33,11 @@ export type PartApp7<
   F = any,
   G = any,
   H = any,
-> = Arity7<A, B, C, D, E, F, G, H> &
-  Arity6<A, B, C, D, E, F, PartApp1<G, H>> &
-  Arity5<A, B, C, D, E, PartApp2<F, G, H>> &
-  Arity4<A, B, C, D, PartApp3<E, F, G, H>> &
-  Arity3<A, B, C, PartApp4<D, E, F, G, H>> &
-  Arity2<A, B, PartApp5<C, D, E, F, G, H>> &
-  Arity1<A, PartApp6<B, C, D, E, F, G, H>>
+> =
+  | Arity7<A, B, C, D, E, F, G, H>
+  | Arity6<A, B, C, D, E, F, PartApp1<G, H>>
+  | Arity5<A, B, C, D, E, PartApp2<F, G, H>>
+  | Arity4<A, B, C, D, PartApp3<E, F, G, H>>
+  | Arity3<A, B, C, PartApp4<D, E, F, G, H>>
+  | Arity2<A, B, PartApp5<C, D, E, F, G, H>>
+  | Arity1<A, PartApp6<B, C, D, E, F, G, H>>

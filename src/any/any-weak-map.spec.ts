@@ -1,9 +1,13 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
 import type { AnyWeakMap } from '~/any/any-weak-map'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 
 describe('AnyWeakMap', () => {
   it('should be a WeakMap of any type', () => {
-    expectTypeOf<AnyWeakMap>().toEqualTypeOf<WeakMap<object, any>>()
+    type Ex = AnyWeakMap
+
+    type TestEx = Expect<IsEqual<Ex, WeakMap<object, any>>>
   })
 
   it('should be a WeakMap of type A', () => {
@@ -11,9 +15,9 @@ describe('AnyWeakMap', () => {
     type Ex2 = AnyWeakMap<{ b: number }>
     type Ex3 = AnyWeakMap<{ c: boolean }>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<WeakMap<{ a: string }, any>>()
-    expectTypeOf<Ex2>().toEqualTypeOf<WeakMap<{ b: number }, any>>()
-    expectTypeOf<Ex3>().toEqualTypeOf<WeakMap<{ c: boolean }, any>>()
+    type TestEx1 = Expect<IsEqual<Ex1, WeakMap<{ a: string }, any>>>
+    type TestEx2 = Expect<IsEqual<Ex2, WeakMap<{ b: number }, any>>>
+    type TestEx3 = Expect<IsEqual<Ex3, WeakMap<{ c: boolean }, any>>>
   })
 
   it('should be a WeakMap of type A and B', () => {
@@ -21,8 +25,8 @@ describe('AnyWeakMap', () => {
     type Ex2 = AnyWeakMap<{ b: number }, boolean>
     type Ex3 = AnyWeakMap<{ c: boolean }, number>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<WeakMap<{ a: string }, string>>()
-    expectTypeOf<Ex2>().toEqualTypeOf<WeakMap<{ b: number }, boolean>>()
-    expectTypeOf<Ex3>().toEqualTypeOf<WeakMap<{ c: boolean }, number>>()
+    type TestEx1 = Expect<IsEqual<Ex1, WeakMap<{ a: string }, string>>>
+    type TestEx2 = Expect<IsEqual<Ex2, WeakMap<{ b: number }, boolean>>>
+    type TestEx3 = Expect<IsEqual<Ex3, WeakMap<{ c: boolean }, number>>>
   })
 })

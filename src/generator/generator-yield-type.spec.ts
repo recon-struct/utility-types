@@ -1,10 +1,12 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
 import type { GeneratorYieldType } from '~/generator/generator-yield-type'
+import type { Expect } from '~/helper/test'
 
 describe('GeneratorYieldType', () => {
   it('should return the yield type of a generator', () => {
-    expectTypeOf<
-      GeneratorYieldType<Generator<string, number, number>>
-    >().toEqualTypeOf<string>()
+    type Test = Expect<
+      IsEqual<GeneratorYieldType<Generator<string, number, number>>, string>
+    >
   })
 })

@@ -1,4 +1,6 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { IsKeyOf } from '~/object/antecedent/is-key-of'
 
 describe('IsKeyOf', () => {
@@ -6,13 +8,13 @@ describe('IsKeyOf', () => {
     type A = { hello: 'World' }
     type Ex = IsKeyOf<A, 'hello'>
 
-    expectTypeOf<Ex>().toEqualTypeOf<true>()
+    type TestEx = Expect<IsEqual<Ex, true>>
   })
 
   it('should return false if B does not extend KeyOf<A>', () => {
     type A = { hello: 'World' }
     type Ex = IsKeyOf<A, 42>
 
-    expectTypeOf<Ex>().toEqualTypeOf<false>()
+    type TestEx = Expect<IsEqual<Ex, false>>
   })
 })

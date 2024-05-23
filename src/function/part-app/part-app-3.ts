@@ -12,6 +12,7 @@ import type { PartApp2 } from '~/function/part-app/part-app-2'
  * @typeParam D - The type of the return value.
  * @group Function
  */
-export type PartApp3<A = any, B = any, C = any, D = any> = Arity3<A, B, C, D> &
-  Arity2<A, B, PartApp1<C, D>> &
-  Arity1<A, PartApp2<B, C, D>>
+export type PartApp3<A = any, B = any, C = any, D = any> =
+  | Arity3<A, B, C, D>
+  | Arity2<A, B, PartApp1<C, D>>
+  | Arity1<A, PartApp2<B, C, D>>

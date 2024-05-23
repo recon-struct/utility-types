@@ -1,8 +1,10 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 import type { StringConcatIdentity } from '~/identity/string-concat-identity'
 
 describe('StringConcatIdentity', () => {
   it('should equal ""', () => {
-    expectTypeOf<StringConcatIdentity>().toEqualTypeOf<''>()
+    type TestStringConcatIdentity = Expect<IsEqual<StringConcatIdentity, ''>>
   })
 })

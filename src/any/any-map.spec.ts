@@ -1,9 +1,13 @@
-import { describe, expectTypeOf, it } from 'vitest'
+import { describe, it } from 'bun:test'
 import type { AnyMap } from '~/any/any-map'
+import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Expect } from '~/helper/test'
 
 describe('AnyMap', () => {
   it('should equal Map<any, any>', () => {
-    expectTypeOf<AnyMap>().toEqualTypeOf<Map<any, any>>()
+    type Ex = AnyMap
+
+    type TestEx = Expect<IsEqual<Ex, Map<any, any>>>
   })
 
   it('should create a map with keys of type K and values of any', () => {
@@ -11,9 +15,9 @@ describe('AnyMap', () => {
     type Ex2 = AnyMap<string>
     type Ex3 = AnyMap<boolean>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<Map<number, any>>()
-    expectTypeOf<Ex2>().toEqualTypeOf<Map<string, any>>()
-    expectTypeOf<Ex3>().toEqualTypeOf<Map<boolean, any>>()
+    type TestEx1 = Expect<IsEqual<Ex1, Map<number, any>>>
+    type TestEx2 = Expect<IsEqual<Ex2, Map<string, any>>>
+    type TestEx3 = Expect<IsEqual<Ex3, Map<boolean, any>>>
   })
 
   it('should create a map with keys of type K and values of type V', () => {
@@ -21,8 +25,8 @@ describe('AnyMap', () => {
     type Ex2 = AnyMap<string, boolean>
     type Ex3 = AnyMap<boolean, number>
 
-    expectTypeOf<Ex1>().toEqualTypeOf<Map<number, string>>()
-    expectTypeOf<Ex2>().toEqualTypeOf<Map<string, boolean>>()
-    expectTypeOf<Ex3>().toEqualTypeOf<Map<boolean, number>>()
+    type TestEx1 = Expect<IsEqual<Ex1, Map<number, string>>>
+    type TestEx2 = Expect<IsEqual<Ex2, Map<string, boolean>>>
+    type TestEx3 = Expect<IsEqual<Ex3, Map<boolean, number>>>
   })
 })

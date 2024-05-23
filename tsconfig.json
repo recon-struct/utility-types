@@ -12,8 +12,7 @@
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
-    // Overwritten by local configuration
-    // "noEmit": true,
+    "noEmit": true,
 
     // Best practices
     "strict": true,
@@ -29,12 +28,8 @@
     "outDir": "dist",
     "baseUrl": "src",
     "paths": {
-      "~/*": ["*"]
-    },
-    "noEmit": false,
-    "declaration": true,
-    "emitDeclarationOnly": true
+      "~/*": ["./*"]
+    }
   },
-  "include": ["src"],
-  "exclude": ["**/*.spec.ts"]
+  "include": ["src"]
 }
