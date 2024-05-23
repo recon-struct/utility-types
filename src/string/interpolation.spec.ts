@@ -34,4 +34,20 @@ describe('Interpolation', () => {
     type TestEx1 = Expect<IsEqual<Ex1, 'true'>>
     type TestEx2 = Expect<IsEqual<Ex2, 'true false'>>
   })
+
+  it('should support custom capture groups', () => {
+    type Ex1 = Interpolation<
+      'hello ${world}',
+      { world: 'world' },
+      { start: '${'; end: '}' }
+    >
+    type Ex2 = Interpolation<
+      '{a} {b} {c}',
+      { a: 'a'; b: 'b'; c: 'c' },
+      { start: '{'; end: '}' }
+    >
+
+    type TestEx1 = Expect<IsEqual<Ex1, 'hello world'>>
+    type TestEx2 = Expect<IsEqual<Ex2, 'a b c'>>
+  })
 })
