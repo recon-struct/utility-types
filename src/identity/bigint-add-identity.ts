@@ -8,8 +8,3 @@
  * ```
  */
 export type BigIntAddIdentity = 0n
-
-/**
- * @deprecated - Use `BigIntAddIdentity` instead.
- */
-export type BigintAddIdentity = BigIntAddIdentity

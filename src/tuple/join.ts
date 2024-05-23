@@ -1,7 +1,7 @@
 import type { AnyStringish } from '~/any/any-stringish'
 import type { ToString } from '~/any/to-string'
 import type { HelperToStringInterface } from '~/helper/to-string-interface'
-import type { IsEmptyString } from '~/identity/antecedent'
+import type { IsStringConcatIdentity } from '~/identity/antecedent/is-string-concat-identity'
 import type { If } from '~/logic/if'
 
 export interface JoinOpts<A extends string = string> {
@@ -36,7 +36,7 @@ export type Join<
           B,
           JoinOpts<
             If<
-              IsEmptyString<C['value']>,
+              IsStringConcatIdentity<C['value']>,
               ToString<D>,
               `${C['value']}${ToString<B>}${ToString<D>}`
             >

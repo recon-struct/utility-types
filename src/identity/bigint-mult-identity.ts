@@ -8,8 +8,3 @@
  * ```
  */
 export type BigIntMultIdentity = 1n
-
-/**
- * @deprecated - Use `BigIntMultIdentity` instead.
- */
-export type BigintMultIdentity = BigIntMultIdentity

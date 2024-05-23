@@ -12,13 +12,3 @@ import type { IsEqual } from '~/extension/antecedent/is-equal'
  * ```
  */
 export type IsObjectAssignIdentity<A> = IsEqual<A, {}>
-
-/**
- * @deprecated - Use `IsObjectAssignIdentity` instead.
- */
-export type IsObjectIdentity<A> = IsObjectAssignIdentity<A>
-
-/**
- * @deprecated - Use `IsObjectAssignIdentity` instead.
- */
-export type IsEmptyObject<A> = IsObjectAssignIdentity<A>

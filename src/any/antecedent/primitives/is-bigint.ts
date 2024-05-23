@@ -11,8 +11,3 @@ import type { IsExtension } from '~/extension/antecedent/is-extension'
  * ```
  */
 export type IsBigInt<A> = IsExtension<A, bigint>
-
-/**
- * @deprecated - Use `IsBigInt` instead
- */
-export type IsBigint<A> = IsBigInt<A>

@@ -12,10 +12,3 @@
  * ```
  */
 export type ArrayConcatIdentity = []
-
-/**
- * Alias of `ArrayConactIdentity`
- * @group Identity
- * @deprecated - use `ArrayConcatIdentity` instead
- */
-export type EmptyArray = ArrayConcatIdentity

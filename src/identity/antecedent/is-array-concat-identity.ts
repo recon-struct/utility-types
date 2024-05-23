@@ -12,13 +12,3 @@ import type { IsEqual } from '~/extension/antecedent/is-equal'
  * ```
  */
 export type IsArrayConcatIdentity<A> = IsEqual<A, []>
-
-/**
- * @deprecated - Use `IsArrayConcatIdentity` instead.
- */
-export type IsArrayIdentity<A> = IsArrayConcatIdentity<A>
-
-/**
- * @deprecated - Use `IsArrayConcatIdentity` instead.
- */
-export type IsEmptyArray<A> = IsArrayConcatIdentity<A>

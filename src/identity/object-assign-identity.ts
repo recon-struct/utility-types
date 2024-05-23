@@ -12,8 +12,3 @@
  * ```
  */
 export type ObjectAssignIdentity = {}
-
-/**
- * @deprecated - Use `ObjectAssignIdenity` instead.
- */
-export type ObjectIntersectionIdentity = ObjectAssignIdentity

@@ -3,6 +3,9 @@ import type { Add } from '~/math/add'
 import type { Multiply } from '~/math/multiply'
 import type { StringLength } from '~/string/string-length'
 
+/**
+ * @internal
+ */
 export interface DigitValue {
   '0': 0
   '1': 1
@@ -16,20 +19,32 @@ export interface DigitValue {
   '9': 9
 }
 
+/**
+ * @internal
+ */
 export interface PlaceValue {
   1: 1
   2: 10
   3: 100
 }
 
+/**
+ * @internal
+ */
 export type StringShift<A extends string> = A extends `${infer B}${string}`
   ? B
   : never
 
+/**
+ * @internal
+ */
 export type StringTail<A extends string> = A extends `${string}${infer B}`
   ? B
   : never
 
+/**
+ * @internal
+ */
 export interface ToNaturalNumberOpts<
   A extends string = string,
   B extends number = number,

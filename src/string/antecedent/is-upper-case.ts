@@ -13,8 +13,3 @@ import type { IsExtension } from '~/extension/antecedent/is-extension'
  * ```
  */
 export type IsUpperCase<A extends string> = IsExtension<A, Uppercase<A>>
-
-/**
- * @deprecated - Use `IsUpperCase` instead.
- */
-export type IsUppercase<A extends string> = IsUpperCase<A>

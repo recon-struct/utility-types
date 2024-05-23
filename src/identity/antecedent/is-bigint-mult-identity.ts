@@ -12,8 +12,3 @@ import type { IsExtension } from '~/any'
  * ```
  */
 export type IsBigIntMultIdentity<A> = IsExtension<A, 1n>
-
-/**
- * @deprecated - Use `IsBigIntMultIdentity` instead.
- */
-export type IsBigintMultIdentity<A> = IsBigIntMultIdentity<A>

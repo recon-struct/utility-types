@@ -10,8 +10,3 @@ import type { AnyArray } from '~/any/any-array'
  * ```
  */
 export type Rest<A extends AnyArray> = A extends [any, ...infer B] ? B : never
-
-/**
- * @deprecated - Use `Rest` instead.
- */
-export type Tail<A extends AnyArray> = Rest<A>

@@ -1,7 +1,6 @@
 /**
  * Returns the type of the return value of a constructor function.
  * @typeParam A - The constructor function.
- * @returns The type of the return value of the constructor function.
  * @group Function
  * @example
  * ```
