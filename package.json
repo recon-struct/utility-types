@@ -20,11 +20,10 @@
     "build": "rimraf dist && tsc -p tsconfig-declaration.json && tsc-alias"
   },
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "packageManager": "pnpm@9.1.0"
+  "packageManager": "pnpm@9.1.0",
+  "module": "index.ts"
 }

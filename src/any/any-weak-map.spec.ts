@@ -1,4 +1,3 @@
-import { describe, it } from 'bun:test'
 import type { AnyWeakMap } from '~/any/any-weak-map'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
 import type { Expect } from '~/helper/test'

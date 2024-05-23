@@ -1,4 +1,3 @@
-import { describe, it } from 'bun:test'
 import type { Expect } from '~/helper/test'
 import type { IsEqual } from './is-equal'
 

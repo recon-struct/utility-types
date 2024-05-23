@@ -1,4 +1,3 @@
-import { describe, it } from 'bun:test'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
 import type { GeneratorReturnType } from '~/generator/generator-return-type'
 import type { Expect } from '~/helper/test'

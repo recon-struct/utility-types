@@ -1,4 +1,3 @@
-import { describe, it } from 'bun:test'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
 import type { ToNaturalNumber } from '~/helper/to-natural-number'
 import type { Expect } from './test'

@@ -1,4 +1,3 @@
-import { describe, it } from 'bun:test'
 import type { AnyObject } from '~/any/any-object'
 import type { AnyWeakSet } from '~/any/any-weak-set'
 import type { IsEqual } from '~/extension/antecedent/is-equal'

@@ -1,4 +1,3 @@
-import { describe, it } from 'bun:test'
 import type { AnyKey } from '~/any/any-key'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
 import type { Expect } from '~/helper/test'

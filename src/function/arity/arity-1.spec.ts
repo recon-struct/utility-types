@@ -1,4 +1,3 @@
-import { describe, it } from 'bun:test'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
 import type { Arity1 } from '~/function/arity/arity-1'
 import type { Expect } from '~/helper/test'
