@@ -17,7 +17,7 @@
   "scripts": {
     "generate-docs": "typedoc --out docs src",
     "test": "tsc -p tsconfig-test.json",
-    "build": "rimraf dist && bun build ./src/index.ts --outdir ./dist && tsc -p tsconfig-declaration.json && tsc-alias"
+    "build": "rimraf dist && tsc -p tsconfig-declaration.json && tsc-alias && touch ./dist/index.js"
   },
   "type": "module",
   "main": "dist/index.js",
