@@ -17,13 +17,13 @@
   "scripts": {
     "generate-docs": "typedoc --out docs src",
     "test": "tsc -p tsconfig-test.json",
-    "build": "rimraf dist && tsc -p tsconfig-declaration.json && tsc-alias"
+    "build": "rimraf dist && bun build ./src/index.ts --outdir ./dist && tsc -p tsconfig-declaration.json && tsc-alias"
   },
   "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
-  ],
-  "packageManager": "pnpm@9.1.0",
-  "module": "index.ts"
+  ]
 }
