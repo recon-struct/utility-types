@@ -13,28 +13,3 @@ export type Sequence<
   B extends string,
   C extends string,
 > = ConsumeRight<B, ConsumeRight<A, C>>
-
-interface Matcher {
-  length: number
-}
-
-interface Fn {
-  in: string
-  first: string
-  second: string
-  return: unknown
-  matcher: Matcher
-  stats: this['matcher' extends infer A extends Matcher ? A : never]
-}
-
-type Match<A extends Fn, B extends A['in']> = (A & {
-  in: B
-})['return']
-
-interface MyBallsSequence extends Fn {
-  first: 'my'
-  second: 'balls'
-  return: Sequence<this['first'], this['second'], this['in']>
-}
-
-type Test = Match<MyBallsSequence, 'myballs'>
