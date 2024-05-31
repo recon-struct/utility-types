@@ -1,3 +1,4 @@
+export * from './is-float'
 export * from './is-greater-than'
 export * from './is-greater-than-or-equal'
 export * from './is-less-than'
