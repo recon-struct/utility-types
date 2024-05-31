@@ -1,6 +1,6 @@
 import type { IsEqual } from '~/extension/antecedent/is-equal'
 import type { GeneratorNextType } from '~/generator/generator-next-type'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('GeneratorNextType', () => {
   it('should return the next type of a generator', () => {

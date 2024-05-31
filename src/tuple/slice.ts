@@ -13,9 +13,9 @@ import type { Override } from '~/object/override'
 
 export interface SliceOpts<
   A extends AnyArray = AnyArray,
-  B extends number = number,
-  C extends number = number,
-  D extends number = number,
+  B extends number | bigint = number | bigint,
+  C extends number | bigint = number | bigint,
+  D extends number | bigint = number | bigint,
 > {
   value: A
   startIndex: B
@@ -66,7 +66,9 @@ export type Slice<
             {
               value: [
                 ...D['value'],
-                A[Add<LengthProp<D['value']>, D['startIndex']>],
+                A[Add<LengthProp<D['value']>, D['startIndex']> extends number
+                  ? Add<LengthProp<D['value']>, D['startIndex']>
+                  : never],
               ]
             }
           >

@@ -1,6 +1,6 @@
 import type { AnyKey } from '~/any/any-key'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('AnyKey', () => {
   it('should equal string | number | symbol', () => {

@@ -1,22 +1,33 @@
-import type { And } from '~/logic/antecedent/and'
-import type { If } from '~/logic/if'
-import type { IsNatural } from '~/math/antecedent/is-natural'
-import type { LengthProp } from '~/object/length-prop'
-import type { Tuple } from '~/tuple/tuple'
+import type { CompareDigits } from './compare'
+import type { AddDigits } from './digits/addition-digits'
+import type { SubDigits } from './digits/substraction-digits'
+import type {
+  DigitNumber,
+  FromDigitNumber,
+  InvertSign,
+  MakeDigitNumber,
+  Normalize,
+  Num,
+  Sign,
+  ToDigitNumber,
+  ToNumber,
+  ToString,
+} from './utils'
 
-/**
- * Return the difference of `A - B`, where `A ∈ ℕ` and `B ∈ ℕ`.
- * @typeParam A - The first number (must be a natural number).
- * @typeParam B - The second number (must be a natural number).
- * @group Math
- * @example
- * ```
- * type Ex1 = Subtract<10, 5>  // 5
- * type Ex2 = Subtract<20, 13> // 7
- * ```
- */
-export type Subtract<A extends number, B extends number> = If<
-  And<IsNatural<A>, IsNatural<B>>,
-  Tuple<A> extends [...infer C, ...Tuple<B>] ? LengthProp<C> : number,
-  number
+type SubDigitNumbers<A extends DigitNumber, B extends DigitNumber> =
+  Sign<A> extends Sign<B>
+    ? CompareDigits<Num<A>, Num<B>> extends 1
+      ? MakeDigitNumber<Sign<A>, SubDigits<Num<A>, Num<B>>>
+      : MakeDigitNumber<InvertSign<A>, SubDigits<Num<B>, Num<A>>>
+    : MakeDigitNumber<Sign<A>, AddDigits<Num<A>, Num<B>>>
+
+export type Subtract<
+  A extends number | bigint,
+  B extends number | bigint,
+> = ToNumber<
+  FromDigitNumber<
+    Normalize<
+      SubDigitNumbers<ToDigitNumber<ToString<A>>, ToDigitNumber<ToString<B>>>
+    >
+  >
 >

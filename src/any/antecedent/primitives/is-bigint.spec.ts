@@ -1,6 +1,6 @@
 import type { IsBigInt } from '~/any/antecedent/primitives/is-bigint'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('IsBigInt', () => {
   it('should return true if A extends bigint', () => {

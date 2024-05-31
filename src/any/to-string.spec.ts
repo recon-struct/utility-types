@@ -1,6 +1,6 @@
 import type { ToString } from '~/any/to-string'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('ToString', () => {
   it('should convert `A` to a string', () => {

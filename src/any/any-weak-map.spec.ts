@@ -1,6 +1,6 @@
 import type { AnyWeakMap } from '~/any/any-weak-map'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('AnyWeakMap', () => {
   it('should be a WeakMap of any type', () => {

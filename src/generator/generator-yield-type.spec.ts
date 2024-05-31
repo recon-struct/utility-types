@@ -1,6 +1,6 @@
 import type { IsEqual } from '~/extension/antecedent/is-equal'
 import type { GeneratorYieldType } from '~/generator/generator-yield-type'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('GeneratorYieldType', () => {
   it('should return the yield type of a generator', () => {

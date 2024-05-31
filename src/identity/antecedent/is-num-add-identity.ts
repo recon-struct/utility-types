@@ -12,11 +12,3 @@ import type { IsExtension } from '~/any'
  * ```
  */
 export type IsNumAddIdentity<A> = IsExtension<A, 0>
-
-/**
- * Alias for `IsNumAddIdentity`
- * @typeParam A - The type to check.
- * @group Antecedent
- * @group Identity
- */
-export type IsZero<A> = IsNumAddIdentity<A>

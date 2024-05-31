@@ -1,18 +1,14 @@
-import type { HelperInnerWrapMap } from '~/helper/inner-wrap-map'
-import type { HelperOuterWrapMap } from '~/helper/outer-wrap-map'
+import type { InnerWrapMap } from '~/helper/inner-wrap-map'
+import type { OuterWrapMap } from '~/helper/outer-wrap-map'
 
 /**
  * Extracts the last unique type from a union type.
  * @typeParam A - The union type from which to extract the last unique type.
  * @group Helper
  */
-export type HelperLastUniqueInUnion<A> =
+export type LastUniqueInUnion<A> =
   (
-    HelperOuterWrapMap<HelperInnerWrapMap<A>> extends HelperOuterWrapMap<
-      infer B
-    >
-      ? B
-      : never
-  ) extends HelperInnerWrapMap<infer B>
+    OuterWrapMap<InnerWrapMap<A>> extends OuterWrapMap<infer B> ? B : never
+  ) extends InnerWrapMap<infer B>
     ? B
     : never

@@ -1,6 +1,6 @@
 import type { IsNever } from '~/any/antecedent/is-never'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('IsNever', () => {
   it('should return true if A extends never', () => {

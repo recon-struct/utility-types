@@ -1,22 +1,35 @@
-import type { HelperMultiAdd } from '~/helper/multi-add'
-import type { And } from '~/logic/antecedent/and'
-import type { If } from '~/logic/if'
-import type { IsNatural } from '~/math/antecedent/is-natural'
+import type { MulDigits } from './digits/multiply-digits'
+import type {
+  DigitNumber,
+  FromDigitNumber,
+  MakeDigitNumber,
+  MulSign,
+  Normalize,
+  Num,
+  Sign,
+  ToDigitNumber,
+  ToNumber,
+  ToString,
+} from './utils'
+
+export type MulDigitNumbers<
+  A extends DigitNumber,
+  B extends DigitNumber,
+> = MakeDigitNumber<MulSign<Sign<A>, Sign<B>>, MulDigits<Num<A>, Num<B>>>
 
 /**
- * Return the product of `A * B`, where `A ∈ ℕ` and `B ∈ ℕ`.
- * @typeParam A - The first number (must be a natural number).
- * @typeParam B - The second number (must be a natural number).
- * @group Math
- * @example
- * ```
- * type Ex0 = Multiply<0, 0> // 0
- * type Ex1 = Multiply<2, 3> // 6
- * type Ex2 = Multiply<5, 5> // 25
- * ```
- * */
-export type Multiply<A extends number, B extends number> = If<
-  And<IsNatural<A>, IsNatural<B>>,
-  HelperMultiAdd<A, B>,
-  number
+ * Multiplies two numbers or bigints.
+ *
+ * @typeParam A - The first number or bigint.
+ * @typeParam B - The second number or bigint.
+ */
+export type Multiply<
+  A extends number | bigint,
+  B extends number | bigint,
+> = ToNumber<
+  FromDigitNumber<
+    Normalize<
+      MulDigitNumbers<ToDigitNumber<ToString<A>>, ToDigitNumber<ToString<B>>>
+    >
+  >
 >

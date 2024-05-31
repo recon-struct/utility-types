@@ -1,6 +1,6 @@
 import type { IsEqual } from '~/extension/antecedent/is-equal'
 import type { PartApp7 } from '~/function/part-app/part-app-7'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('PartApp6', () => {
   it('should be a function with 7 parameters', () => {

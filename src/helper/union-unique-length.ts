@@ -1,5 +1,5 @@
 import type { IsNever } from '~/any/antecedent/is-never'
-import type { HelperLastUniqueInUnion } from '~/helper/last-unique-in-union'
+import type { LastUniqueInUnion } from '~/helper/last-unique-in-union'
 import type { Increment } from '~/math/increment'
 
 export interface UnionUniqueLengthOpts<A extends number = number> {
@@ -17,13 +17,13 @@ export interface UnionUniqueLengthOpts<A extends number = number> {
  * type Ex2 = UnionUniqueLength<1 | 2 | 1 | 3>         // 3
  * ```
  */
-export type HelperUnionUniqueLength<
+export type UnionUniqueLength<
   A,
   B extends UnionUniqueLengthOpts = UnionUniqueLengthOpts<0>,
 > =
-  IsNever<HelperLastUniqueInUnion<A>> extends true
+  IsNever<LastUniqueInUnion<A>> extends true
     ? B['value']
-    : HelperUnionUniqueLength<
-        Exclude<A, HelperLastUniqueInUnion<A>>,
+    : UnionUniqueLength<
+        Exclude<A, LastUniqueInUnion<A>>,
         UnionUniqueLengthOpts<Increment<B['value']>>
       >

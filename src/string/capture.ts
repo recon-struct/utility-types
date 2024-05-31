@@ -1,4 +1,4 @@
-import type { HelperCaptureGroup } from '~/helper/capture-group'
+import type { CaptureGroup } from '~/helper/capture-group'
 
 export interface CaptureOpts<A extends string = string> {
   value: A
@@ -16,7 +16,7 @@ export interface CaptureOpts<A extends string = string> {
  */
 export type Capture<
   A extends string,
-  B extends HelperCaptureGroup = HelperCaptureGroup<'{{', '}}'>,
+  B extends CaptureGroup = CaptureGroup<'{{', '}}'>,
   Z extends CaptureOpts = CaptureOpts<never>,
 > = A extends `${string}${B['start']}${infer C}${B['end']}${infer D}`
   ? Capture<D, B, CaptureOpts<Z['value'] | C>>

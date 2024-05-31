@@ -1,6 +1,6 @@
 import type { AnyDecimalDigit } from '~/any/any-decimal-digit'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('AnyDecimalDigit', () => {
   it('should be a decimal digit', () => {

@@ -1,6 +1,6 @@
 import type { IsNull } from '~/any/antecedent/primitives/is-null'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('IsNull', () => {
   it('should return true if A extends null', () => {

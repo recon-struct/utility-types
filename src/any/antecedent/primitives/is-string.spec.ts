@@ -1,6 +1,6 @@
 import type { IsString } from '~/any/antecedent/primitives/is-string'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('IsString', () => {
   it('should return true if A extends string', () => {

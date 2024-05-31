@@ -10,6 +10,7 @@
  * type Ex2 = AnyObject<'a' | 'b', boolean> // { a: boolean, b: boolean }
  * ```
  */
-export type AnyObject<A extends PropertyKey = PropertyKey, B = any> = {
-  [C in A]: B
-}
+export type AnyObject<A extends PropertyKey = PropertyKey, B = any> = Record<
+  A,
+  B
+>

@@ -1,22 +1,35 @@
-import type { HelperMultiSub } from '~/helper/multi-sub'
-import type { And } from '~/logic/antecedent/and'
-import type { If } from '~/logic/if'
-import type { IsNatural } from '~/math/antecedent/is-natural'
+import type { DivDigits } from './digits/division-digits'
+import type {
+  DigitNumber,
+  FromDigitNumber,
+  MakeDigitNumber,
+  MulSign,
+  Normalize,
+  Num,
+  Sign,
+  ToDigitNumber,
+  ToNumber,
+  ToString,
+} from './utils'
+
+export type DivDigitNumbers<
+  A extends DigitNumber,
+  B extends DigitNumber,
+> = MakeDigitNumber<MulSign<Sign<A>, Sign<B>>, DivDigits<Num<A>, Num<B>>>
 
 /**
- * Evaluate `A / B`, where `A ∈ ℕ` and `B ∈ ℕ`.
- * @typeParam A - The dividend (must be a natural number).
- * @typeParam B - The divisor (must be a natural number).
- * @group Math
- * @example
- * ```
- * type Ex1 = Divide<9, 3> // 3
- * // NOTE only natural numbers are supported for output
- * type Ex2 = Divide<11, 3> // 3
- * ```
+ * Divides two numbers or bigints.
+ *
+ * @typeParam A - The type of the dividend.
+ * @typeParam B - The type of the divisor.
  */
-export type Divide<A extends number, B extends number> = If<
-  And<IsNatural<A>, IsNatural<B>>,
-  HelperMultiSub<A, B>,
-  number
+export type Divide<
+  A extends number | bigint,
+  B extends number | bigint,
+> = ToNumber<
+  FromDigitNumber<
+    Normalize<
+      DivDigitNumbers<ToDigitNumber<ToString<A>>, ToDigitNumber<ToString<B>>>
+    >
+  >
 >

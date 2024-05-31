@@ -1,15 +1,15 @@
-import type { IsLessThan } from '~/math/antecedent/is-less-than'
+import type { Subtract } from '../subtract'
+import type { IsNegative } from './is-negative'
 
 /**
- * Evaluate `A > B`, where `A ∈ ℕ` and `B ∈ ℕ`
- * @typeParam A - The number to compare.
- * @typeParam B - The number to compare against.
+ * Determines if the value of A is greater than the value of B.
+ *
+ * @typeParam A - The first number or bigint.
+ * @typeParam B - The second number or bigint.
  * @group Antecedent
  * @group Math
- * @example
- * ```
- * type Ex1 = IsGreaterThan<3, 1> // true
- * type Ex2 = IsGreaterThan<1, 3> // false
- * ```
  */
-export type IsGreaterThan<A extends number, B extends number> = IsLessThan<B, A>
+export type IsGreaterThan<
+  A extends number | bigint,
+  B extends number | bigint,
+> = IsNegative<Subtract<B, A>>

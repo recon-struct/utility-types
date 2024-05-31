@@ -1,6 +1,6 @@
 import type { IsEqual } from '~/extension/antecedent/is-equal'
 import type { Arity0 } from '~/function/arity/arity-0'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('Arity0', () => {
   it('should be a function with 0 parameters', () => {

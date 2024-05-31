@@ -1,6 +1,6 @@
 import type { IsSymbol } from '~/any/antecedent/primitives/is-symbol'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('IsSymbol', () => {
   it('should return true if A extends symbol', () => {

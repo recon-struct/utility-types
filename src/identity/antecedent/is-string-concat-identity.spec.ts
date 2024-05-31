@@ -1,5 +1,5 @@
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 import type { IsStringConcatIdentity } from '~/identity/antecedent/is-string-concat-identity'
 
 describe('IsStringConcatIdentity', () => {

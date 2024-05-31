@@ -1,6 +1,6 @@
 import type { AnySet } from '~/any/any-set'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('AnySet', () => {
   it('should be a Set of any type', () => {

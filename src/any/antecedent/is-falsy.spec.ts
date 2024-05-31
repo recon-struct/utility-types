@@ -1,6 +1,6 @@
 import type { IsFalsy } from '~/any/antecedent/is-falsy'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('IsFalsy', () => {
   it('should return true if A extends falsy', () => {

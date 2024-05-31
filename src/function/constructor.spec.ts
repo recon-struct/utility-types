@@ -1,6 +1,6 @@
 import type { IsEqual } from '~/extension/antecedent/is-equal'
 import type { Constructor } from '~/function/constructor'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('Constructor', () => {
   it('should be a function with 1 argument', () => {

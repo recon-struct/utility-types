@@ -1,5 +1,5 @@
 import type { IsExtension } from '~/extension/antecedent/is-extension'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 import type { IsEqual } from './is-equal'
 
 describe('IsExtension', () => {

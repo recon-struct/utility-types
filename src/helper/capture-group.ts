@@ -8,7 +8,7 @@
  * type Ex = CaptureGroup<'{{', '}}'> // { start: '{{', end: '}}' }
  * ```
  */
-export interface HelperCaptureGroup<
+export interface CaptureGroup<
   A extends string = string,
   B extends string = string,
 > {

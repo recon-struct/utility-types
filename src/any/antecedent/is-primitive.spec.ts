@@ -1,6 +1,6 @@
 import type { IsPrimitive } from '~/any/antecedent/is-primitive'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('IsPrimitive', () => {
   it('should return true if A extends primitive', () => {

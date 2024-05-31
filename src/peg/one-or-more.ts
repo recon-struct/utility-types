@@ -1,5 +1,5 @@
-import type { IsZero } from '~/identity/antecedent/is-num-add-identity'
 import type { If } from '~/logic/if'
+import type { IsZero } from '~/math/antecedent/is-zero'
 import type { Increment } from '~/math/increment'
 
 export interface OneOrMoreOpts<A extends number = 0> {

@@ -1,6 +1,6 @@
 import type { AnyStringish } from '~/any/any-stringish'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('AnyStringish', () => {
   it('should be a union of all TypeScript type that can be coercedto a string easily.', () => {

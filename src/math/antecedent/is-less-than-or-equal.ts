@@ -1,19 +1,15 @@
-import type { Not } from '~/logic/antecedent/not'
-import type { IsGreaterThan } from '~/math/antecedent/is-greater-than'
+import type { Subtract } from '../subtract'
+import type { IsNegative } from './is-negative'
 
 /**
- * Evaluate `A ≤ B`, where `A ∈ ℕ` and `B ∈ ℕ`
- * @typeParam A - The number to compare.
- * @typeParam B - The number to compare against.
+ * Determines if the value of A is less than or equal to the value of B.
+ *
+ * @typeParam A - The first number or bigint.
+ * @typeParam B - The second number or bigint.
  * @group Antecedent
  * @group Math
- * @example
- * ```
- * type Ex1 = IsLessThanOrEqual<3, 1> // true
- * type Ex2 = IsLessThanOrEqual<3, 3> // true
- * type Ex3 = IsLessThanOrEqual<1, 3> // false
- * ```
  */
-export type IsLessThanOrEqual<A extends number, B extends number> = Not<
-  IsGreaterThan<A, B>
->
+export type IsLessThanOrEqual<
+  A extends number | bigint,
+  B extends number | bigint,
+> = IsNegative<Subtract<B, A>> extends true ? false : true

@@ -1,6 +1,6 @@
 import type { IsEqual } from '~/extension/antecedent/is-equal'
 import type { Arity4 } from '~/function/arity/arity-4'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('Arity4', () => {
   it('should be a function with 4 parameters', () => {

@@ -1,6 +1,6 @@
 import type { IsUndefined } from '~/any/antecedent/primitives/is-undefined'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('IsUndefined', () => {
   it('should return true if A extends undefined', () => {

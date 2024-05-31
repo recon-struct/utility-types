@@ -2,6 +2,6 @@
  * Represents an interface that defines a `toString` method.
  * @group Helper
  */
-export interface HelperToStringInterface {
+export interface ToStringInterface {
   toString(): string
 }

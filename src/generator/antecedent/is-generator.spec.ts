@@ -1,6 +1,6 @@
 import type { IsEqual } from '~/extension/antecedent/is-equal'
 import type { IsGenerator } from '~/generator/antecedent/is-generator'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('IsGenerator', () => {
   it('should return true if `A` is a generator', () => {

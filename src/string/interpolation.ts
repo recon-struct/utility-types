@@ -1,4 +1,4 @@
-import type { HelperCaptureGroup } from '~/helper/capture-group'
+import type { CaptureGroup } from '~/helper/capture-group'
 import type { Capture } from '~/string/capture'
 
 export type InterpolationVariable = string | number | bigint | boolean
@@ -25,7 +25,7 @@ export interface InterpolationOpts<
 export type Interpolation<
   A extends string,
   B extends Record<Capture<A, C>, InterpolationVariable>,
-  C extends HelperCaptureGroup = HelperCaptureGroup<'{{', '}}'>,
+  C extends CaptureGroup = CaptureGroup<'{{', '}}'>,
   Z extends InterpolationOpts<string, Capture<A, C>> = InterpolationOpts<
     A,
     Capture<A, C>

@@ -1,4 +1,4 @@
-import type { IsExtension } from '~/extension/antecedent/is-extension'
+import type { IsExtension } from './is-extension'
 
 /**
  * If `A extends B` and `B extends A` then `true` else `false`

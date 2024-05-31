@@ -1,5 +1,5 @@
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 import type { IsLowerCase } from '~/string/antecedent/is-lower-case'
 
 describe('IsLowerCase', () => {

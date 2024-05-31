@@ -1,4 +1,4 @@
-import type { HelperUnionUniqueLength } from '~/helper/union-unique-length'
+import type { UnionUniqueLength } from '~/helper/union-unique-length'
 import type { IsLiteralKey } from '~/literal/antecedent/is-literal-key'
 
 /**
@@ -13,4 +13,4 @@ import type { IsLiteralKey } from '~/literal/antecedent/is-literal-key'
  * ```
  */
 export type ObjectLength<A extends object> =
-  IsLiteralKey<keyof A> extends true ? HelperUnionUniqueLength<keyof A> : number
+  IsLiteralKey<keyof A> extends true ? UnionUniqueLength<keyof A> : number

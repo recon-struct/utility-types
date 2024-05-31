@@ -1,6 +1,6 @@
 import type { IsEqual } from '~/extension/antecedent/is-equal'
 import type { IsFunction } from '~/function/antecedent/is-function'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('IsFunction', () => {
   it('should return true if the function is a function', () => {

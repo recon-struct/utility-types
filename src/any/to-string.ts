@@ -1,8 +1,8 @@
 import type { AnyStringish } from '~/any/any-stringish'
-import type { HelperToStringInterface } from '~/helper/to-string-interface'
+import type { ToStringInterface } from '~/helper/to-string-interface'
 
 export type ToString<A> = A extends AnyStringish
   ? `${A}`
-  : A extends HelperToStringInterface
+  : A extends ToStringInterface
     ? ReturnType<A['toString']>
     : never

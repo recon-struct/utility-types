@@ -1,6 +1,6 @@
 import type { AnyMap } from '~/any/any-map'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('AnyMap', () => {
   it('should equal Map<any, any>', () => {

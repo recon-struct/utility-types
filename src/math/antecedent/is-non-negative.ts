@@ -1,16 +1,9 @@
-import type { Not } from '~/logic/antecedent/not'
-import type { IsNegative } from '~/math/antecedent/is-negative'
-
 /**
- * If `A ≥ 0` then `true` else `false`
- * @typeParam A - The number to check.
+ * Checks if a number or bigint is non-negative.
+ *
+ * @typeParam A - The type of the input value.
  * @group Antecedent
  * @group Math
- * @example
- * ```
- * type Ex1 = IsNonNegative<-1> // false
- * type Ex2 = IsNonNegative<0>  // true
- * type Ex3 = IsNonNegative<1>  // true
- * ```
  */
-export type IsNonNegative<A extends number> = Not<IsNegative<A>>
+export type IsNonNegative<A extends number | bigint> =
+  `${A}` extends `-${number | bigint}` ? false : true

@@ -1,6 +1,6 @@
 import type { IsEqual } from '~/extension/antecedent/is-equal'
 import type { Arity1 } from '~/function/arity/arity-1'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 import type { Arity0 } from './arity-0'
 
 describe('Arity1', () => {

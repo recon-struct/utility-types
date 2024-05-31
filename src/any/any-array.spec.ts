@@ -1,6 +1,6 @@
 import type { AnyArray } from '~/any/any-array'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('AnyArray', () => {
   it('should equal any[]', () => {

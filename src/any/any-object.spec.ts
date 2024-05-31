@@ -1,7 +1,7 @@
 import type { AnyKey } from '~/any/any-key'
 import type { AnyObject } from '~/any/any-object'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('AnyObject', () => {
   it('should equal Record<any, any>', () => {

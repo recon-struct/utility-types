@@ -1,6 +1,6 @@
 import type { IsBoolean } from '~/any/antecedent/primitives/is-boolean'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('IsBoolean', () => {
   it('should return true if A extends boolean', () => {

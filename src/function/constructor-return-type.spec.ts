@@ -1,6 +1,6 @@
 import type { IsEqual } from '~/extension/antecedent/is-equal'
 import type { ConstructorReturnType } from '~/function/constructor-return-type'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('ConstructorReturnType', () => {
   it('should return the type of the constructor', () => {

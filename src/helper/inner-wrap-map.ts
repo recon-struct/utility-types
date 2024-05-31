@@ -3,4 +3,4 @@
  * @typeParam A - The type to be wrapped.
  * @group Helper
  */
-export type HelperInnerWrapMap<A> = A extends any ? () => A : never
+export type InnerWrapMap<A> = A extends any ? () => A : never

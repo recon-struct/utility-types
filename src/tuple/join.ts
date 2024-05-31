@@ -1,6 +1,6 @@
 import type { AnyStringish } from '~/any/any-stringish'
 import type { ToString } from '~/any/to-string'
-import type { HelperToStringInterface } from '~/helper/to-string-interface'
+import type { ToStringInterface } from '~/helper/to-string-interface'
 import type { IsStringConcatIdentity } from '~/identity/antecedent/is-string-concat-identity'
 import type { If } from '~/logic/if'
 
@@ -8,7 +8,7 @@ export interface JoinOpts<A extends string = string> {
   value: A
 }
 
-export type StringLike = AnyStringish | HelperToStringInterface
+export type StringLike = AnyStringish | ToStringInterface
 
 /**
  * Join a tuple of templatables `A` on a templatable `B`

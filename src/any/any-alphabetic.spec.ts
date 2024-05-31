@@ -1,6 +1,6 @@
 import type { AnyAlphabetic } from '~/any/any-alphabetic'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('AnyAlphabetic', () => {
   it('should be an alphabetic character', () => {

@@ -1,6 +1,6 @@
 import type { IsArray } from '~/any/antecedent/is-array'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('IsArray', () => {
   it('should return true if A extends any[]', () => {

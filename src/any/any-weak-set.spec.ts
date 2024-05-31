@@ -1,13 +1,12 @@
-import type { AnyObject } from '~/any/any-object'
 import type { AnyWeakSet } from '~/any/any-weak-set'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('AnyWeakSet', () => {
   it('should be a WeakSet of any type', () => {
     type Ex = AnyWeakSet
 
-    type TestEx = Expect<IsEqual<Ex, WeakSet<AnyObject>>>
+    type TestEx = Expect<IsEqual<Ex, WeakSet<object>>>
   })
 
   it('should be a WeakSet of type A', () => {

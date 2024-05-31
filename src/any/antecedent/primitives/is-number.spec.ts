@@ -1,6 +1,6 @@
 import type { IsNumber } from '~/any/antecedent/primitives/is-number'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
-import type { Expect } from '~/helper/test'
+import type { Expect } from '~/helper/expect'
 
 describe('IsNumber', () => {
   it('should return true if A extends number', () => {
