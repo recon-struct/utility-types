@@ -7,4 +7,4 @@ import type { Point } from './point'
  * @typeParam B - The type of the second point.
  * @group Geometry
  */
-export type Line<A extends Point, B extends Point> = [A, B]
+export type Line<A extends Point = Point, B extends Point = Point> = [A, B]
