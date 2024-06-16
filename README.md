@@ -31,3 +31,5 @@ npm install @recon-struct/utility-types
 - [Logic](https://blog.hox.io/articles/2024-05-01)
 - [Literal](https://blog.hox.io/articles/2024-05-06)
 - [Math](https://blog.hox.io/articles/2024-05-30)
+
+<!-- bumping -->
