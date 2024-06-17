@@ -180,6 +180,6 @@ docs/
 .vscode/
 .github/
 
-.prettierrc.rts2_cache_cjs
+.prettierrc.cjs
 tsconfig*.json
 typedoc.json
