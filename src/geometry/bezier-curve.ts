@@ -1,4 +1,4 @@
-import type { InferPoint, Point } from './point'
+import type { Point } from './point'
 
 /**
  * Represents a Bezier curve in 2D space.
@@ -16,8 +16,8 @@ export interface BezierCurve<
   D extends Point = Point,
 > {
   type: 'bezier-curve'
-  start: InferPoint<A>
-  control1: InferPoint<B>
-  control2: InferPoint<C>
-  end: InferPoint<D>
+  start: A
+  control1: B
+  control2: C
+  end: D
 }

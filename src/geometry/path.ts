@@ -1,4 +1,4 @@
-import type { InferPoints, Point } from './point'
+import type { Point } from './point'
 
 /**
  * Represents a path in geometry.
@@ -12,6 +12,6 @@ export interface Path<
   B extends boolean = boolean,
 > {
   type: 'path'
-  points: InferPoints<A>
+  points: [...A]
   isClosed: B
 }

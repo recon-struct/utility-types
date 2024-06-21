@@ -1,4 +1,4 @@
-import type { InferPoint, Point } from './point'
+import type { Point } from './point'
 
 /**
  * Represents an ellipse in a two-dimensional space.
@@ -15,7 +15,7 @@ export interface Ellipse<
   D extends number = number,
 > {
   type: 'ellipse'
-  center: InferPoint<A>
+  center: A
   radiusX: B
   radiusY: C
   rotation: D
