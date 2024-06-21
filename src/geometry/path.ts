@@ -11,6 +11,7 @@ export interface Path<
   A extends Point[] = Point[],
   B extends boolean = boolean,
 > {
+  type: 'path'
   points: A
   isClosed: B
 }

@@ -8,7 +8,11 @@ describe('line', () => {
     type Ex1 = Line<Point<-1, -1>, Point<1, 1>>
     type Ex2 = Line<Point<1, 1>, Point<-1, -1>>
 
-    type TestEx1 = Expect<IsEqual<Ex1, [Point<-1, -1>, Point<1, 1>]>>
-    type TestEx2 = Expect<IsEqual<Ex2, [Point<1, 1>, Point<-1, -1>]>>
+    type TestEx1 = Expect<
+      IsEqual<Ex1, [Point<-1, -1>, Point<1, 1>] & { type: 'line' }>
+    >
+    type TestEx2 = Expect<
+      IsEqual<Ex2, [Point<1, 1>, Point<-1, -1>] & { type: 'line' }>
+    >
   })
 })

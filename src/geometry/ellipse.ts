@@ -13,6 +13,7 @@ export interface Ellipse<
   B extends number = number,
   C extends number = number,
 > {
+  type: 'ellipse'
   center: A
   radiusX: B
   radiusY: C

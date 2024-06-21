@@ -13,6 +13,7 @@ export interface Rectangle<
   B extends number = number,
   C extends number = number,
 > {
+  type: 'rectangle'
   topLeft: A
   width: B
   height: C

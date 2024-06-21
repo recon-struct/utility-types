@@ -5,4 +5,7 @@
  * @typeParam Y - The type of the y-coordinate.
  * @group Geometry
  */
-export type Point<X extends number = number, Y extends number = number> = [X, Y]
+export type Point<X extends number = number, Y extends number = number> = [
+  X,
+  Y,
+] & { type: 'point' }

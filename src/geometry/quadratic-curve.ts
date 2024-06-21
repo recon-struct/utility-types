@@ -13,6 +13,7 @@ export interface QuadraticCurve<
   B extends Point = Point,
   C extends Point = Point,
 > {
+  type: 'quadratic-curve'
   start: A
   control: B
   end: C

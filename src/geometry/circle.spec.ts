@@ -9,8 +9,14 @@ describe('circle', () => {
     type Ex2 = Circle<Point<1, 1>, 1>
     type Ex3 = Circle<Point<-1, -1>, 1>
 
-    type TestEx1 = Expect<IsEqual<Ex1, { center: Point<0, 0>; radius: 0 }>>
-    type TestEx2 = Expect<IsEqual<Ex2, { center: Point<1, 1>; radius: 1 }>>
-    type TestEx3 = Expect<IsEqual<Ex3, { center: Point<-1, -1>; radius: 1 }>>
+    type TestEx1 = Expect<
+      IsEqual<Ex1, { type: 'circle'; center: Point<0, 0>; radius: 0 }>
+    >
+    type TestEx2 = Expect<
+      IsEqual<Ex2, { type: 'circle'; center: Point<1, 1>; radius: 1 }>
+    >
+    type TestEx3 = Expect<
+      IsEqual<Ex3, { type: 'circle'; center: Point<-1, -1>; radius: 1 }>
+    >
   })
 })

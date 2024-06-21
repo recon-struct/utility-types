@@ -15,6 +15,7 @@ export interface Arc<
   C extends number = number,
   D extends number = number,
 > {
+  type: 'arc'
   center: A
   radius: B
   startAngle: C // Angle in radians

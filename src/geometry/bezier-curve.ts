@@ -15,6 +15,7 @@ export interface BezierCurve<
   C extends Point = Point,
   D extends Point = Point,
 > {
+  type: 'bezier-curve'
   start: A
   control1: B
   control2: C

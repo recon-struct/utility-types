@@ -8,6 +8,7 @@ import type { Point } from './point'
  * @group Geometry
  */
 export interface Circle<A extends Point = Point, B extends number = number> {
+  type: 'circle'
   center: A
   radius: B
 }
