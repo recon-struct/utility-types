@@ -12,9 +12,11 @@ export interface Ellipse<
   A extends Point = Point,
   B extends number = number,
   C extends number = number,
+  D extends number = number,
 > {
   type: 'ellipse'
   center: A
   radiusX: B
   radiusY: C
+  rotation: D
 }
