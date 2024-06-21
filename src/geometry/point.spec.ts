@@ -8,8 +8,8 @@ describe('point', () => {
     type Ex2 = Point<1, 1>
     type Ex3 = Point<-1, -1>
 
-    type TestEx1 = Expect<IsEqual<Ex1, [0, 0] & { type: 'point' }>>
-    type TestEx2 = Expect<IsEqual<Ex2, [1, 1] & { type: 'point' }>>
-    type TestEx3 = Expect<IsEqual<Ex3, [-1, -1] & { type: 'point' }>>
+    type TestEx1 = Expect<IsEqual<Ex1, [0, 0]>>
+    type TestEx2 = Expect<IsEqual<Ex2, [1, 1]>>
+    type TestEx3 = Expect<IsEqual<Ex3, [-1, -1]>>
   })
 })
