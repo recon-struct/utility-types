@@ -1,4 +1,4 @@
-import type { Point } from './point'
+import type { InferPoint, Point } from './point'
 
 /**
  * Represents a rectangle in a 2D coordinate system.
@@ -14,7 +14,7 @@ export interface Rectangle<
   C extends number = number,
 > {
   type: 'rectangle'
-  topLeft: A
+  topLeft: InferPoint<A>
   width: B
   height: C
 }

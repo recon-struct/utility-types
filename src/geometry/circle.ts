@@ -1,4 +1,4 @@
-import type { Point } from './point'
+import type { InferPoint, Point } from './point'
 
 /**
  * Represents a circle in a two-dimensional space.
@@ -9,6 +9,6 @@ import type { Point } from './point'
  */
 export interface Circle<A extends Point = Point, B extends number = number> {
   type: 'circle'
-  center: A
+  center: InferPoint<A>
   radius: B
 }

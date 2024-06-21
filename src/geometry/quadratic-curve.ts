@@ -1,4 +1,4 @@
-import type { Point } from './point'
+import type { InferPoint, Point } from './point'
 
 /**
  * Represents a quadratic curve in a 2D coordinate system.
@@ -14,7 +14,7 @@ export interface QuadraticCurve<
   C extends Point = Point,
 > {
   type: 'quadratic-curve'
-  start: A
-  control: B
-  end: C
+  start: InferPoint<A>
+  control: InferPoint<B>
+  end: InferPoint<C>
 }

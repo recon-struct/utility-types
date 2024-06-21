@@ -1,4 +1,4 @@
-import type { Point } from './point'
+import type { InferPoint, Point } from './point'
 
 /**
  * Represents a line segment between two points.
@@ -7,4 +7,7 @@ import type { Point } from './point'
  * @typeParam B - The type of the second point.
  * @group Geometry
  */
-export type Line<A extends Point = Point, B extends Point = Point> = [A, B]
+export type Line<A extends Point = Point, B extends Point = Point> = [
+  InferPoint<A>,
+  InferPoint<B>,
+]
