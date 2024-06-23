@@ -8,7 +8,7 @@ import type { LengthProp } from '~/object/length-prop'
  * @typeParam C - The index of the second element to swap.
  * @typeParam D - The resulting array after swapping the elements.
  */
-type Swap<
+export type Swap<
   A extends any[],
   B extends number,
   C extends number,
