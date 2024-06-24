@@ -1,4 +1,7 @@
-export interface SplitOpts<A extends string[] = string[]> {
+import type { Options } from '~/helper/options'
+
+export interface SplitOpts<A extends string[] = string[]>
+  extends Options<'Split'> {
   value: A
 }
 

@@ -1,9 +1,11 @@
 import type { AnyAlphabetic } from '~/any/any-alphabetic'
 import type { AnyDecimalDigit } from '~/any/any-decimal-digit'
+import type { Options } from '~/helper/options'
 import type { LowerCase } from '~/string/lower-case'
 import type { UpperCase } from '~/string/upper-case'
 
-interface IsCamelCaseOpts<A extends string = string> {
+interface IsCamelCaseOpts<A extends string = string>
+  extends Options<'IsCamelCase'> {
   value: A
 }
 

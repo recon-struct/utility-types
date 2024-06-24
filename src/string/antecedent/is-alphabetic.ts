@@ -1,6 +1,8 @@
 import type { AnyAlphabetic } from '~/any/any-alphabetic'
+import type { Options } from '~/helper/options'
 
-interface IsAlphabeticOpts<A extends string = string> {
+interface IsAlphabeticOpts<A extends string = string>
+  extends Options<'IsAlphabetic'> {
   value: A
 }
 

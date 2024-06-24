@@ -1,8 +1,10 @@
+import type { Options } from '~/helper/options'
 import type { If } from '~/logic/if'
 import type { IsZero } from '~/math/antecedent/is-zero'
 import type { Increment } from '~/math/increment'
 
-export interface OneOrMoreOpts<A extends number = 0> {
+export interface OneOrMoreOpts<A extends number = 0>
+  extends Options<'OneOrMore'> {
   value: A
 }
 

@@ -1,5 +1,6 @@
 /**
  * An interface representing the start and end of a capture group
+ *
  * @typeParam A - The start of the capture group.
  * @typeParam B - The end of the capture group.
  * @group Helper

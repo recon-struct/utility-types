@@ -1,7 +1,9 @@
 import type { AnyAlphabetic } from '~/any/any-alphabetic'
 import type { AnyDecimalDigit } from '~/any/any-decimal-digit'
+import type { Options } from '~/helper/options'
 
-interface IsKebabCaseOpts<A extends string = string> {
+interface IsKebabCaseOpts<A extends string = string>
+  extends Options<'IsKebabCase'> {
   value: A
 }
 

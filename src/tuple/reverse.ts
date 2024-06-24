@@ -1,6 +1,8 @@
 import type { AnyArray } from '~/any/any-array'
+import type { Options } from '~/helper/options'
 
-export interface ReverseOpts<A extends AnyArray = AnyArray> {
+export interface ReverseOpts<A extends AnyArray = AnyArray>
+  extends Options<'Reverse'> {
   value: A
 }
 

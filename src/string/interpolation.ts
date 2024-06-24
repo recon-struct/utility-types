@@ -1,4 +1,5 @@
 import type { CaptureGroup } from '~/helper/capture-group'
+import type { Options } from '~/helper/options'
 import type { Capture } from '~/string/capture'
 
 export type InterpolationVariable = string | number | bigint | boolean
@@ -6,7 +7,7 @@ export type InterpolationVariable = string | number | bigint | boolean
 export interface InterpolationOpts<
   A extends string = string,
   B extends InterpolationVariable = InterpolationVariable,
-> {
+> extends Options<'Interpolation'> {
   value: A
   variables: B
 }

@@ -1,4 +1,5 @@
 import type { AnyArray } from '~/any/any-array'
+import type { Options } from '~/helper/options'
 import type { And } from '~/logic/antecedent/and'
 import type { Or } from '~/logic/antecedent/or'
 import type { If } from '~/logic/if'
@@ -16,7 +17,7 @@ export interface SliceOpts<
   B extends number | bigint = number | bigint,
   C extends number | bigint = number | bigint,
   D extends number | bigint = number | bigint,
-> {
+> extends Options<'Slice'> {
   value: A
   startIndex: B
   endIndex: C

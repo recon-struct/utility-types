@@ -1,7 +1,9 @@
 import type { AnyDecimalDigit } from '~/any/any-decimal-digit'
 import type { IsEqual } from '~/extension/antecedent/is-equal'
+import type { Options } from '~/helper/options'
 
-interface IsNumericOpts<A extends string = string> {
+interface IsNumericOpts<A extends string = string>
+  extends Options<'IsNumeric'> {
   value: A
 }
 

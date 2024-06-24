@@ -6,8 +6,10 @@ import type { If } from '~/logic/if'
 
 /**
  * Checks if type `A` extends type `B` and is not equal to type `B`.
+ *
  * @typeParam A - The first type to compare.
  * @typeParam B - The second type to compare.
+ * @internal
  * @group Helper
  * @example
  * ```

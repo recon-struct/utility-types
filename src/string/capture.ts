@@ -1,6 +1,8 @@
 import type { CaptureGroup } from '~/helper/capture-group'
+import type { Options } from '~/helper/options'
 
-export interface CaptureOpts<A extends string = string> {
+export interface CaptureOpts<A extends string = string>
+  extends Options<'Capture'> {
   value: A
 }
 

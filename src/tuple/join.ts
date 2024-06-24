@@ -1,10 +1,11 @@
 import type { AnyStringish } from '~/any/any-stringish'
 import type { ToString } from '~/any/to-string'
+import type { Options } from '~/helper/options'
 import type { ToStringInterface } from '~/helper/to-string-interface'
 import type { IsStringConcatIdentity } from '~/identity/antecedent/is-string-concat-identity'
 import type { If } from '~/logic/if'
 
-export interface JoinOpts<A extends string = string> {
+export interface JoinOpts<A extends string = string> extends Options<'Join'> {
   value: A
 }
 
